@@ -1,1 +1,5252 @@
-
+{
+  "info": {
+    "_postman_id": "8e5f7ed5-5fa5-4a9d-972b-ee045881975e",
+    "name": "SaySwitch Merchant Dashboard",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+    "_exporter_id": "53072195",
+    "_collection_link": "https://go.postman.co/collection/53072195-8e5f7ed5-5fa5-4a9d-972b-ee045881975e?source=collection_link"
+  },
+  "item": [
+    {
+      "name": "Auth",
+      "item": [
+        {
+          "name": "Screen 1 - Email",
+          "event": [
+            {
+              "listen": "test",
+              "script": {
+                "exec": [
+                  ""
+                ],
+                "type": "text/javascript"
+              }
+            }
+          ],
+          "request": {
+            "method": "POST",
+            "header": [],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n    \"data\": \"efeaf355ad39798f7cfb27b3ca5e33e2bf3ae5260c25f42893cecff55b572c6f\"\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "{{base_url}}/email",
+              "host": [
+                "{{base_url}}"
+              ],
+              "path": [
+                "email"
+              ]
+            },
+            "description": "Request Body to encrypt.\n\n{ \"email\": \"[tolu@bud.africa](https://mailto:tolu@bud.africa)\"}"
+          },
+          "response": []
+        },
+        {
+          "name": "Screen 2 - Email Verify",
+          "event": [
+            {
+              "listen": "test",
+              "script": {
+                "exec": [
+                  ""
+                ],
+                "type": "text/javascript"
+              }
+            }
+          ],
+          "request": {
+            "method": "POST",
+            "header": [],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n    \"data\": \"ceed8ee239c9e4b8d66f52700d4843f4e1ba53d654085fd4cea802f45e4319dd0c6711ef5a59592e565dec32d7ccd3af\"\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "{{base_url}}/email-verify",
+              "host": [
+                "{{base_url}}"
+              ],
+              "path": [
+                "email-verify"
+              ]
+            },
+            "description": "Request Body to encrypt.\n\n{ \"email\": \"[tolu@bud.africa](https://mailto:tolu@bud.africa)\", \"code\": \"865321\"}"
+          },
+          "response": []
+        },
+        {
+          "name": "Screen 2 - Resend Email",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "{{base_url}}/resend-email-code/{email}",
+              "host": [
+                "{{base_url}}"
+              ],
+              "path": [
+                "resend-email-code",
+                "{email}"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "Register",
+          "event": [
+            {
+              "listen": "test",
+              "script": {
+                "exec": [
+                  "var jsonData = JSON.parse(responseBody);",
+                  "if(jsonData.success==true){",
+                  "pm.collectionVariables.set(\"token\", jsonData.token);",
+                  "}"
+                ],
+                "type": "text/javascript"
+              }
+            }
+          ],
+          "request": {
+            "method": "POST",
+            "header": [],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n    \"data\": \"3a806987cac60ae1644b2cb8a95eabafa1a91d09b21177c54600b8a7333443592c694455f56ac2cff977e4846041a21a56417cd882c0b05d6e60130891a39c6b60c13cfd0c1b9dac6bb53191b17bcc6f7ef711858fdea7de5c9fb1ad300936bcf37bde0f908edbec4a547dc6828c5c188eb3acd6a9a1202f0d236c6f5b7d6adc88610a69c4c8229a9698d70c9bacb48578a50b9aedc22af45ac68afdb08929ff404cd00ee1fe58da82f33f6b74bd1018\"\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "{{base_url}}/register",
+              "host": [
+                "{{base_url}}"
+              ],
+              "path": [
+                "register"
+              ]
+            },
+            "description": "Request Body to encrypt.\n\n{\"verifier\": \"regrkwrkvwkrrk\", \"firstname\": \"Tolu\", \"lastname\": \"Oye\", \"email\": \"[tolu@bud.africa](https://mailto:tolu@bud.africa)\", \"password\": \"101919fbjs\", \"business_name\": \"Toluxsys Inc\", \"trade_name\": \"Toluxsys Inc\", \"registration_number\": \"\", \"date_of_incorporation\": \"\", \"country\": \"NG\", \"business_type\": 1, \"referral\": \"TOLO50\"}\n\n{\"verifier\": \"65f95f5b72b071793947537451787697242984\", \"firstname\": \"Omolara\", \"lastname\": \"ilori\", \"email\": \"[favour@budpay.com](https://mailto:favour@budpay.com)\", \"password\": \"Budpay@$7\", \"business_name\": \"omolara and co\", \"trade_name\": \"iloriInc\", \"country\": \"Nigeria\", \"isoName\": \"Nigeria\", \"business_type\": 2, \"industry_id\": 11, \"cat_id\": 95, \"referral\": \"TOLO50\", \"date_of_incorporation\": \"\", \"registration_number\": \"\"}"
+          },
+          "response": []
+        },
+        {
+          "name": "Auth Login",
+          "event": [
+            {
+              "listen": "test",
+              "script": {
+                "exec": [
+                  "var jsonData = JSON.parse(responseBody);",
+                  "if(jsonData.success==true){",
+                  "pm.collectionVariables.set(\"token\", jsonData.token);",
+                  "}"
+                ],
+                "type": "text/javascript"
+              }
+            }
+          ],
+          "request": {
+            "method": "POST",
+            "header": [],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n    \"data\": \"5f14b411aef298b6315492226f1d6b83859cdb585871d54df73648a7bc85ca625d5e704858595434a9c0290cd3a60cc93304a926532eef532baafc3d2f98f2b234e6ea6603d99d4cd770e561aee819d2\"\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "{{base_url}}/login",
+              "host": [
+                "{{base_url}}"
+              ],
+              "path": [
+                "login"
+              ]
+            },
+            "description": "Request Body to encrypt.\n\n{ \"email\": \"adetunjioluwakayode@gmail.com\", \"password\": \"adetunjioluwakayode@gmail.com\", \"device_name\": \"merchantpro\"}"
+          },
+          "response": []
+        },
+        {
+          "name": "Reset Password Request",
+          "request": {
+            "method": "POST",
+            "header": [],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n    \"data\": \"3131443259364336302b4f797855384e52774c5265775663776e492f39304e674f697a6c544149727978334738624236683862397379477238505578354b356a6b48616e5a466174503679522f676378795878567564734657666679302b2b3531627569342b71334676773d\"\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "{{base_url}}/reset_password_request",
+              "host": [
+                "{{base_url}}"
+              ],
+              "path": [
+                "reset_password_request"
+              ]
+            },
+            "description": "Request Body to encrypt.\n\n{ \"email\": \"[sam@bud.africa](https://mailto:sam@bud.africa)\"}"
+          },
+          "response": []
+        },
+        {
+          "name": "Reset Password Submit",
+          "request": {
+            "method": "POST",
+            "header": [],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n    \"data\": \"3131443259364336302b4f797855384e52774c5265775663776e492f39304e674f697a6c544149727978334738624236683862397379477238505578354b356a6b48616e5a466174503679522f676378795878567564734657666679302b2b3531627569342b71334676773d\"\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "{{base_url}}/reset_password_submit",
+              "host": [
+                "{{base_url}}"
+              ],
+              "path": [
+                "reset_password_submit"
+              ]
+            },
+            "description": "Request Body to encrypt.\n\n{ \"email\": \"[sam@bud.africa](https://mailto:sam@bud.africa)\", \"token\": \"098grr949g9r7654321\", \"password\": \"0987654321\", \"confirm_password\": \"0987654321\"}"
+          },
+          "response": []
+        },
+        {
+          "name": "Delete Account Request",
+          "request": {
+            "auth": {
+              "type": "bearer",
+              "bearer": [
+                {
+                  "key": "token",
+                  "value": "{{token}}",
+                  "type": "string"
+                }
+              ]
+            },
+            "method": "POST",
+            "header": [],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n    \"pin\": 111111\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "{{base_url}}/deleted-account/{biz_id}",
+              "host": [
+                "{{base_url}}"
+              ],
+              "path": [
+                "deleted-account",
+                "{biz_id}"
+              ]
+            },
+            "description": "Request Body to encrypt.\n\n{ \"email\": \"[sam@bud.africa](https://mailto:sam@bud.africa)\", \"token\": \"098grr949g9r7654321\", \"password\": \"0987654321\", \"confirm_password\": \"0987654321\"}"
+          },
+          "response": []
+        },
+        {
+          "name": "decryption",
+          "request": {
+            "method": "POST",
+            "header": [],
+            "body": {
+              "mode": "raw",
+              "raw": "{\"data\": \"5f14b411aef298b6315492226f1d6b83859cdb585871d54df73648a7bc85ca625d5e704858595434a9c0290cd3a60cc93304a926532eef532baafc3d2f98f2b234e6ea6603d99d4cd770e561aee819d2\"}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "https://backendapi.staging-sayswitchgroup.com/api/msw/decryption",
+              "protocol": "https",
+              "host": [
+                "backendapi",
+                "staging-sayswitchgroup",
+                "com"
+              ],
+              "path": [
+                "api",
+                "msw",
+                "decryption"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "encryption",
+          "request": {
+            "method": "POST",
+            "header": [],
+            "body": {
+              "mode": "raw",
+              "raw": "{\"email\": \"faseuntunde5@gmail.com\", \"password\": \"Simeonhenry1#\", \"device_name\": \"iPhone 15 Pro Max\"}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "https://backendapi.sayswitchgroup.com/api/msw/encryption",
+              "protocol": "https",
+              "host": [
+                "backendapi",
+                "sayswitchgroup",
+                "com"
+              ],
+              "path": [
+                "api",
+                "msw",
+                "encryption"
+              ]
+            }
+          },
+          "response": []
+        }
+      ]
+    },
+    {
+      "name": "Country Extras",
+      "item": [
+        {
+          "name": "Country",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "{{base_url}}/country",
+              "host": [
+                "{{base_url}}"
+              ],
+              "path": [
+                "country"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "Extras",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "{{base_url}}/extras",
+              "host": [
+                "{{base_url}}"
+              ],
+              "path": [
+                "extras"
+              ]
+            }
+          },
+          "response": []
+        }
+      ]
+    },
+    {
+      "name": "Compliance",
+      "item": [
+        {
+          "name": "Compliance Individual",
+          "request": {
+            "auth": {
+              "type": "bearer",
+              "bearer": [
+                {
+                  "key": "token",
+                  "value": "{{token}}",
+                  "type": "string"
+                }
+              ]
+            },
+            "method": "POST",
+            "header": [],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n    \"business_name\":\"Tech Plus Network Limited\",\n    \"trade_name\":\" Tech Plus Host\",\n    \"industry_id\":\"5\",\n    \"description\":\"Domain name registration, Servers and Web hosting service\",\n    \"biz_email\":\" info@techplushost.com\",\n    \"biz_phone\":\" 07036218209\",\n    \"biz_address\":\"Off General Gas Road, Akobo, Ibadan\",\n    \"biz_country\":\" Nigeria\",\n    \"biz_state\":\" Oyo\",\n    \"biz_city\":\"Ibadan\",\n    \"biz_url\":\"techplushost.com\",\n    \"biz_ig\":\"techplushost\",\n    \"idcard\":\"1\",\n    \"bank_code\":\"00013\",\n    \"bank_name\":\"Guaranty Trust Bank\",\n    \"account_number\":\"0050883605\",\n    \"account_name\":\"TOLULOPE OYENIYI\",\n    \"bvn\":\" 11111111111\"\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "{{base_url}}/compliance-individual",
+              "host": [
+                "{{base_url}}"
+              ],
+              "path": [
+                "compliance-individual"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "Compliance Business",
+          "request": {
+            "auth": {
+              "type": "bearer",
+              "bearer": [
+                {
+                  "key": "token",
+                  "value": "{{token}}",
+                  "type": "string"
+                }
+              ]
+            },
+            "method": "POST",
+            "header": [],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n    \"data\": \"5a084ff288ce78a3343e794ab433d400c403efd3e9a1374ff99371e86f1ec767a98e97dc486bcfd15f66903973a03e20c9f8b54a263110080ce45d7a28f03ae58e1db53a2062473c0ea76bc6307915d97930e065b1dd5e5d87999ccbace648156f08682b00cedfb292adc895fb9c36d82d5866d72444ae0876bc41807fb133b1e1d247533198e7a526a18e39937e952b30b82ad1779bd007537ea4d8ee2ed14dcfa3eced790d2a0f0507664a136ffa76135ad5c402d5906d7bf460eada32d6adcda700d2ecdd6d218c1cda16797aae9639f4c9752fce27c91b7b8b36aa71df89e364d7678c85666717665372f26c7e2cd36a0dfa9c2407143b7ee5ff675c04e8ca3c5517ce788eff259d1136bc9728c8f1916587d0df0e47d9baad65630be5a84181009668690544d7f2691955cefa314048cc472363d8534c5a5f8302e68cfd8480b191c60e454522da829bfc240991e0c80c61a29285ba44bbfb3b9aa1af355e10bf67a8a39a4cf158c92bffb33745c520920f4a4396ee48938947183e31f472073b739a62e5930e5ba1c9915c71597e5796d7700431ab7de3cb70c558ad0eefd97d5c7f8b8e47f4d8a24247a89f127b6e45ebfd1e55c2416f013c9b21b062f8fbb205b73e59551d5c902c4e182408f7de2cf61e62398fdabd9c5c76b2cf2411f67002fd3d9e4a9ca23921557ae65666d97c71a3130231ee1a0e3ee0b35f86b083d9a501e2f91703cec46c3f50d0bcf96e3d49f3cb079c19f1e64aaca5b167905dcee9c51393e25bca77cfc0e4ca6de8862f37ee7b436d8d6a2a39a30114eb7778b9e3a33f0163b2f843cd4e405baa7a9347e4e08b2a1831daeb6de517c7372aea684681d5cf0fb3ed57ecc9bfe9515330bc9e3501fb6593389ceceff012bda976231a2acd154c76f6b1c50937457d7576831bb27453c0d53500e7a71154f03046d787cb4bdc28e959b569464610b59b4c78c267ec717c23248f8a267bf4e677a562c6a088a54ae3ddb38d0f279d1f4921ce75ecdbabf7d09035e5664fb3f005ce066b170bb234a6fc8454106726e5dbecef6ffbb2e9c19ba2ce43fcfa2aff0e735c9d544ab3f83c0922e48479b13e2d9bf3b21890ae1eeac4d485774b9cac4a52c0c60081a38d42735fc1ac40dab4\"\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "{{base_url}}/compliance-business",
+              "host": [
+                "{{base_url}}"
+              ],
+              "path": [
+                "compliance-business"
+              ]
+            },
+            "description": "{ \"phone\":\"07036218209\", \"business_name\":\"Tech Plus Network Limited\", \"trade_name\":\" Tech Plus Host\", \"industry_id\":\"5\", \"description\":\"Domain name registration, Servers and Web hosting service\", \"biz_email\":\" [info@techplushost.com](https://mailto:info@techplushost.com)\", \"biz_phone\":\" 07036218209\", \"biz_address\":\"Off General Gas Road, Akobo, Ibadan\", \"biz_country\":\" Nigeria\", \"biz_state\":\" Oyo\", \"biz_city\":\"Ibadan\", \"biz_url\":\"techplushost.com\", \"biz_ig\":\"techplushost\", \"cac\":\"2\", \"memart\":\"3\", \"bank_code\":\"00013\", \"bank_name\":\"Guaranty Trust Bank\", \"account_number\":\"0050883605\", \"account_name\":\"TOLULOPE OYENIYI\", \"bvn\":\" 11111111111\", \"directors\":\\[ { \"firstname\": \"Tolulope\", \"lastname\": \"Oyeniyi\", \"id_type\": \"Driver License\", \"id_file\":\"4\", \"bvn\": \"22222222222\" }, { \"firstname\": \"Samuel\", \"lastname\": \"Owolabi\", \"id_type\": \"Driver License\", \"id_file\":\"5\", \"bvn\": \"22222222223\" } \\]}"
+          },
+          "response": []
+        },
+        {
+          "name": "Compliance NGO",
+          "request": {
+            "auth": {
+              "type": "bearer",
+              "bearer": [
+                {
+                  "key": "token",
+                  "value": "{{token}}",
+                  "type": "string"
+                }
+              ]
+            },
+            "method": "POST",
+            "header": [],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n    \"business_name\":\"Tech Plus Network Limited\",\n    \"trade_name\":\" Tech Plus Host\",\n    \"industry_id\":\"5\",\n    \"description\":\"Domain name registration, Servers and Web hosting service\",\n    \"biz_email\":\" info@techplushost.com\",\n    \"biz_phone\":\" 07036218209\",\n    \"biz_address\":\"Off General Gas Road, Akobo, Ibadan\",\n    \"biz_country\":\" Nigeria\",\n    \"biz_state\":\" Oyo\",\n    \"biz_city\":\"Ibadan\",\n    \"biz_url\":\"techplushost.com\",\n    \"biz_ig\":\"techplushost\",\n    \"cac\":\"2\",\n    \"memart\":\"3\",\n    \"schuml\":\"4\",\n    \"bank_code\":\"00013\",\n    \"bank_name\":\"Guaranty Trust Bank\",\n    \"account_number\":\"0050883605\",\n    \"account_name\":\"TOLULOPE OYENIYI\",\n    \"bvn\":\" 11111111111\",\n    \"trustees\":[\n        {\n            \"firstname\": \"Tolulope\",\n            \"lastname\": \"Oyeniyi\",\n            \"id_type\": \"Driver License\",\n            \"id_file\":\"5\",\n            \"bvn\": \"22222222222\"\n            \n        },\n        {\n            \"firstname\": \"Samuel\",\n            \"lastname\": \"Owolabi\",\n            \"id_type\": \"Driver License\",\n            \"id_file\":\"6\",\n            \"bvn\": \"22222222223\"\n        }\n    ]\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "{{base_url}}/compliance-ngo",
+              "host": [
+                "{{base_url}}"
+              ],
+              "path": [
+                "compliance-ngo"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "Compliance Sole Proprietorship",
+          "request": {
+            "auth": {
+              "type": "bearer",
+              "bearer": [
+                {
+                  "key": "token",
+                  "value": "{{token}}",
+                  "type": "string"
+                }
+              ]
+            },
+            "method": "POST",
+            "header": [],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n    \"business_name\":\"Tech Plus Network Limited\",\n    \"trade_name\":\" Tech Plus Host\",\n    \"industry_id\":\"5\",\n    \"description\":\"Domain name registration, Servers and Web hosting service\",\n    \"biz_email\":\" info@techplushost.com\",\n    \"biz_phone\":\" 07036218209\",\n    \"biz_address\":\"Off General Gas Road, Akobo, Ibadan\",\n    \"biz_country\":\" Nigeria\",\n    \"biz_state\":\" Oyo\",\n    \"biz_city\":\"Ibadan\",\n    \"biz_url\":\"techplushost.com\",\n    \"biz_ig\":\"techplushost\",\n    \"cac\":\"2\",\n    \"idcard\":\"3\",\n    \"bank_code\":\"00013\",\n    \"bank_name\":\"Guaranty Trust Bank\",\n    \"account_number\":\"0050883605\",\n    \"account_name\":\"TOLULOPE OYENIYI\",\n    \"bvn\":\" 11111111111\"\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "{{base_url}}/compliance-sole",
+              "host": [
+                "{{base_url}}"
+              ],
+              "path": [
+                "compliance-sole"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "Compliance Governmental Bodies",
+          "request": {
+            "auth": {
+              "type": "bearer",
+              "bearer": [
+                {
+                  "key": "token",
+                  "value": "{{token}}",
+                  "type": "string"
+                }
+              ]
+            },
+            "method": "POST",
+            "header": [],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n    \"data\": \"5a084ff288ce78a3343e794ab433d400c403efd3e9a1374ff99371e86f1ec767a98e97dc486bcfd15f66903973a03e20c9f8b54a263110080ce45d7a28f03ae58e1db53a2062473c0ea76bc6307915d97930e065b1dd5e5d87999ccbace648156f08682b00cedfb292adc895fb9c36d82d5866d72444ae0876bc41807fb133b1e1d247533198e7a526a18e39937e952b30b82ad1779bd007537ea4d8ee2ed14dcfa3eced790d2a0f0507664a136ffa76135ad5c402d5906d7bf460eada32d6adcda700d2ecdd6d218c1cda16797aae9639f4c9752fce27c91b7b8b36aa71df89e364d7678c85666717665372f26c7e2cd36a0dfa9c2407143b7ee5ff675c04e8ca3c5517ce788eff259d1136bc9728c8f1916587d0df0e47d9baad65630be5a84181009668690544d7f2691955cefa314048cc472363d8534c5a5f8302e68cfd8480b191c60e454522da829bfc240991e0c80c61a29285ba44bbfb3b9aa1af355e10bf67a8a39a4cf158c92bffb33745c520920f4a4396ee48938947183e31f472073b739a62e5930e5ba1c9915c71597e5796d7700431ab7de3cb70c558ad0eefd97d5c7f8b8e47f4d8a24247a89f127b6e45ebfd1e55c2416f013c9b21b062f8fbb205b73e59551d5c902c4e182408f7de2cf61e62398fdabd9c5c76b2cf2411f67002fd3d9e4a9ca23921557ae65666d97c71a3130231ee1a0e3ee0b35f86b083d9a501e2f91703cec46c3f50d0bcf96e3d49f3cb079c19f1e64aaca5b167905dcee9c51393e25bca77cfc0e4ca6de8862f37ee7b436d8d6a2a39a30114eb7778b9e3a33f0163b2f843cd4e405baa7a9347e4e08b2a1831daeb6de517c7372aea684681d5cf0fb3ed57ecc9bfe9515330bc9e3501fb6593389ceceff012bda976231a2acd154c76f6b1c50937457d7576831bb27453c0d53500e7a71154f03046d787cb4bdc28e959b569464610b59b4c78c267ec717c23248f8a267bf4e677a562c6a088a54ae3ddb38d0f279d1f4921ce75ecdbabf7d09035e5664fb3f005ce066b170bb234a6fc8454106726e5dbecef6ffbb2e9c19ba2ce43fcfa2aff0e735c9d544ab3f83c0922e48479b13e2d9bf3b21890ae1eeac4d485774b9cac4a52c0c60081a38d42735fc1ac40dab4\"\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "{{base_url}}/compliance-gov",
+              "host": [
+                "{{base_url}}"
+              ],
+              "path": [
+                "compliance-gov"
+              ]
+            },
+            "description": "{ \"phone\": \"07036218209\", \"business_name\": \"Tech Plus Network Limited\", \"trade_name\": \" Tech Plus Host\", \"industry_id\": \"5\", \"description\": \"Domain name registration, Servers and Web hosting service\", \"biz_email\": \" info@techplushost.com\", \"biz_phone\": \" 07036218209\", \"biz_address\": \"Off General Gas Road, Akobo, Ibadan\", \"biz_country\": \" Nigeria\", \"biz_state\": \" Oyo\", \"biz_city\": \"Ibadan\", \"biz_url\": \"techplushost.com\", \"biz_ig\": \"techplushost\", \"glea\": \"2\", \"aga\": \"3\", \"bank_code\": \"00013\", \"bank_name\": \"Guaranty Trust Bank\", \"account_number\": \"0050883605\", \"account_name\": \"TOLULOPE OYENIYI\", \"bvn\": \" 11111111111\", \"pa_firstname\": \"Tolulope\", \"pa_lastname\": \"Oyeniyi\", \"pa_email\": \"toluxsys@yahoo.ca\", \"pa_phone\": \"07036218209\", \"pa_id_type\": \"Driver License\", \"pa_id_file\": \"4\", \"pa_bvn\": \"22222222222\"}"
+          },
+          "response": []
+        },
+        {
+          "name": "Compliance Update BVN",
+          "request": {
+            "auth": {
+              "type": "bearer",
+              "bearer": [
+                {
+                  "key": "token",
+                  "value": "{{token}}",
+                  "type": "string"
+                }
+              ]
+            },
+            "method": "POST",
+            "header": [],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n    \"data\": \"efeaf355ad39798f7cfb27b3ca5e33e2bf3ae526b572c6f\"\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "{{base_url}}/update-bvn",
+              "host": [
+                "{{base_url}}"
+              ],
+              "path": [
+                "update-bvn"
+              ]
+            },
+            "description": "Request Body to encrypt.\n\n{ \"business_id\":30, \"bvn\":\" 11111111111\"}"
+          },
+          "response": []
+        },
+        {
+          "name": "Business Phone Verify",
+          "request": {
+            "auth": {
+              "type": "bearer",
+              "bearer": [
+                {
+                  "key": "token",
+                  "value": "{{token}}",
+                  "type": "string"
+                }
+              ]
+            },
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "{{base_url}}/business-phone-verify/{biz_id}/{phone}",
+              "host": [
+                "{{base_url}}"
+              ],
+              "path": [
+                "business-phone-verify",
+                "{biz_id}",
+                "{phone}"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "Confirm Business Phone Otp",
+          "request": {
+            "auth": {
+              "type": "bearer",
+              "bearer": [
+                {
+                  "key": "token",
+                  "value": "{{token}}",
+                  "type": "string"
+                }
+              ]
+            },
+            "method": "POST",
+            "header": [],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n    \"otp\":\"483971\"\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "{{base_url}}/confirm-business-phone-otp/{biz_id}",
+              "host": [
+                "{{base_url}}"
+              ],
+              "path": [
+                "confirm-business-phone-otp",
+                "{biz_id}"
+              ]
+            }
+          },
+          "response": []
+        }
+      ]
+    },
+    {
+      "name": "File Upload",
+      "item": [
+        {
+          "name": "File Upload",
+          "request": {
+            "auth": {
+              "type": "bearer",
+              "bearer": [
+                {
+                  "key": "token",
+                  "value": "{{token}}",
+                  "type": "string"
+                }
+              ]
+            },
+            "method": "POST",
+            "header": [],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n    \"type\":\"kyc\",\n    \"file_link\":\"\"\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "{{base_url}}/file-upload/1037",
+              "host": [
+                "{{base_url}}"
+              ],
+              "path": [
+                "file-upload",
+                "1037"
+              ]
+            }
+          },
+          "response": []
+        }
+      ]
+    },
+    {
+      "name": "OTP Request",
+      "item": [
+        {
+          "name": "Request OTP",
+          "request": {
+            "auth": {
+              "type": "bearer",
+              "bearer": [
+                {
+                  "key": "token",
+                  "value": "{{token}}",
+                  "type": "string"
+                }
+              ]
+            },
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "{{base_url}}/request-otp/{biz_id}/{source}/{mode}",
+              "host": [
+                "{{base_url}}"
+              ],
+              "path": [
+                "request-otp",
+                "{biz_id}",
+                "{source}",
+                "{mode}"
+              ]
+            },
+            "description": "OTP Source determinant\n\nPayout OTP = payout\n\nBudpay Transfer OTP = transfer\n\nTransaction Settings Update OTP = 2fa (to switch btw pin and otp)"
+          },
+          "response": []
+        },
+        {
+          "name": "Transaction OTP",
+          "request": {
+            "auth": {
+              "type": "bearer",
+              "bearer": [
+                {
+                  "key": "token",
+                  "value": "{{token}}",
+                  "type": "string"
+                }
+              ]
+            },
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "{{base_url}}/get-auth-otp/{biz_id}/{source}/{mode}",
+              "host": [
+                "{{base_url}}"
+              ],
+              "path": [
+                "get-auth-otp",
+                "{biz_id}",
+                "{source}",
+                "{mode}"
+              ]
+            },
+            "description": "OTP Source determinant\n\nPayout OTP = payout\n\nBudpay Transfer OTP = transfer\n\nTransaction Settings Update OTP = 2fa (to switch btw pin and otp)"
+          },
+          "response": []
+        },
+        {
+          "name": "Change Auth Mode",
+          "request": {
+            "auth": {
+              "type": "bearer",
+              "bearer": [
+                {
+                  "key": "token",
+                  "value": "{{token}}",
+                  "type": "string"
+                }
+              ]
+            },
+            "method": "POST",
+            "header": [],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n    \"auth\":\"otp\",\n    \"otp\":\"211482\"\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "{{base_url}}/change-auth-mode/{biz_id}/{mode}",
+              "host": [
+                "{{base_url}}"
+              ],
+              "path": [
+                "change-auth-mode",
+                "{biz_id}",
+                "{mode}"
+              ]
+            },
+            "description": "OTP Source determinant\n\nPayout OTP = payout\n\nBudpay Transfer OTP = transfer\n\nTransaction Settings Update OTP = 2fa (to switch btw pin and otp)"
+          },
+          "response": []
+        }
+      ]
+    },
+    {
+      "name": "Dashboard",
+      "item": [
+        {
+          "name": "Dashboard (Summary)",
+          "request": {
+            "auth": {
+              "type": "bearer",
+              "bearer": [
+                {
+                  "key": "token",
+                  "value": "{{token}}",
+                  "type": "string"
+                }
+              ]
+            },
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "{{base_url}}/dashboard-brief/{biz_id}/{cur}/{start_date}/{end_date}/{mode}",
+              "host": [
+                "{{base_url}}"
+              ],
+              "path": [
+                "dashboard-brief",
+                "{biz_id}",
+                "{cur}",
+                "{start_date}",
+                "{end_date}",
+                "{mode}"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "Dashboard (wallet)",
+          "request": {
+            "auth": {
+              "type": "bearer",
+              "bearer": [
+                {
+                  "key": "token",
+                  "value": "{{token}}",
+                  "type": "string"
+                }
+              ]
+            },
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "{{base_url}}/dashboard/{biz_id}/{mode}",
+              "host": [
+                "{{base_url}}"
+              ],
+              "path": [
+                "dashboard",
+                "{biz_id}",
+                "{mode}"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "Dashboard Week Volume Chart",
+          "request": {
+            "auth": {
+              "type": "bearer",
+              "bearer": [
+                {
+                  "key": "token",
+                  "value": "{{token}}",
+                  "type": "string"
+                }
+              ]
+            },
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "{{base_url}}/week-volume-chart/{biz_id}/{cur}/{mode}",
+              "host": [
+                "{{base_url}}"
+              ],
+              "path": [
+                "week-volume-chart",
+                "{biz_id}",
+                "{cur}",
+                "{mode}"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "Dashboard Transaction Chart",
+          "request": {
+            "auth": {
+              "type": "bearer",
+              "bearer": [
+                {
+                  "key": "token",
+                  "value": "{{token}}",
+                  "type": "string"
+                }
+              ]
+            },
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "{{base_url}}/trans-chart/{biz_id}/{cur}/{mode}",
+              "host": [
+                "{{base_url}}"
+              ],
+              "path": [
+                "trans-chart",
+                "{biz_id}",
+                "{cur}",
+                "{mode}"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "Dashboard Transaction Month Chart",
+          "request": {
+            "auth": {
+              "type": "bearer",
+              "bearer": [
+                {
+                  "key": "token",
+                  "value": "{{token}}",
+                  "type": "string"
+                }
+              ]
+            },
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "{{base_url}}/trans-month-chart/{biz_id}/{mode}",
+              "host": [
+                "{{base_url}}"
+              ],
+              "path": [
+                "trans-month-chart",
+                "{biz_id}",
+                "{mode}"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "Businesses",
+          "request": {
+            "auth": {
+              "type": "bearer",
+              "bearer": [
+                {
+                  "key": "token",
+                  "value": "{{token}}",
+                  "type": "string"
+                }
+              ]
+            },
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "{{base_url}}/businesses",
+              "host": [
+                "{{base_url}}"
+              ],
+              "path": [
+                "businesses"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "Business Profile",
+          "request": {
+            "auth": {
+              "type": "bearer",
+              "bearer": [
+                {
+                  "key": "token",
+                  "value": "{{token}}",
+                  "type": "string"
+                }
+              ]
+            },
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "{{base_url}}/business-profile/{biz_id}",
+              "host": [
+                "{{base_url}}"
+              ],
+              "path": [
+                "business-profile",
+                "{biz_id}"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "Add New Business",
+          "request": {
+            "auth": {
+              "type": "bearer",
+              "bearer": [
+                {
+                  "key": "token",
+                  "value": "{{token}}",
+                  "type": "string"
+                }
+              ]
+            },
+            "method": "POST",
+            "header": [],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n    \"business_name\":\"\",\n    \"trade_name\":\"\",\n    \"country\":\"Nigeria\",\n    \"industry_id\":12,\n    \"cat_id\":1,\n    \"business_type\":2,\n    \"date_of_incorporation\":\"\",\n    \"registration_number\":\"\"\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "{{base_url}}/add-new-business",
+              "host": [
+                "{{base_url}}"
+              ],
+              "path": [
+                "add-new-business"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "Recent",
+          "request": {
+            "auth": {
+              "type": "bearer",
+              "bearer": [
+                {
+                  "key": "token",
+                  "value": "{{token}}",
+                  "type": "string"
+                }
+              ]
+            },
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "{{base_url}}/recent/{biz_id}/{mode}",
+              "host": [
+                "{{base_url}}"
+              ],
+              "path": [
+                "recent",
+                "{biz_id}",
+                "{mode}"
+              ]
+            }
+          },
+          "response": []
+        }
+      ]
+    },
+    {
+      "name": "Audit",
+      "item": [
+        {
+          "name": "Audit",
+          "request": {
+            "auth": {
+              "type": "bearer",
+              "bearer": [
+                {
+                  "key": "token",
+                  "value": "{{token}}",
+                  "type": "string"
+                }
+              ]
+            },
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "{{base_url}}/audits",
+              "host": [
+                "{{base_url}}"
+              ],
+              "path": [
+                "audits"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "Audit Filter",
+          "request": {
+            "auth": {
+              "type": "bearer",
+              "bearer": [
+                {
+                  "key": "token",
+                  "value": "{{token}}",
+                  "type": "string"
+                }
+              ]
+            },
+            "method": "POST",
+            "header": [],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n    \"from_date\": \"2022-12-01\",\n    \"to_date\": \"2022-12-19\",\n    \"limit\": 20\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "{{base_url}}/audit-filter",
+              "host": [
+                "{{base_url}}"
+              ],
+              "path": [
+                "audit-filter"
+              ]
+            }
+          },
+          "response": []
+        }
+      ]
+    },
+    {
+      "name": "Payout (Bank Transfer)",
+      "item": [
+        {
+          "name": "Payouts Bank List",
+          "request": {
+            "auth": {
+              "type": "bearer",
+              "bearer": [
+                {
+                  "key": "token",
+                  "value": "{{token}}",
+                  "type": "string"
+                }
+              ]
+            },
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "{{base_url}}/banks",
+              "host": [
+                "{{base_url}}"
+              ],
+              "path": [
+                "banks"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "Payouts Verify",
+          "request": {
+            "auth": {
+              "type": "bearer",
+              "bearer": [
+                {
+                  "key": "token",
+                  "value": "{{token}}",
+                  "type": "string"
+                }
+              ]
+            },
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "{{base_url}}/payout-verify/{biz_id}/{mode}/{reference}",
+              "host": [
+                "{{base_url}}"
+              ],
+              "path": [
+                "payout-verify",
+                "{biz_id}",
+                "{mode}",
+                "{reference}"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "Payouts",
+          "request": {
+            "auth": {
+              "type": "bearer",
+              "bearer": [
+                {
+                  "key": "token",
+                  "value": "{{token}}",
+                  "type": "string"
+                }
+              ]
+            },
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "{{base_url}}/payouts/{biz_id}/{mode}",
+              "host": [
+                "{{base_url}}"
+              ],
+              "path": [
+                "payouts",
+                "{biz_id}",
+                "{mode}"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "Payouts By Currency",
+          "request": {
+            "auth": {
+              "type": "bearer",
+              "bearer": [
+                {
+                  "key": "token",
+                  "value": "{{token}}",
+                  "type": "string"
+                }
+              ]
+            },
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "{{base_url}}/payouts-by-cur/{biz_id}/{cur}/{mode}",
+              "host": [
+                "{{base_url}}"
+              ],
+              "path": [
+                "payouts-by-cur",
+                "{biz_id}",
+                "{cur}",
+                "{mode}"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "Payouts Account Name Verify",
+          "request": {
+            "auth": {
+              "type": "bearer",
+              "bearer": [
+                {
+                  "key": "token",
+                  "value": "{{token}}",
+                  "type": "string"
+                }
+              ]
+            },
+            "method": "POST",
+            "header": [],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n    \"data\": \"cf22a0635ca7b3ca2a148e35da67dd0ebcd162508057ef54f67972cd6dfa13917a248ad6ed16113e9880d20a654b8d858e3e7d8cd661b91a1de4afe11f8c9847\"\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "{{base_url}}/account-name-verify",
+              "host": [
+                "{{base_url}}"
+              ],
+              "path": [
+                "account-name-verify"
+              ]
+            },
+            "description": "{ \"bank_code\":\"000013\", \"account_number\":\"0050883605\"}"
+          },
+          "response": []
+        },
+        {
+          "name": "Payouts Get Beneficiaries",
+          "request": {
+            "auth": {
+              "type": "bearer",
+              "bearer": [
+                {
+                  "key": "token",
+                  "value": "{{token}}",
+                  "type": "string"
+                }
+              ]
+            },
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "{{base_url}}/get-payout-beneficiary/{biz_id}",
+              "host": [
+                "{{base_url}}"
+              ],
+              "path": [
+                "get-payout-beneficiary",
+                "{biz_id}"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "Payouts Get Fee",
+          "request": {
+            "auth": {
+              "type": "bearer",
+              "bearer": [
+                {
+                  "key": "token",
+                  "value": "{{token}}",
+                  "type": "string"
+                }
+              ]
+            },
+            "method": "POST",
+            "header": [],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n    \"wallet\":\"\",\n    \"business\":\"\",\n    \"amount\":100\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "{{base_url}}/get-fee",
+              "host": [
+                "{{base_url}}"
+              ],
+              "path": [
+                "get-fee"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "Payouts Account Name Verify Copy",
+          "request": {
+            "auth": {
+              "type": "bearer",
+              "bearer": [
+                {
+                  "key": "token",
+                  "value": "{{token}}",
+                  "type": "string"
+                }
+              ]
+            },
+            "method": "POST",
+            "header": [],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n    \"bank\":\"000013\",\n    \"currency\":\"NGN\",\n    \"account_number\":\"0050883605\"\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "{{base_url}}/initiate-transfer/30/live",
+              "host": [
+                "{{base_url}}"
+              ],
+              "path": [
+                "initiate-transfer",
+                "30",
+                "live"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "Payouts Initiate Transfer",
+          "request": {
+            "auth": {
+              "type": "bearer",
+              "bearer": [
+                {
+                  "key": "token",
+                  "value": "{{token}}",
+                  "type": "string"
+                }
+              ]
+            },
+            "method": "POST",
+            "header": [],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n    \"currency\":\"NGN\",\n    \"amount\":50,\n    \"bank\":\"GTBank Plc|000013\",\n    \"account_number\":\"0050883605\",\n    \"account_name\":\"OYENIYI TOLULOPE OYEBIYI\",\n    \"narration\":\"GiftBills\",\n    \"auth\":\"\"\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "{{base_url}}/initiate-transfer/{biz_id}/{mode}",
+              "host": [
+                "{{base_url}}"
+              ],
+              "path": [
+                "initiate-transfer",
+                "{biz_id}",
+                "{mode}"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "Payouts Initiate Bulk Transfer",
+          "request": {
+            "auth": {
+              "type": "bearer",
+              "bearer": [
+                {
+                  "key": "token",
+                  "value": "{{token}}",
+                  "type": "string"
+                }
+              ]
+            },
+            "method": "POST",
+            "header": [],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n    \"currency\": \"NGN\",\n    \"file_id\": 331,\n    \"auth\": \"137426\"\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "{{base_url}}/initiate-bulk-transfer/1037/live",
+              "host": [
+                "{{base_url}}"
+              ],
+              "path": [
+                "initiate-bulk-transfer",
+                "1037",
+                "live"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "Payouts validate Bulk Transfer Account",
+          "request": {
+            "auth": {
+              "type": "bearer",
+              "bearer": [
+                {
+                  "key": "token",
+                  "value": "{{token}}",
+                  "type": "string"
+                }
+              ]
+            },
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "{{base_url}}/validate-account-detail/{biz_id}/{id}",
+              "host": [
+                "{{base_url}}"
+              ],
+              "path": [
+                "validate-account-detail",
+                "{biz_id}",
+                "{id}"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "Payout Filter",
+          "request": {
+            "auth": {
+              "type": "bearer",
+              "bearer": [
+                {
+                  "key": "token",
+                  "value": "{{token}}",
+                  "type": "string"
+                }
+              ]
+            },
+            "method": "POST",
+            "header": [],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n    \"search\": \"\",\n    \"biz_id\": 30,\n    \"domain\": \"live\",\n    \"from_date\": \"2022-06-29\",\n    \"to_date\": \"2022-06-30\",\n    \"status\": \"success\",\n    \"currency\": \"NGN\",\n    \"limit\": 5\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "{{base_url}}/payouts/filter",
+              "host": [
+                "{{base_url}}"
+              ],
+              "path": [
+                "payouts",
+                "filter"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "Payouts Download Export",
+          "request": {
+            "auth": {
+              "type": "bearer",
+              "bearer": [
+                {
+                  "key": "token",
+                  "value": "{{token}}",
+                  "type": "string"
+                }
+              ]
+            },
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "{{base_url}}/payouts-dexport/{biz_id}/{search}/{from}/{to}/{status}/{currency}/{limit}/{medium}/{domain}",
+              "host": [
+                "{{base_url}}"
+              ],
+              "path": [
+                "payouts-dexport",
+                "{biz_id}",
+                "{search}",
+                "{from}",
+                "{to}",
+                "{status}",
+                "{currency}",
+                "{limit}",
+                "{medium}",
+                "{domain}"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "Get Beneficiaries",
+          "request": {
+            "auth": {
+              "type": "bearer",
+              "bearer": [
+                {
+                  "key": "token",
+                  "value": "{{token}}",
+                  "type": "string"
+                }
+              ]
+            },
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "{{base_url}}/get-beneficiary/{biz_id}",
+              "host": [
+                "{{base_url}}"
+              ],
+              "path": [
+                "get-beneficiary",
+                "{biz_id}"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "Add Beneficiary",
+          "request": {
+            "auth": {
+              "type": "bearer",
+              "bearer": [
+                {
+                  "key": "token",
+                  "value": "{{token}}",
+                  "type": "string"
+                }
+              ]
+            },
+            "method": "POST",
+            "header": [],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n    \"bank_code\":\"000013\",\n    \"account_number\":\"0050883605\",\n    \"account_name\":\"OYENIYI TOLULOPE OYEBIYI\",\n    \"bank_name\":\"GTBank Plc\"\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "{{base_url}}/add-beneficiary/{biz_id}",
+              "host": [
+                "{{base_url}}"
+              ],
+              "path": [
+                "add-beneficiary",
+                "{biz_id}"
+              ]
+            }
+          },
+          "response": []
+        }
+      ]
+    },
+    {
+      "name": "Payout B (SaySwitch Transfer)",
+      "item": [
+        {
+          "name": "Payouts Account Name Verify",
+          "request": {
+            "auth": {
+              "type": "bearer",
+              "bearer": [
+                {
+                  "key": "token",
+                  "value": "{{token}}",
+                  "type": "string"
+                }
+              ]
+            },
+            "method": "POST",
+            "header": [],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n    \"data\": \"f1ef121391ed43b67306cc15cc0976de674d265a8228cd4e91fbaf28c1a1e80a\"\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "{{base_url}}/bud-account-validation",
+              "host": [
+                "{{base_url}}"
+              ],
+              "path": [
+                "bud-account-validation"
+              ]
+            },
+            "description": "{\"merchantId\":\"30\"}"
+          },
+          "response": []
+        },
+        {
+          "name": "Single Transfer",
+          "request": {
+            "auth": {
+              "type": "bearer",
+              "bearer": [
+                {
+                  "key": "token",
+                  "value": "{{token}}",
+                  "type": "string"
+                }
+              ]
+            },
+            "method": "POST",
+            "header": [],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n    \"data\": \"f1ef121391ed43b67306cc15cc0976de674d265a8228cd4e91fbaf28c1a1e80a\"\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "{{base_url}}/bud-transfer/{biz_id}/{mode}",
+              "host": [
+                "{{base_url}}"
+              ],
+              "path": [
+                "bud-transfer",
+                "{biz_id}",
+                "{mode}"
+              ]
+            },
+            "description": "{ \"currency\":\"NGN\", \"amount\":50, \"merchantId\":\"30\", \"narration\":\"GiftBills\", \"auth\":\"123456\"}"
+          },
+          "response": []
+        },
+        {
+          "name": "Payouts Initiate Bulk Transfer",
+          "request": {
+            "auth": {
+              "type": "bearer",
+              "bearer": [
+                {
+                  "key": "token",
+                  "value": "{{token}}",
+                  "type": "string"
+                }
+              ]
+            },
+            "method": "POST",
+            "header": [],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n    \"currency\": \"NGN\",\n    \"pin\": \"1234\",\n    \"transfers\": [\n        {\n            \"amount\": \"200\",\n            \"bank_code\": \"000013\",\n            \"bank_name\": \"GUARANTY TRUST BANK\",\n            \"account_number\": \"0050883605\",\n            \"narration\": \"January Salary\"\n        },\n        {\n            \"amount\": \"100\",\n            \"bank_code\": \"000013\",\n            \"bank_name\": \"GUARANTY TRUST BANK\",\n            \"account_number\": \"0050883605\",\n            \"narration\": \"February  Salary\"\n        },\n        {\n            \"amount\": \"100\",\n            \"bank_code\": \"000013\",\n            \"bank_name\": \"GUARANTY TRUST BANK\",\n            \"account_number\": \"0050883605\",\n            \"narration\": \"March  Salary\"\n        }\n    ]\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "{{base_url}}/initiate-bulk-transfer/{biz_id}/{mode}",
+              "host": [
+                "{{base_url}}"
+              ],
+              "path": [
+                "initiate-bulk-transfer",
+                "{biz_id}",
+                "{mode}"
+              ]
+            }
+          },
+          "response": []
+        }
+      ]
+    },
+    {
+      "name": "Transactions",
+      "item": [
+        {
+          "name": "Transaction",
+          "request": {
+            "auth": {
+              "type": "bearer",
+              "bearer": [
+                {
+                  "key": "token",
+                  "value": "{{token}}",
+                  "type": "string"
+                }
+              ]
+            },
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "{{base_url}}/transactions/{biz_id}/{mode}",
+              "host": [
+                "{{base_url}}"
+              ],
+              "path": [
+                "transactions",
+                "{biz_id}",
+                "{mode}"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "Transaction By Date",
+          "request": {
+            "auth": {
+              "type": "bearer",
+              "bearer": [
+                {
+                  "key": "token",
+                  "value": "{{token}}",
+                  "type": "string"
+                }
+              ]
+            },
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "{{base_url}}/transactions-by-date/{biz_id}/{mode}/{cur}/{start_date}/{end_date}",
+              "host": [
+                "{{base_url}}"
+              ],
+              "path": [
+                "transactions-by-date",
+                "{biz_id}",
+                "{mode}",
+                "{cur}",
+                "{start_date}",
+                "{end_date}"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "Transaction Details",
+          "request": {
+            "auth": {
+              "type": "bearer",
+              "bearer": [
+                {
+                  "key": "token",
+                  "value": "{{token}}",
+                  "type": "string"
+                }
+              ]
+            },
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "{{base_url}}/transaction/details/{biz_id}/{id}",
+              "host": [
+                "{{base_url}}"
+              ],
+              "path": [
+                "transaction",
+                "details",
+                "{biz_id}",
+                "{id}"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "Transaction Details Using Reference",
+          "request": {
+            "auth": {
+              "type": "bearer",
+              "bearer": [
+                {
+                  "key": "token",
+                  "value": "{{token}}",
+                  "type": "string"
+                }
+              ]
+            },
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "{{base_url}}/transaction-details/{biz_id}/{reference}",
+              "host": [
+                "{{base_url}}"
+              ],
+              "path": [
+                "transaction-details",
+                "{biz_id}",
+                "{reference}"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "Transaction Details for Dedicated",
+          "request": {
+            "auth": {
+              "type": "bearer",
+              "bearer": [
+                {
+                  "key": "token",
+                  "value": "{{token}}",
+                  "type": "string"
+                }
+              ]
+            },
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "{{base_url}}/dedicated_transaction/details/{biz_id}/{reference}",
+              "host": [
+                "{{base_url}}"
+              ],
+              "path": [
+                "dedicated_transaction",
+                "details",
+                "{biz_id}",
+                "{reference}"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "Transactions of a Settelemt",
+          "request": {
+            "auth": {
+              "type": "bearer",
+              "bearer": [
+                {
+                  "key": "token",
+                  "value": "{{token}}",
+                  "type": "string"
+                }
+              ]
+            },
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "{{base_url}}/settlement_transaction/details/{biz_id}/{batchid}",
+              "host": [
+                "{{base_url}}"
+              ],
+              "path": [
+                "settlement_transaction",
+                "details",
+                "{biz_id}",
+                "{batchid}"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "Resend Transaction Webhook",
+          "request": {
+            "auth": {
+              "type": "bearer",
+              "bearer": [
+                {
+                  "key": "token",
+                  "value": "{{token}}",
+                  "type": "string"
+                }
+              ]
+            },
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "{{base_url}}/resend_transaction_webhook/{biz_id}/{mode}/{id}",
+              "host": [
+                "{{base_url}}"
+              ],
+              "path": [
+                "resend_transaction_webhook",
+                "{biz_id}",
+                "{mode}",
+                "{id}"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "Resend Transaction Receipt",
+          "request": {
+            "auth": {
+              "type": "bearer",
+              "bearer": [
+                {
+                  "key": "token",
+                  "value": "{{token}}",
+                  "type": "string"
+                }
+              ]
+            },
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "{{base_url}}/resend_transaction_receipt/{biz_id}/{mode}/{id}",
+              "host": [
+                "{{base_url}}"
+              ],
+              "path": [
+                "resend_transaction_receipt",
+                "{biz_id}",
+                "{mode}",
+                "{id}"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "Transaction Filter",
+          "request": {
+            "auth": {
+              "type": "bearer",
+              "bearer": [
+                {
+                  "key": "token",
+                  "value": "{{token}}",
+                  "type": "string"
+                }
+              ]
+            },
+            "method": "POST",
+            "header": [],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n    \"search\": \"\",\n    \"biz_id\": 30,\n    \"domain\": \"live\",\n    \"from_date\": \"2022-12-01\",\n    \"to_date\": \"2022-12-19\",\n    \"status\": \"success\",\n    \"type\": \"transaction\",\n    \"currency\": \"NGN\",\n    \"limit\": 20\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "{{base_url}}/transactions/filter",
+              "host": [
+                "{{base_url}}"
+              ],
+              "path": [
+                "transactions",
+                "filter"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "Transaction Download Export",
+          "request": {
+            "auth": {
+              "type": "bearer",
+              "bearer": [
+                {
+                  "key": "token",
+                  "value": "{{token}}",
+                  "type": "string"
+                }
+              ]
+            },
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "{{base_url}}/transaction-dexport/{biz_id}/{search}/{from}/{to}/{status}/{type}/{currency}/{limit}/{medium}/{domain}",
+              "host": [
+                "{{base_url}}"
+              ],
+              "path": [
+                "transaction-dexport",
+                "{biz_id}",
+                "{search}",
+                "{from}",
+                "{to}",
+                "{status}",
+                "{type}",
+                "{currency}",
+                "{limit}",
+                "{medium}",
+                "{domain}"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "Transaction History Log for Mobile App",
+          "request": {
+            "auth": {
+              "type": "bearer",
+              "bearer": [
+                {
+                  "key": "token",
+                  "value": "{{token}}",
+                  "type": "string"
+                }
+              ]
+            },
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "{{base_url}}/history_log/{biz_id}/{mode}",
+              "host": [
+                "{{base_url}}"
+              ],
+              "path": [
+                "history_log",
+                "{biz_id}",
+                "{mode}"
+              ]
+            }
+          },
+          "response": []
+        }
+      ]
+    },
+    {
+      "name": "Balance",
+      "item": [
+        {
+          "name": "Wallet (by Currency)",
+          "request": {
+            "auth": {
+              "type": "bearer",
+              "bearer": [
+                {
+                  "key": "token",
+                  "value": "{{token}}",
+                  "type": "string"
+                }
+              ]
+            },
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "{{base_url}}/wallet/{biz_id}/{cur}/{mode}",
+              "host": [
+                "{{base_url}}"
+              ],
+              "path": [
+                "wallet",
+                "{biz_id}",
+                "{cur}",
+                "{mode}"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "Wallet Transactions Filter",
+          "request": {
+            "auth": {
+              "type": "bearer",
+              "bearer": [
+                {
+                  "key": "token",
+                  "value": "{{token}}",
+                  "type": "string"
+                }
+              ]
+            },
+            "method": "POST",
+            "header": [],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n    \"biz_id\": 30,\n    \"domain\": \"live\",\n    \"type\": \"credit\",\n    \"from_date\": \"2022-12-01\",\n    \"to_date\": \"2022-12-19\",\n    \"currency\": \"NGN\",\n    \"status\": \"success\",\n    \"limit\": 20\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "{{base_url}}/wallet-trans-filter",
+              "host": [
+                "{{base_url}}"
+              ],
+              "path": [
+                "wallet-trans-filter"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "Regenerate Wallet Account",
+          "request": {
+            "auth": {
+              "type": "bearer",
+              "bearer": [
+                {
+                  "key": "token",
+                  "value": "{{token}}",
+                  "type": "string"
+                }
+              ]
+            },
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "{{base_url}}/regenerate-wallet-account/{biz_id}/{cur}/{?provider}/{mode}",
+              "host": [
+                "{{base_url}}"
+              ],
+              "path": [
+                "regenerate-wallet-account",
+                "{biz_id}",
+                "{cur}",
+                "{"
+              ],
+              "query": [
+                {
+                  "key": "provider}/{mode}",
+                  "value": null
+                }
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "Wallet Balance Reload (Test mode only)",
+          "request": {
+            "auth": {
+              "type": "bearer",
+              "bearer": [
+                {
+                  "key": "token",
+                  "value": "{{token}}",
+                  "type": "string"
+                }
+              ]
+            },
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "{{base_url}}/wallet-balance/reload/{biz_id}/{cur}",
+              "host": [
+                "{{base_url}}"
+              ],
+              "path": [
+                "wallet-balance",
+                "reload",
+                "{biz_id}",
+                "{cur}"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "Settlement",
+          "request": {
+            "auth": {
+              "type": "bearer",
+              "bearer": [
+                {
+                  "key": "token",
+                  "value": "{{token}}",
+                  "type": "string"
+                }
+              ]
+            },
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "{{base_url}}/settlement/{biz_id}/{mode}",
+              "host": [
+                "{{base_url}}"
+              ],
+              "path": [
+                "settlement",
+                "{biz_id}",
+                "{mode}"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "Settlement Details (View Settlement)",
+          "request": {
+            "auth": {
+              "type": "bearer",
+              "bearer": [
+                {
+                  "key": "token",
+                  "value": "{{token}}",
+                  "type": "string"
+                }
+              ]
+            },
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "{{base_url}}/settlement-details/{biz_id}/{mode}/{id}",
+              "host": [
+                "{{base_url}}"
+              ],
+              "path": [
+                "settlement-details",
+                "{biz_id}",
+                "{mode}",
+                "{id}"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "Settlement Filter",
+          "request": {
+            "auth": {
+              "type": "bearer",
+              "bearer": [
+                {
+                  "key": "token",
+                  "value": "{{token}}",
+                  "type": "string"
+                }
+              ]
+            },
+            "method": "POST",
+            "header": [],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n    \"search\": \"\",\n    \"biz_id\": 30,\n    \"domain\": \"live\",\n    \"from_date\": \"2022-12-01\",\n    \"to_date\": \"2022-12-19\",\n    \"currency\": \"NGN\",\n    \"status\": \"success\",\n    \"limit\": 20\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "{{base_url}}/settlement-filter",
+              "host": [
+                "{{base_url}}"
+              ],
+              "path": [
+                "settlement-filter"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "Settlement Download Export",
+          "request": {
+            "auth": {
+              "type": "bearer",
+              "bearer": [
+                {
+                  "key": "token",
+                  "value": "{{token}}",
+                  "type": "string"
+                }
+              ]
+            },
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "{{base_url}}/settlement-dexport/{biz_id}/{domain}/{search}/{from}/{to}/{currency}/{status}/{limit}/{medium}",
+              "host": [
+                "{{base_url}}"
+              ],
+              "path": [
+                "settlement-dexport",
+                "{biz_id}",
+                "{domain}",
+                "{search}",
+                "{from}",
+                "{to}",
+                "{currency}",
+                "{status}",
+                "{limit}",
+                "{medium}"
+              ]
+            }
+          },
+          "response": []
+        }
+      ]
+    },
+    {
+      "name": "Customer",
+      "item": [
+        {
+          "name": "Customers",
+          "request": {
+            "auth": {
+              "type": "bearer",
+              "bearer": [
+                {
+                  "key": "token",
+                  "value": "{{token}}",
+                  "type": "string"
+                }
+              ]
+            },
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "{{base_url}}/customers/{biz_id}/{mode}",
+              "host": [
+                "{{base_url}}"
+              ],
+              "path": [
+                "customers",
+                "{biz_id}",
+                "{mode}"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "Customer Filter",
+          "request": {
+            "auth": {
+              "type": "bearer",
+              "bearer": [
+                {
+                  "key": "token",
+                  "value": "{{token}}",
+                  "type": "string"
+                }
+              ]
+            },
+            "method": "POST",
+            "header": [],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n    \"from_date\": \"2022-12-01\",\n    \"to_date\": \"2023-09-19\",\n    \"email\": \"\",\n    \"id\": \"\",\n    \"limit\": 20\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "{{base_url}}/customers-filter/{biz_id}/{mode}",
+              "host": [
+                "{{base_url}}"
+              ],
+              "path": [
+                "customers-filter",
+                "{biz_id}",
+                "{mode}"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "Customer Create",
+          "request": {
+            "auth": {
+              "type": "bearer",
+              "bearer": [
+                {
+                  "key": "token",
+                  "value": "{{token}}",
+                  "type": "string"
+                }
+              ]
+            },
+            "method": "POST",
+            "header": [],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n    \"email\":\"\",\n    \"first_name\":\"\",\n    \"last_name\":\"\",\n    \"phone\":\"\"\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "{{base_url}}/customer-create/{biz_id}/{mode}",
+              "host": [
+                "{{base_url}}"
+              ],
+              "path": [
+                "customer-create",
+                "{biz_id}",
+                "{mode}"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "Customer Details",
+          "request": {
+            "auth": {
+              "type": "bearer",
+              "bearer": [
+                {
+                  "key": "token",
+                  "value": "{{token}}",
+                  "type": "string"
+                }
+              ]
+            },
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "{{base_url}}/customer-details/{biz_id}/{mode}/{customer_id}",
+              "host": [
+                "{{base_url}}"
+              ],
+              "path": [
+                "customer-details",
+                "{biz_id}",
+                "{mode}",
+                "{customer_id}"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "Customer Edit",
+          "request": {
+            "auth": {
+              "type": "bearer",
+              "bearer": [
+                {
+                  "key": "token",
+                  "value": "{{token}}",
+                  "type": "string"
+                }
+              ]
+            },
+            "method": "POST",
+            "header": [],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n    \"first_name\" : \"\",\n    \"last_name\" : \"\",\n    \"phone\" : \"\",\n    \"metadata\" : \"{}\"\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "{{base_url}}/customer-edit/{biz_id}/{mode}/{id}",
+              "host": [
+                "{{base_url}}"
+              ],
+              "path": [
+                "customer-edit",
+                "{biz_id}",
+                "{mode}",
+                "{id}"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "Customer Blacklist",
+          "request": {
+            "auth": {
+              "type": "bearer",
+              "bearer": [
+                {
+                  "key": "token",
+                  "value": "{{token}}",
+                  "type": "string"
+                }
+              ]
+            },
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "{{base_url}}/customer-blacklist/{biz_id}/{mode}/{id}",
+              "host": [
+                "{{base_url}}"
+              ],
+              "path": [
+                "customer-blacklist",
+                "{biz_id}",
+                "{mode}",
+                "{id}"
+              ]
+            }
+          },
+          "response": []
+        }
+      ]
+    },
+    {
+      "name": "Sub Account",
+      "item": [
+        {
+          "name": "Sub Account List",
+          "request": {
+            "auth": {
+              "type": "bearer",
+              "bearer": [
+                {
+                  "key": "token",
+                  "value": "{{token}}",
+                  "type": "string"
+                }
+              ]
+            },
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "{{base_url}}/sub-accounts/{biz_id}/{mode}",
+              "host": [
+                "{{base_url}}"
+              ],
+              "path": [
+                "sub-accounts",
+                "{biz_id}",
+                "{mode}"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "Sub Account Details",
+          "request": {
+            "auth": {
+              "type": "bearer",
+              "bearer": [
+                {
+                  "key": "token",
+                  "value": "{{token}}",
+                  "type": "string"
+                }
+              ]
+            },
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "{{base_url}}/sub-account-details/{id}/{biz_id}/{mode}",
+              "host": [
+                "{{base_url}}"
+              ],
+              "path": [
+                "sub-account-details",
+                "{id}",
+                "{biz_id}",
+                "{mode}"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "Sub Account Filter",
+          "request": {
+            "auth": {
+              "type": "bearer",
+              "bearer": [
+                {
+                  "key": "token",
+                  "value": "{{token}}",
+                  "type": "string"
+                }
+              ]
+            },
+            "method": "POST",
+            "header": [],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n    \"from_date\": \"2022-12-01\",\n    \"to_date\": \"2022-12-19\",\n    \"currency\": \"NGN\",\n    \"limit\": 20\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "{{base_url}}/sub-accounts-filter/{biz_id}/{mode}",
+              "host": [
+                "{{base_url}}"
+              ],
+              "path": [
+                "sub-accounts-filter",
+                "{biz_id}",
+                "{mode}"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "Sub Account Transaction Filter",
+          "request": {
+            "auth": {
+              "type": "bearer",
+              "bearer": [
+                {
+                  "key": "token",
+                  "value": "{{token}}",
+                  "type": "string"
+                }
+              ]
+            },
+            "method": "POST",
+            "header": [],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n    \"from_date\": \"2022-12-01\",\n    \"to_date\": \"2022-12-19\",\n    \"currency\": \"NGN\",\n    \"limit\": 20\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "{{base_url}}/sub-account_trans-filter/{biz_id}/{split_code}/{mode}",
+              "host": [
+                "{{base_url}}"
+              ],
+              "path": [
+                "sub-account_trans-filter",
+                "{biz_id}",
+                "{split_code}",
+                "{mode}"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "Sub Account Edit",
+          "request": {
+            "auth": {
+              "type": "bearer",
+              "bearer": [
+                {
+                  "key": "token",
+                  "value": "{{token}}",
+                  "type": "string"
+                }
+              ]
+            },
+            "method": "POST",
+            "header": [],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n    \"split_type\": \"percentage\",\n    \"split_rate\": \"20\"\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "{{base_url}}/sub-account-edit/{biz_id}/{mode}/{sa_code}",
+              "host": [
+                "{{base_url}}"
+              ],
+              "path": [
+                "sub-account-edit",
+                "{biz_id}",
+                "{mode}",
+                "{sa_code}"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "Sub Account Create",
+          "request": {
+            "auth": {
+              "type": "bearer",
+              "bearer": [
+                {
+                  "key": "token",
+                  "value": "{{token}}",
+                  "type": "string"
+                }
+              ]
+            },
+            "method": "POST",
+            "header": [],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n    \"name\": \"\",\n    \"email\": \"toluxsys@yahoo.ca\",\n    \"bank_name\": \"GTBank Plc\",\n    \"bank_code\": \"000013\",\n    \"account_number\": \"0050883605\",\n    \"country\": \"Nigeria\",\n    \"currency\": \"NGN\",\n    \"split_type\": \"percentage\",\n    \"split_rate\": \"20\",\n    \"zip_code\": \"234\"\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "{{base_url}}/sub-account-create/{biz_id}/{mode}",
+              "host": [
+                "{{base_url}}"
+              ],
+              "path": [
+                "sub-account-create",
+                "{biz_id}",
+                "{mode}"
+              ]
+            }
+          },
+          "response": []
+        }
+      ]
+    },
+    {
+      "name": "Reserved Accounts",
+      "item": [
+        {
+          "name": "Reserved Accounts",
+          "request": {
+            "auth": {
+              "type": "bearer",
+              "bearer": [
+                {
+                  "key": "token",
+                  "value": "{{token}}",
+                  "type": "string"
+                }
+              ]
+            },
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "{{base_url}}/reserved_account/{biz_id}/{mode}",
+              "host": [
+                "{{base_url}}"
+              ],
+              "path": [
+                "reserved_account",
+                "{biz_id}",
+                "{mode}"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "Reserved Account Details",
+          "request": {
+            "auth": {
+              "type": "bearer",
+              "bearer": [
+                {
+                  "key": "token",
+                  "value": "{{token}}",
+                  "type": "string"
+                }
+              ]
+            },
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "{{base_url}}/reserved_account/details/{biz_id}/{mode}/{account_number}",
+              "host": [
+                "{{base_url}}"
+              ],
+              "path": [
+                "reserved_account",
+                "details",
+                "{biz_id}",
+                "{mode}",
+                "{account_number}"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "Wallet Account Providers",
+          "request": {
+            "auth": {
+              "type": "bearer",
+              "bearer": [
+                {
+                  "key": "token",
+                  "value": "{{token}}",
+                  "type": "string"
+                }
+              ]
+            },
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "{{base_url}}/wallet-account-providers",
+              "host": [
+                "{{base_url}}"
+              ],
+              "path": [
+                "wallet-account-providers"
+              ]
+            }
+          },
+          "response": []
+        }
+      ]
+    },
+    {
+      "name": "Refund",
+      "item": [
+        {
+          "name": "Refund",
+          "request": {
+            "auth": {
+              "type": "bearer",
+              "bearer": [
+                {
+                  "key": "token",
+                  "value": "{{token}}",
+                  "type": "string"
+                }
+              ]
+            },
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "{{base_url}}/refund/{biz_id}/{mode}/{status}",
+              "host": [
+                "{{base_url}}"
+              ],
+              "path": [
+                "refund",
+                "{biz_id}",
+                "{mode}",
+                "{status}"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "Refund Details",
+          "request": {
+            "auth": {
+              "type": "bearer",
+              "bearer": [
+                {
+                  "key": "token",
+                  "value": "{{token}}",
+                  "type": "string"
+                }
+              ]
+            },
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "{{base_url}}/refund-details/{biz_id}/{mode}/{r_id}",
+              "host": [
+                "{{base_url}}"
+              ],
+              "path": [
+                "refund-details",
+                "{biz_id}",
+                "{mode}",
+                "{r_id}"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "Refund Filter",
+          "request": {
+            "auth": {
+              "type": "bearer",
+              "bearer": [
+                {
+                  "key": "token",
+                  "value": "{{token}}",
+                  "type": "string"
+                }
+              ]
+            },
+            "method": "POST",
+            "header": [],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n    \"refund_reference\": \"\",\n    \"biz_id\": 1037,\n    \"domain\": \"live\",\n    \"from_date\": \"2022-06-29\",\n    \"to_date\": \"2024-01-22\",\n    \"currency\": \"NGN\",\n    \"status\": \"success\",\n    \"limit\": 5\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "{{base_url}}/refund/filter",
+              "host": [
+                "{{base_url}}"
+              ],
+              "path": [
+                "refund",
+                "filter"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "Refund Transaction",
+          "request": {
+            "auth": {
+              "type": "bearer",
+              "bearer": [
+                {
+                  "key": "token",
+                  "value": "{{token}}",
+                  "type": "string"
+                }
+              ]
+            },
+            "method": "POST",
+            "header": [],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n    \"data\":\"\"\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "{{base_url}}/refund-transaction/{biz_id}/{mode}",
+              "host": [
+                "{{base_url}}"
+              ],
+              "path": [
+                "refund-transaction",
+                "{biz_id}",
+                "{mode}"
+              ]
+            },
+            "description": "Request Body to encrypt.\n\n{\"reference\": \"0987654321\", \"type\": \"partial\", \"type\": \"amount\", \"100\": \"refund for bills\", \"auth\": \"542954\"}"
+          },
+          "response": []
+        }
+      ]
+    },
+    {
+      "name": "Dispute (Chargeback)",
+      "item": [
+        {
+          "name": "Dispute (Pending)",
+          "request": {
+            "auth": {
+              "type": "bearer",
+              "bearer": [
+                {
+                  "key": "token",
+                  "value": "{{token}}",
+                  "type": "string"
+                }
+              ]
+            },
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "{{base_url}}/dispute/pending/{biz_id}/{mode}",
+              "host": [
+                "{{base_url}}"
+              ],
+              "path": [
+                "dispute",
+                "pending",
+                "{biz_id}",
+                "{mode}"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "Dispute (Resolved)",
+          "request": {
+            "auth": {
+              "type": "bearer",
+              "bearer": [
+                {
+                  "key": "token",
+                  "value": "{{token}}",
+                  "type": "string"
+                }
+              ]
+            },
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "{{base_url}}/dispute/resolved/{biz_id}/{mode}",
+              "host": [
+                "{{base_url}}"
+              ],
+              "path": [
+                "dispute",
+                "resolved",
+                "{biz_id}",
+                "{mode}"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "Dispute Details",
+          "request": {
+            "auth": {
+              "type": "bearer",
+              "bearer": [
+                {
+                  "key": "token",
+                  "value": "{{token}}",
+                  "type": "string"
+                }
+              ]
+            },
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "{{base_url}}/dispute/details/{biz_id}/{id}",
+              "host": [
+                "{{base_url}}"
+              ],
+              "path": [
+                "dispute",
+                "details",
+                "{biz_id}",
+                "{id}"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "Dispute Response",
+          "request": {
+            "auth": {
+              "type": "bearer",
+              "bearer": [
+                {
+                  "key": "token",
+                  "value": "{{token}}",
+                  "type": "string"
+                }
+              ]
+            },
+            "method": "POST",
+            "header": [],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n    \"reply\":\"reject\",\n    \"file\":1\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "{{base_url}}/dispute/response/{biz_id}/{id}",
+              "host": [
+                "{{base_url}}"
+              ],
+              "path": [
+                "dispute",
+                "response",
+                "{biz_id}",
+                "{id}"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "Dispute Filter",
+          "request": {
+            "auth": {
+              "type": "bearer",
+              "bearer": [
+                {
+                  "key": "token",
+                  "value": "{{token}}",
+                  "type": "string"
+                }
+              ]
+            },
+            "method": "POST",
+            "header": [],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n    \"from_date\": \"2022-06-29\",\n    \"to_date\": \"2022-06-30\",\n    \"currency\": \"NGN\",\n    \"status\": \"accepted\",\n    \"limit\": 5\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "{{base_url}}/dispute/filter/{biz_id}/{mode}",
+              "host": [
+                "{{base_url}}"
+              ],
+              "path": [
+                "dispute",
+                "filter",
+                "{biz_id}",
+                "{mode}"
+              ]
+            }
+          },
+          "response": []
+        }
+      ]
+    },
+    {
+      "name": "Bills Payment",
+      "item": [
+        {
+          "name": "Bill Payment",
+          "request": {
+            "auth": {
+              "type": "bearer",
+              "bearer": [
+                {
+                  "key": "token",
+                  "value": "{{token}}",
+                  "type": "string"
+                }
+              ]
+            },
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "{{base_url}}/bill-payment/{biz_id}/{mode}/{service_type}",
+              "host": [
+                "{{base_url}}"
+              ],
+              "path": [
+                "bill-payment",
+                "{biz_id}",
+                "{mode}",
+                "{service_type}"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "Bill Payment Details by Ref",
+          "request": {
+            "auth": {
+              "type": "bearer",
+              "bearer": [
+                {
+                  "key": "token",
+                  "value": "{{token}}",
+                  "type": "string"
+                }
+              ]
+            },
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "{{base_url}}/bill-payment-details/{biz_id}/{mode}/{reference}",
+              "host": [
+                "{{base_url}}"
+              ],
+              "path": [
+                "bill-payment-details",
+                "{biz_id}",
+                "{mode}",
+                "{reference}"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "Bill Payment Stats",
+          "request": {
+            "auth": {
+              "type": "bearer",
+              "bearer": [
+                {
+                  "key": "token",
+                  "value": "{{token}}",
+                  "type": "string"
+                }
+              ]
+            },
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "{{base_url}}/bill-payment/stats/{biz_id}/{mode}/{service_type}",
+              "host": [
+                "{{base_url}}"
+              ],
+              "path": [
+                "bill-payment",
+                "stats",
+                "{biz_id}",
+                "{mode}",
+                "{service_type}"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "Bill Payment Chart",
+          "request": {
+            "auth": {
+              "type": "bearer",
+              "bearer": [
+                {
+                  "key": "token",
+                  "value": "{{token}}",
+                  "type": "string"
+                }
+              ]
+            },
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "{{base_url}}/bill-payment-chart/{biz_id}/{service_type}/{mode}",
+              "host": [
+                "{{base_url}}"
+              ],
+              "path": [
+                "bill-payment-chart",
+                "{biz_id}",
+                "{service_type}",
+                "{mode}"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "Bill Payment Airtime Providers",
+          "request": {
+            "auth": {
+              "type": "bearer",
+              "bearer": [
+                {
+                  "key": "token",
+                  "value": "{{token}}",
+                  "type": "string"
+                }
+              ]
+            },
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "{{base_url}}/bill-payment/airtime/provider",
+              "host": [
+                "{{base_url}}"
+              ],
+              "path": [
+                "bill-payment",
+                "airtime",
+                "provider"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "Bill Payment Filter",
+          "request": {
+            "auth": {
+              "type": "bearer",
+              "bearer": [
+                {
+                  "key": "token",
+                  "value": "{{token}}",
+                  "type": "string"
+                }
+              ]
+            },
+            "method": "POST",
+            "header": [],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n    \"search\": \"\",\n    \"service_type\": \"\",\n    \"from_date\": \"2022-06-29\",\n    \"to_date\": \"2023-09-13\",\n    \"provider\": \"MTN\",\n    \"status\": \"delivered\",\n    \"limit\": 10\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "{{base_url}}/bill-payment/filter/{biz_id}/{mode}",
+              "host": [
+                "{{base_url}}"
+              ],
+              "path": [
+                "bill-payment",
+                "filter",
+                "{biz_id}",
+                "{mode}"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "Bill Payment Buy Airime",
+          "request": {
+            "auth": {
+              "type": "bearer",
+              "bearer": [
+                {
+                  "key": "token",
+                  "value": "{{token}}",
+                  "type": "string"
+                }
+              ]
+            },
+            "method": "POST",
+            "header": [],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n    \"provider\": \"MTN\",\n    \"number\": \"07036218209\",\n    \"amount\": 100,\n    \"auth\": \"182730\"\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "{{base_url}}/bill-payment/buy/airtime/{biz_id}/{mode}",
+              "host": [
+                "{{base_url}}"
+              ],
+              "path": [
+                "bill-payment",
+                "buy",
+                "airtime",
+                "{biz_id}",
+                "{mode}"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "Bill Payment Internet Providers",
+          "request": {
+            "auth": {
+              "type": "bearer",
+              "bearer": [
+                {
+                  "key": "token",
+                  "value": "{{token}}",
+                  "type": "string"
+                }
+              ]
+            },
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "{{base_url}}/bill-payment/internet/provider",
+              "host": [
+                "{{base_url}}"
+              ],
+              "path": [
+                "bill-payment",
+                "internet",
+                "provider"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "Bill Payment Internet Providers Plans (All)",
+          "request": {
+            "auth": {
+              "type": "bearer",
+              "bearer": [
+                {
+                  "key": "token",
+                  "value": "{{token}}",
+                  "type": "string"
+                }
+              ]
+            },
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "{{base_url}}/bill-payment/internet/plans",
+              "host": [
+                "{{base_url}}"
+              ],
+              "path": [
+                "bill-payment",
+                "internet",
+                "plans"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "Bill Payment Internet Providers Plans (by Provider)",
+          "request": {
+            "auth": {
+              "type": "bearer",
+              "bearer": [
+                {
+                  "key": "token",
+                  "value": "{{token}}",
+                  "type": "string"
+                }
+              ]
+            },
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "{{base_url}}/bill-payment/internet/plans/provider/{provider}",
+              "host": [
+                "{{base_url}}"
+              ],
+              "path": [
+                "bill-payment",
+                "internet",
+                "plans",
+                "provider",
+                "{provider}"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "Bill Payment Tv Providers",
+          "request": {
+            "auth": {
+              "type": "bearer",
+              "bearer": [
+                {
+                  "key": "token",
+                  "value": "{{token}}",
+                  "type": "string"
+                }
+              ]
+            },
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "{{base_url}}/bill-payment/tv/provider",
+              "host": [
+                "{{base_url}}"
+              ],
+              "path": [
+                "bill-payment",
+                "tv",
+                "provider"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "Bill Payment Internet Data",
+          "request": {
+            "auth": {
+              "type": "bearer",
+              "bearer": [
+                {
+                  "key": "token",
+                  "value": "{{token}}",
+                  "type": "string"
+                }
+              ]
+            },
+            "method": "POST",
+            "header": [],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n    \"provider\": \"MTN\",\n    \"number\": \"07036218209\",\n    \"plan_id\": 100,\n    \"auth\": \"182730\"\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "{{base_url}}/bill-payment/internet/data/{biz_id}/{mode}",
+              "host": [
+                "{{base_url}}"
+              ],
+              "path": [
+                "bill-payment",
+                "internet",
+                "data",
+                "{biz_id}",
+                "{mode}"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "Bill Payment Tv Providers Packages (All)",
+          "request": {
+            "auth": {
+              "type": "bearer",
+              "bearer": [
+                {
+                  "key": "token",
+                  "value": "{{token}}",
+                  "type": "string"
+                }
+              ]
+            },
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "{{base_url}}/bill-payment/tv/packages",
+              "host": [
+                "{{base_url}}"
+              ],
+              "path": [
+                "bill-payment",
+                "tv",
+                "packages"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "Bill Payment Tv Providers Packages (by Provider)",
+          "request": {
+            "auth": {
+              "type": "bearer",
+              "bearer": [
+                {
+                  "key": "token",
+                  "value": "{{token}}",
+                  "type": "string"
+                }
+              ]
+            },
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "{{base_url}}/bill-payment/tv/packages/provider/{provider}",
+              "host": [
+                "{{base_url}}"
+              ],
+              "path": [
+                "bill-payment",
+                "tv",
+                "packages",
+                "provider",
+                "{provider}"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "Bill Payment Tv Validate",
+          "request": {
+            "auth": {
+              "type": "bearer",
+              "bearer": [
+                {
+                  "key": "token",
+                  "value": "{{token}}",
+                  "type": "string"
+                }
+              ]
+            },
+            "method": "POST",
+            "header": [],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n    \"provider\": \"GOTV\",\n    \"number\": \"2019505346\"\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "{{base_url}}/bill-payment/tv/validate/live",
+              "host": [
+                "{{base_url}}"
+              ],
+              "path": [
+                "bill-payment",
+                "tv",
+                "validate",
+                "live"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "Bill Payment Tv Subscription",
+          "request": {
+            "auth": {
+              "type": "bearer",
+              "bearer": [
+                {
+                  "key": "token",
+                  "value": "{{token}}",
+                  "type": "string"
+                }
+              ]
+            },
+            "method": "POST",
+            "header": [],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n    \"provider\": \"SHOWMAX\",\n    \"number\": \"07036218209\",\n    \"code\": \"full\",\n    \"reference\": \"2024011607580000\",\n    \"auth\": \"182730\"\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "{{base_url}}/bill-payment/tv/pay/{biz_id}/{mode}",
+              "host": [
+                "{{base_url}}"
+              ],
+              "path": [
+                "bill-payment",
+                "tv",
+                "pay",
+                "{biz_id}",
+                "{mode}"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "Bill Payment Electricity Providers",
+          "request": {
+            "auth": {
+              "type": "bearer",
+              "bearer": [
+                {
+                  "key": "token",
+                  "value": "{{token}}",
+                  "type": "string"
+                }
+              ]
+            },
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "{{base_url}}/bill-payment/electricity/provider",
+              "host": [
+                "{{base_url}}"
+              ],
+              "path": [
+                "bill-payment",
+                "electricity",
+                "provider"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "Bill Payment Electricity Validate",
+          "request": {
+            "auth": {
+              "type": "bearer",
+              "bearer": [
+                {
+                  "key": "token",
+                  "value": "{{token}}",
+                  "type": "string"
+                }
+              ]
+            },
+            "method": "POST",
+            "header": [],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n    \"provider\": \"IBEDC\",\n    \"number\": \"0159003278896\",\n    \"type\": \"prepaid\"\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "{{base_url}}/bill-payment/electricity/validate/{mode}",
+              "host": [
+                "{{base_url}}"
+              ],
+              "path": [
+                "bill-payment",
+                "electricity",
+                "validate",
+                "{mode}"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "Bill Payment Electricity Recharge",
+          "request": {
+            "auth": {
+              "type": "bearer",
+              "bearer": [
+                {
+                  "key": "token",
+                  "value": "{{token}}",
+                  "type": "string"
+                }
+              ]
+            },
+            "method": "POST",
+            "header": [],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n    \"provider\": \"IBEDC\",\n    \"number\": \"0159003278896\",\n    \"type\": \"prepaid\",\n    \"amount\": 1000,\n    \"customer_name\": \"IDOWU ADEDOYIN  SUNDAY 3\",\n    \"customer_address\": \"17, IREPODUN STREET, AFUNLEYIN AREA OFF, GENERAL GAS ROADESTATEIBADAN O\",\n    \"reference\": \"2024011608070000\",\n    \"auth\": \"182730\"\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "{{base_url}}/bill-payment/electricity/recharge/{biz_id}/{mode}",
+              "host": [
+                "{{base_url}}"
+              ],
+              "path": [
+                "bill-payment",
+                "electricity",
+                "recharge",
+                "{biz_id}",
+                "{mode}"
+              ]
+            }
+          },
+          "response": []
+        }
+      ]
+    },
+    {
+      "name": "Rolling Reserve",
+      "item": [
+        {
+          "name": "Rolling Reserve",
+          "request": {
+            "auth": {
+              "type": "bearer",
+              "bearer": [
+                {
+                  "key": "token",
+                  "value": "{{token}}",
+                  "type": "string"
+                }
+              ]
+            },
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "{{base_url}}/rolling-reserve/{biz_id}",
+              "host": [
+                "{{base_url}}"
+              ],
+              "path": [
+                "rolling-reserve",
+                "{biz_id}"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "Rolling Reserve (View RS)",
+          "request": {
+            "auth": {
+              "type": "bearer",
+              "bearer": [
+                {
+                  "key": "token",
+                  "value": "{{token}}",
+                  "type": "string"
+                }
+              ]
+            },
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "{{base_url}}/rolling-reserve-details/{biz_id}/{id}",
+              "host": [
+                "{{base_url}}"
+              ],
+              "path": [
+                "rolling-reserve-details",
+                "{biz_id}",
+                "{id}"
+              ]
+            }
+          },
+          "response": []
+        }
+      ]
+    },
+    {
+      "name": "Payment Link",
+      "item": [
+        {
+          "name": "Payment Link",
+          "request": {
+            "auth": {
+              "type": "bearer",
+              "bearer": [
+                {
+                  "key": "token",
+                  "value": "{{token}}",
+                  "type": "string"
+                }
+              ]
+            },
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "{{base_url}}/payment-link/{biz_id}/{mode}",
+              "host": [
+                "{{base_url}}"
+              ],
+              "path": [
+                "payment-link",
+                "{biz_id}",
+                "{mode}"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "Payment Filter",
+          "request": {
+            "auth": {
+              "type": "bearer",
+              "bearer": [
+                {
+                  "key": "token",
+                  "value": "{{token}}",
+                  "type": "string"
+                }
+              ]
+            },
+            "method": "POST",
+            "header": [],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n    \"reference\": \"\",\n    \"email\": \"\",\n    \"from_date\": \"2022-12-01\",\n    \"to_date\": \"2022-12-19\",\n    \"currency\": \"NGN\",\n    \"status\": \"success\",\n    \"limit\": 20\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "{{base_url}}/payment-link-filter/{biz_id}/{mode}",
+              "host": [
+                "{{base_url}}"
+              ],
+              "path": [
+                "payment-link-filter",
+                "{biz_id}",
+                "{mode}"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "Payment Link Create",
+          "request": {
+            "auth": {
+              "type": "bearer",
+              "bearer": [
+                {
+                  "key": "token",
+                  "value": "{{token}}",
+                  "type": "string"
+                }
+              ]
+            },
+            "method": "POST",
+            "header": [],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n    \"name\":\"Tolu Test Link\",\n    \"amount\":\"100\",\n    \"currency\":\"NGN\",\n    \"description\":\"my test link\",\n    \"redirect\":\"https://google.com\",\n    \"split_code\":\"\",\n    \"type\":\"onetime\", // default = onetime if not set, if recurring, interval and times are required\n    \"interval\":\"\", // required if type = recurring\n    \"times\":1, // required if type = recurring\n    \"image\":\"599\",\n    \"custom_url\":\"tolu_test_link\"\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "{{base_url}}/payment-link-create/1037/live",
+              "host": [
+                "{{base_url}}"
+              ],
+              "path": [
+                "payment-link-create",
+                "1037",
+                "live"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "Validate Custom Payment Link Url",
+          "request": {
+            "auth": {
+              "type": "bearer",
+              "bearer": [
+                {
+                  "key": "token",
+                  "value": "{{token}}",
+                  "type": "string"
+                }
+              ]
+            },
+            "method": "POST",
+            "header": [],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n    \"custom_url\":\"\"\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "{{base_url}}/validate-custom-payment-link/{biz_id}/{mode}",
+              "host": [
+                "{{base_url}}"
+              ],
+              "path": [
+                "validate-custom-payment-link",
+                "{biz_id}",
+                "{mode}"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "Payment Link Status",
+          "request": {
+            "auth": {
+              "type": "bearer",
+              "bearer": [
+                {
+                  "key": "token",
+                  "value": "{{token}}",
+                  "type": "string"
+                }
+              ]
+            },
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "{{base_url}}/payment-link-status/{biz_id}/{link_id}",
+              "host": [
+                "{{base_url}}"
+              ],
+              "path": [
+                "payment-link-status",
+                "{biz_id}",
+                "{link_id}"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "Payment Link Delete",
+          "request": {
+            "auth": {
+              "type": "bearer",
+              "bearer": [
+                {
+                  "key": "token",
+                  "value": "{{token}}",
+                  "type": "string"
+                }
+              ]
+            },
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "{{base_url}}/payment-link-delete/{biz_id}/{link_id}",
+              "host": [
+                "{{base_url}}"
+              ],
+              "path": [
+                "payment-link-delete",
+                "{biz_id}",
+                "{link_id}"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "Payment Link Details",
+          "request": {
+            "auth": {
+              "type": "bearer",
+              "bearer": [
+                {
+                  "key": "token",
+                  "value": "{{token}}",
+                  "type": "string"
+                }
+              ]
+            },
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "{{base_url}}/payment-link-details/{biz_id}/{link_id}",
+              "host": [
+                "{{base_url}}"
+              ],
+              "path": [
+                "payment-link-details",
+                "{biz_id}",
+                "{link_id}"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "Payment Request",
+          "request": {
+            "auth": {
+              "type": "bearer",
+              "bearer": [
+                {
+                  "key": "token",
+                  "value": "{{token}}",
+                  "type": "string"
+                }
+              ]
+            },
+            "method": "POST",
+            "header": [],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n    \"recipient\":\"toluxsys@yahoo.ca,07036218209,sam@bud.africa,08161112404\",\n    \"amount\":\"200\",\n    \"currency\":\"NGN\",\n    \"description\":\"Testing Payment Request Night\"\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "{{base_url}}/payment-request/{biz_id}/{mode}",
+              "host": [
+                "{{base_url}}"
+              ],
+              "path": [
+                "payment-request",
+                "{biz_id}",
+                "{mode}"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "Payment Link Update",
+          "request": {
+            "auth": {
+              "type": "bearer",
+              "bearer": [
+                {
+                  "key": "token",
+                  "value": "{{token}}",
+                  "type": "string"
+                }
+              ]
+            },
+            "method": "POST",
+            "header": [],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n    \"name\":\"\",\n    \"amount\":\"200\",\n    \"description\":\"Testing Payment Request Night\",\n    \"redirect\":\"google.com\"\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "{{base_url}}/payment-link-update/{biz_id}/{link_id}",
+              "host": [
+                "{{base_url}}"
+              ],
+              "path": [
+                "payment-link-update",
+                "{biz_id}",
+                "{link_id}"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "Payment Link Tried",
+          "request": {
+            "auth": {
+              "type": "bearer",
+              "bearer": [
+                {
+                  "key": "token",
+                  "value": "{{token}}",
+                  "type": "string"
+                }
+              ]
+            },
+            "method": "POST",
+            "header": [],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n    \"reference\": \"\",\n    \"email\": \"\",\n    \"from_date\": \"2022-12-01\",\n    \"to_date\": \"2022-12-19\",\n    \"currency\": \"NGN\",\n    \"status\": \"success\",\n    \"limit\": 20\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "{{base_url}}/payment-link-try/{biz_id}/{link_id}",
+              "host": [
+                "{{base_url}}"
+              ],
+              "path": [
+                "payment-link-try",
+                "{biz_id}",
+                "{link_id}"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "Payment Link Tried Count",
+          "request": {
+            "auth": {
+              "type": "bearer",
+              "bearer": [
+                {
+                  "key": "token",
+                  "value": "{{token}}",
+                  "type": "string"
+                }
+              ]
+            },
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "{{base_url}}/payment-link-try-count/{biz_id}/{link_id}",
+              "host": [
+                "{{base_url}}"
+              ],
+              "path": [
+                "payment-link-try-count",
+                "{biz_id}",
+                "{link_id}"
+              ]
+            }
+          },
+          "response": []
+        }
+      ]
+    },
+    {
+      "name": "Business",
+      "item": [
+        {
+          "name": "Business Update Auto refund Settings",
+          "request": {
+            "auth": {
+              "type": "bearer",
+              "bearer": [
+                {
+                  "key": "token",
+                  "value": "{{token}}",
+                  "type": "string"
+                }
+              ]
+            },
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "{{base_url}}/business-update-auto-refund/{biz_id}/{mode}/{status}",
+              "host": [
+                "{{base_url}}"
+              ],
+              "path": [
+                "business-update-auto-refund",
+                "{biz_id}",
+                "{mode}",
+                "{status}"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "Account Profile Update",
+          "request": {
+            "auth": {
+              "type": "bearer",
+              "bearer": [
+                {
+                  "key": "token",
+                  "value": "{{token}}",
+                  "type": "string"
+                }
+              ]
+            },
+            "method": "POST",
+            "header": [],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n    \"firstname\":\"\",\n    \"lastname\":\"\",\n    \"home_address\":\"\",\n    \"image\":\"\"\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "{{base_url}}/account-profile-update",
+              "host": [
+                "{{base_url}}"
+              ],
+              "path": [
+                "account-profile-update"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "Business Details Update",
+          "request": {
+            "auth": {
+              "type": "bearer",
+              "bearer": [
+                {
+                  "key": "token",
+                  "value": "{{token}}",
+                  "type": "string"
+                }
+              ]
+            },
+            "method": "POST",
+            "header": [],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n    \"support_email\":\"\",\n    \"support_phone\":\"\",\n    \"chargeback_email\":\"\"\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "{{base_url}}/business-details-update/{biz_id}",
+              "host": [
+                "{{base_url}}"
+              ],
+              "path": [
+                "business-details-update",
+                "{biz_id}"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "Business Notification Preference Update",
+          "request": {
+            "auth": {
+              "type": "bearer",
+              "bearer": [
+                {
+                  "key": "token",
+                  "value": "{{token}}",
+                  "type": "string"
+                }
+              ]
+            },
+            "method": "POST",
+            "header": [],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n    \"bc_notify\":true,\n    \"cc_notify\":false,\n    \"bp_notify\":false,\n    \"cp_notify\":true\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "{{base_url}}/business-notification-preference-update/{biz_id}",
+              "host": [
+                "{{base_url}}"
+              ],
+              "path": [
+                "business-notification-preference-update",
+                "{biz_id}"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "Business Settlement Bank Filter",
+          "request": {
+            "auth": {
+              "type": "bearer",
+              "bearer": [
+                {
+                  "key": "token",
+                  "value": "{{token}}",
+                  "type": "string"
+                }
+              ]
+            },
+            "method": "POST",
+            "header": [],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n    \"from_date\":\"\",\n    \"to_date\":\"\",\n    \"currency\":\"\",\n    \"account_name\":\"\",\n    \"account_type\":\"\",\n    \"bank_code\":\"\",\n    \"status\":\"\"\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "{{base_url}}/business-settlement-account/{biz_id}",
+              "host": [
+                "{{base_url}}"
+              ],
+              "path": [
+                "business-settlement-account",
+                "{biz_id}"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "Business Add Settlement Bank Account",
+          "request": {
+            "auth": {
+              "type": "bearer",
+              "bearer": [
+                {
+                  "key": "token",
+                  "value": "{{token}}",
+                  "type": "string"
+                }
+              ]
+            },
+            "method": "POST",
+            "header": [],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n    \"account_name\":\"\",\n    \"account_number\":\"\",\n    \"bank_code\":\"\",\n    \"bank_name\":\"\",\n    \"currency\":\"\",\n    \"account_type\":\"\",\n    \"make_primary\":\"\" // if provided and = YES, would be primary account, else = NO\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "{{base_url}}/business-add-settlement-account/{biz_id}",
+              "host": [
+                "{{base_url}}"
+              ],
+              "path": [
+                "business-add-settlement-account",
+                "{biz_id}"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "Business Edit Settlement Bank Account",
+          "request": {
+            "auth": {
+              "type": "bearer",
+              "bearer": [
+                {
+                  "key": "token",
+                  "value": "{{token}}",
+                  "type": "string"
+                }
+              ]
+            },
+            "method": "POST",
+            "header": [],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n    \"account_name\":\"\",\n    \"account_number\":\"\",\n    \"bank_code\":\"\",\n    \"bank_name\":\"\",\n    \"currency\":\"\",\n    \"account_type\":\"\",\n    \"make_primary\":\"\"\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "{{base_url}}/business-edit-settlement-account/{biz_id}/{account_id}",
+              "host": [
+                "{{base_url}}"
+              ],
+              "path": [
+                "business-edit-settlement-account",
+                "{biz_id}",
+                "{account_id}"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "Business Set Primary Settlement Account",
+          "request": {
+            "auth": {
+              "type": "bearer",
+              "bearer": [
+                {
+                  "key": "token",
+                  "value": "{{token}}",
+                  "type": "string"
+                }
+              ]
+            },
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "{{base_url}}/business-set-primary-settlement-account/{biz_id}/{account_id}",
+              "host": [
+                "{{base_url}}"
+              ],
+              "path": [
+                "business-set-primary-settlement-account",
+                "{biz_id}",
+                "{account_id}"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "Business Delete Settlement Account",
+          "request": {
+            "auth": {
+              "type": "bearer",
+              "bearer": [
+                {
+                  "key": "token",
+                  "value": "{{token}}",
+                  "type": "string"
+                }
+              ]
+            },
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "{{base_url}}/business-delete-settlement-account/{biz_id}/{account_id}",
+              "host": [
+                "{{base_url}}"
+              ],
+              "path": [
+                "business-delete-settlement-account",
+                "{biz_id}",
+                "{account_id}"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "Business IP whitelisting",
+          "request": {
+            "auth": {
+              "type": "bearer",
+              "bearer": [
+                {
+                  "key": "token",
+                  "value": "{{token}}",
+                  "type": "string"
+                }
+              ]
+            },
+            "method": "POST",
+            "header": [],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n    \"ip\":\"\" // separate IPs with comma\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "{{base_url}}/business-ip-whitelisting/{biz_id}",
+              "host": [
+                "{{base_url}}"
+              ],
+              "path": [
+                "business-ip-whitelisting",
+                "{biz_id}"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "Business Generate Key",
+          "request": {
+            "auth": {
+              "type": "bearer",
+              "bearer": [
+                {
+                  "key": "token",
+                  "value": "{{token}}",
+                  "type": "string"
+                }
+              ]
+            },
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "{{base_url}}/generate-key/{biz_id}",
+              "host": [
+                "{{base_url}}"
+              ],
+              "path": [
+                "generate-key",
+                "{biz_id}"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "Business Webhook Callback FeeBearer Update",
+          "request": {
+            "auth": {
+              "type": "bearer",
+              "bearer": [
+                {
+                  "key": "token",
+                  "value": "{{token}}",
+                  "type": "string"
+                }
+              ]
+            },
+            "method": "POST",
+            "header": [],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n    \"test_callback_url\":\"\",\n    \"test_webhook_url\":\"\",\n    \"live_callback_url\":\"\",\n    \"live_webhook_url\":\"\",\n    \"feeBearer\":0\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "{{base_url}}/api-hook-callback/{biz_id}",
+              "host": [
+                "{{base_url}}"
+              ],
+              "path": [
+                "api-hook-callback",
+                "{biz_id}"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "Business Logo Upload",
+          "request": {
+            "auth": {
+              "type": "bearer",
+              "bearer": [
+                {
+                  "key": "token",
+                  "value": "{{token}}",
+                  "type": "string"
+                }
+              ]
+            },
+            "method": "POST",
+            "header": [],
+            "body": {
+              "mode": "formdata",
+              "formdata": [
+                {
+                  "key": "image",
+                  "type": "file",
+                  "value": null
+                }
+              ]
+            },
+            "url": {
+              "raw": "{{base_url}}/business-logo-upload/{biz_id}",
+              "host": [
+                "{{base_url}}"
+              ],
+              "path": [
+                "business-logo-upload",
+                "{biz_id}"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "Account Change Password",
+          "request": {
+            "auth": {
+              "type": "bearer",
+              "bearer": [
+                {
+                  "key": "token",
+                  "value": "{{token}}",
+                  "type": "string"
+                }
+              ]
+            },
+            "method": "POST",
+            "header": [],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n    \"current_password\":\"\",\n    \"password\":\"\",\n    \"confirm_password\":\"\"\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "{{base_url}}/account-password-update",
+              "host": [
+                "{{base_url}}"
+              ],
+              "path": [
+                "account-password-update"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "Account Change Trans Pin",
+          "request": {
+            "auth": {
+              "type": "bearer",
+              "bearer": [
+                {
+                  "key": "token",
+                  "value": "{{token}}",
+                  "type": "string"
+                }
+              ]
+            },
+            "method": "POST",
+            "header": [],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n    \"current_pin\":\"\",\n    \"pin\":\"\"\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "{{base_url}}/business-change-trans-pin/{biz_id}",
+              "host": [
+                "{{base_url}}"
+              ],
+              "path": [
+                "business-change-trans-pin",
+                "{biz_id}"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "Business Payment Method Update (disable)",
+          "request": {
+            "auth": {
+              "type": "bearer",
+              "bearer": [
+                {
+                  "key": "token",
+                  "value": "{{token}}",
+                  "type": "string"
+                }
+              ]
+            },
+            "method": "POST",
+            "header": [],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n    \"paymentMethod\":\"card|transfer|ussd|momo\"\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "{{base_url}}/business-payment-method/{biz_id}",
+              "host": [
+                "{{base_url}}"
+              ],
+              "path": [
+                "business-payment-method",
+                "{biz_id}"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "Business Permissions",
+          "request": {
+            "auth": {
+              "type": "bearer",
+              "bearer": [
+                {
+                  "key": "token",
+                  "value": "{{token}}",
+                  "type": "string"
+                }
+              ]
+            },
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "{{base_url}}/business-permissions",
+              "host": [
+                "{{base_url}}"
+              ],
+              "path": [
+                "business-permissions"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "Business Roles",
+          "request": {
+            "auth": {
+              "type": "bearer",
+              "bearer": [
+                {
+                  "key": "token",
+                  "value": "{{token}}",
+                  "type": "string"
+                }
+              ]
+            },
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "{{base_url}}/business-roles/{biz_id}",
+              "host": [
+                "{{base_url}}"
+              ],
+              "path": [
+                "business-roles",
+                "{biz_id}"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "Business Roles Create",
+          "request": {
+            "auth": {
+              "type": "bearer",
+              "bearer": [
+                {
+                  "key": "token",
+                  "value": "{{token}}",
+                  "type": "string"
+                }
+              ]
+            },
+            "method": "POST",
+            "header": [],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n    \"name\":\"Account Manager\",\n    \"permissions\": \"2|3|4\"\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "{{base_url}}/business-create-role/{biz_id}",
+              "host": [
+                "{{base_url}}"
+              ],
+              "path": [
+                "business-create-role",
+                "{biz_id}"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "Business Roles Update",
+          "request": {
+            "auth": {
+              "type": "bearer",
+              "bearer": [
+                {
+                  "key": "token",
+                  "value": "{{token}}",
+                  "type": "string"
+                }
+              ]
+            },
+            "method": "POST",
+            "header": [],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n    \"name\":\"Account Manager\",\n    \"permissions\": \"2|3|4\"\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "{{base_url}}/business-update-role/{biz_id}/{role_id}",
+              "host": [
+                "{{base_url}}"
+              ],
+              "path": [
+                "business-update-role",
+                "{biz_id}",
+                "{role_id}"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "Business Team Member Status Update",
+          "request": {
+            "auth": {
+              "type": "bearer",
+              "bearer": [
+                {
+                  "key": "token",
+                  "value": "{{token}}",
+                  "type": "string"
+                }
+              ]
+            },
+            "method": "POST",
+            "header": [],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n    \"merchant_id\":25,\n    \"role_id\": 1,\n    \"status\": \"active\" // can only be active or inactive, anything else will return 401\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "{{base_url}}/business-team-member-status/{biz_id}",
+              "host": [
+                "{{base_url}}"
+              ],
+              "path": [
+                "business-team-member-status",
+                "{biz_id}"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "Business Invite Team Member",
+          "request": {
+            "auth": {
+              "type": "bearer",
+              "bearer": [
+                {
+                  "key": "token",
+                  "value": "{{token}}",
+                  "type": "string"
+                }
+              ]
+            },
+            "method": "POST",
+            "header": [],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n    \"email\":\"toluxsys@gmail.com\",\n    \"role_id\": 47\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "{{base_url}}/business-invite-team-member/{biz_id}",
+              "host": [
+                "{{base_url}}"
+              ],
+              "path": [
+                "business-invite-team-member",
+                "{biz_id}"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "Business Delete Team Member",
+          "request": {
+            "auth": {
+              "type": "bearer",
+              "bearer": [
+                {
+                  "key": "token",
+                  "value": "{{token}}",
+                  "type": "string"
+                }
+              ]
+            },
+            "method": "POST",
+            "header": [],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n    \"merchant_id\":25,\n    \"role_id\": 1\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "{{base_url}}/business-delete-team-member/{biz_id}",
+              "host": [
+                "{{base_url}}"
+              ],
+              "path": [
+                "business-delete-team-member",
+                "{biz_id}"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "Business Team",
+          "request": {
+            "auth": {
+              "type": "bearer",
+              "bearer": [
+                {
+                  "key": "token",
+                  "value": "{{token}}",
+                  "type": "string"
+                }
+              ]
+            },
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "{{base_url}}/business-team/{biz_id}",
+              "host": [
+                "{{base_url}}"
+              ],
+              "path": [
+                "business-team",
+                "{biz_id}"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "Business Callback Auto Redirect Setting",
+          "request": {
+            "auth": {
+              "type": "bearer",
+              "bearer": [
+                {
+                  "key": "token",
+                  "value": "{{token}}",
+                  "type": "string"
+                }
+              ]
+            },
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "{{base_url}}/checkout-auto-redirect/{biz_id}/{status}",
+              "host": [
+                "{{base_url}}"
+              ],
+              "path": [
+                "checkout-auto-redirect",
+                "{biz_id}",
+                "{status}"
+              ]
+            }
+          },
+          "response": []
+        }
+      ]
+    },
+    {
+      "name": "Test Webhook",
+      "request": {
+        "auth": {
+          "type": "bearer",
+          "bearer": [
+            {
+              "key": "token",
+              "value": "ejUB3mPGZQ67ln8z657yuihjbnhgftui789iokl87uijk45r",
+              "type": "string"
+            }
+          ]
+        },
+        "method": "POST",
+        "header": [],
+        "body": {
+          "mode": "raw",
+          "raw": "{\n    \"originatoraccountnumber\": \"7036218209\",\n    \"amount\": \"5000\",\n    \"originatorname\": \"Tolulope Oyeniyi\",\n    \"narration\": \"Enjoy your day\",\n    \"craccountname\": \"Rowland Test Enterprise\",\n    \"paymentreference\": \"202401251802550000\",\n    \"bankname\": \"Opay\",\n    \"sessionid\": \"100004202401251802550000100004\",\n    \"craccount\": \"8028926498\",\n    \"bankcode\": \"100004\"\n}",
+          "options": {
+            "raw": {
+              "language": "json"
+            }
+          }
+        },
+        "url": {
+          "raw": "https://3tv.budpay.com/api/webhook/wema-vnuban",
+          "protocol": "https",
+          "host": [
+            "3tv",
+            "budpay",
+            "com"
+          ],
+          "path": [
+            "api",
+            "webhook",
+            "wema-vnuban"
+          ]
+        }
+      },
+      "response": []
+    }
+  ],
+  "event": [
+    {
+      "listen": "prerequest",
+      "script": {
+        "type": "text/javascript",
+        "exec": [
+          ""
+        ]
+      }
+    },
+    {
+      "listen": "test",
+      "script": {
+        "type": "text/javascript",
+        "exec": [
+          ""
+        ]
+      }
+    }
+  ],
+  "variable": [
+    {
+      "key": "token",
+      "value": "409|47X16b8hgay6PmRF4v7ByUVoAMLvcY4RXX2qNZi0",
+      "type": "string"
+    },
+    {
+      "key": "base_url",
+      "value": "https://backendapi.sayswitchgroup.com/api/msw",
+      "type": "string"
+    }
+  ]
+}
