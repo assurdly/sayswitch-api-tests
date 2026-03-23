@@ -1,0 +1,6 @@
+{
+    "provider": "MTN",
+    "number": "07036218209",
+    "amount": 100,
+    "auth": "123456"
+}
