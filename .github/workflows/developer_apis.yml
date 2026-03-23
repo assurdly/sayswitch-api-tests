@@ -4,6 +4,8 @@ on:
   push:
     branches:
       - main
+    paths:
+      - postman_collections/developer_apis.json
   schedule:
     - cron: '0 18 * * 4' # Runs every Wednesday by 6pm
     - cron: '0 18 * * 5' # Runs every Friday by 6pm
