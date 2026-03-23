@@ -1,0 +1,11 @@
+{
+    "Server": "nginx/1.24.0 (Ubuntu)",
+    "Date": "Mon, 23 Mar 2026 15:12:03 GMT",
+    "Content-Type": "application/json",
+    "Transfer-Encoding": "chunked",
+    "Connection": "keep-alive",
+    "Cache-Control": "private, must-revalidate",
+    "pragma": "no-cache",
+    "expires": "-1",
+    "Access-Control-Allow-Origin": "*"
+}
