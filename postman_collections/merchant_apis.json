@@ -23693,7 +23693,7 @@
           "}",
           "",
           "// ===== LOGIN ISSUE CHECK =====",
-          "pm.test(\"Response should not contain login error for valid requests\", function () {",
+          "pm.test(\"Response should not contain login error for valid requests.\", function () {",
           "    const res = pm.response.text().toLowerCase();",
           "    if (pm.response.code === 200) {",
           "        pm.expect(res).to.not.include(\"login required\");",
