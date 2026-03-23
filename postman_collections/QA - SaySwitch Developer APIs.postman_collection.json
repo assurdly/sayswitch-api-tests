@@ -1,0 +1,1651 @@
+{
+  "info": {
+    "_postman_id": "fdbe2f04-e41f-42e5-9831-d095cf4d6611",
+    "name": "QA - SaySwitch Developer APIs",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+    "_exporter_id": "53072195",
+    "_collection_link": "https://go.postman.co/collection/53072195-fdbe2f04-e41f-42e5-9831-d095cf4d6611?source=collection_link"
+  },
+  "item": [
+    {
+      "name": "Standard Checkout",
+      "item": [
+        {
+          "name": "Initiate Transaction",
+          "request": {
+            "method": "POST",
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              },
+              {
+                "key": "Authorization",
+                "value": "Bearer sk_test_muyba6nqhdseeerlnoszko4zw6gt4phzvhy0dka"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n    \"email\": \"test@gmail.com\",\n    \"amount\": \"10\",\n    \"callback\": \"https://google.com\",\n    \"currency\": \"NGN\"\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "https://backendapi.sayswitchgroup.com/api/v1/transaction/initialize",
+              "protocol": "https",
+              "host": [
+                "backendapi",
+                "sayswitchgroup",
+                "com"
+              ],
+              "path": [
+                "api",
+                "v1",
+                "transaction",
+                "initialize"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "Verify Transaction",
+          "request": {
+            "method": "GET",
+            "header": [
+              {
+                "key": "Authorization",
+                "value": "Bearer YOUR_SECRET_KEY"
+              }
+            ],
+            "url": {
+              "raw": "https://backendapi.sayswitchgroup.com/api/v1/:your_referenceId",
+              "protocol": "https",
+              "host": [
+                "backendapi",
+                "sayswitchgroup",
+                "com"
+              ],
+              "path": [
+                "api",
+                "v1",
+                ":your_referenceId"
+              ],
+              "variable": [
+                {
+                  "key": "your_referenceId",
+                  "value": ""
+                }
+              ]
+            }
+          },
+          "response": []
+        }
+      ]
+    },
+    {
+      "name": "Server to Server",
+      "item": [
+        {
+          "name": "Card",
+          "item": [
+            {
+              "name": "Encrypt Card Details",
+              "request": {
+                "method": "POST",
+                "header": [
+                  {
+                    "key": "Content-Type",
+                    "value": "application/json"
+                  },
+                  {
+                    "key": "Authorization",
+                    "value": "Bearer REMOVED_SECRET"
+                  }
+                ],
+                "body": {
+                  "mode": "raw",
+                  "raw": "{\n    \"data\": {\n        \"number\": \"5204730000002449\",\n        \"expiryMonth\": \"12\",\n        \"expiryYear\": \"35\",\n        \"cvv\": \"244\",\n        \"PIN\": \"1234\" // This is meant for NGN only and not required for USD, GBP, and EURO\n    },\n    \"reference\": \"865436543308888877527544pw6\"\n}",
+                  "options": {
+                    "raw": {
+                      "language": "json"
+                    }
+                  }
+                },
+                "url": {
+                  "raw": "https://backendapi.sayswitchgroup.com/api/s2s/test/encryption",
+                  "protocol": "https",
+                  "host": [
+                    "backendapi",
+                    "sayswitchgroup",
+                    "com"
+                  ],
+                  "path": [
+                    "api",
+                    "s2s",
+                    "test",
+                    "encryption"
+                  ]
+                }
+              },
+              "response": []
+            },
+            {
+              "name": "Initialize Payment",
+              "request": {
+                "method": "POST",
+                "header": [
+                  {
+                    "key": "Content-Type",
+                    "value": "application/json"
+                  },
+                  {
+                    "key": "Authorization",
+                    "value": "Bearer REMOVED_SECRET"
+                  }
+                ],
+                "body": {
+                  "mode": "raw",
+                  "raw": "{\n    \"amount\": \"1\",\n    \"card\": \"61e2eaa450602e592ce3f5733a15e1b907588060fd15cab502bf7669b88e9486fd46787bde8d9e9a05c168fa12748218d7a8d0a04e4533084a5734e5b3e9963d2c3a34b47a8cd894ec05947eaa1feab4\",\n    \"currency\": \"USD\",\n    \"email\": \"akinlabisamson15@gmail.com\",\n    \"reference\": \"865436543308888877527544pw6\"\n}",
+                  "options": {
+                    "raw": {
+                      "language": "json"
+                    }
+                  }
+                },
+                "url": {
+                  "raw": "https://backendapi.sayswitchgroup.com/api/s2s/transaction/initialize",
+                  "protocol": "https",
+                  "host": [
+                    "backendapi",
+                    "sayswitchgroup",
+                    "com"
+                  ],
+                  "path": [
+                    "api",
+                    "s2s",
+                    "transaction",
+                    "initialize"
+                  ]
+                }
+              },
+              "response": []
+            },
+            {
+              "name": "Trigger 3DS2 Authentication",
+              "request": {
+                "method": "POST",
+                "header": [
+                  {
+                    "key": "Content-Type",
+                    "value": "application/json"
+                  },
+                  {
+                    "key": "Authorization",
+                    "value": "Bearer REMOVED_SECRET"
+                  }
+                ],
+                "body": {
+                  "mode": "raw",
+                  "raw": "{\n\"ref\":\"865436543308888877527544pw6\"\n}",
+                  "options": {
+                    "raw": {
+                      "language": "json"
+                    }
+                  }
+                },
+                "url": {
+                  "raw": "https://backendapi.sayswitchgroup.com/api/mrtyui876578a/3ds2auth",
+                  "protocol": "https",
+                  "host": [
+                    "backendapi",
+                    "sayswitchgroup",
+                    "com"
+                  ],
+                  "path": [
+                    "api",
+                    "mrtyui876578a",
+                    "3ds2auth"
+                  ]
+                }
+              },
+              "response": []
+            }
+          ]
+        },
+        {
+          "name": "Bank Transfer",
+          "item": [
+            {
+              "name": "Initiate Bank Transfer",
+              "request": {
+                "method": "POST",
+                "header": [
+                  {
+                    "key": "Content-Type",
+                    "value": "application/json"
+                  }
+                ],
+                "body": {
+                  "mode": "raw",
+                  "raw": "{\n   \"email\": \"johndoe@gmail.com\",\n   \"amount\": \"100\",\n   \"currency\": \"NGN\",\n   \"reference\": \"895362787365996276345987\"\n}",
+                  "options": {
+                    "raw": {
+                      "language": "json"
+                    }
+                  }
+                },
+                "url": {
+                  "raw": "https://backendapi.sayswitchgroup.com/api/s2s/banktransfer/initialize",
+                  "protocol": "https",
+                  "host": [
+                    "backendapi",
+                    "sayswitchgroup",
+                    "com"
+                  ],
+                  "path": [
+                    "api",
+                    "s2s",
+                    "banktransfer",
+                    "initialize"
+                  ]
+                }
+              },
+              "response": []
+            },
+            {
+              "name": "Verify Transaction",
+              "request": {
+                "method": "GET",
+                "header": [
+                  {
+                    "key": "Authorization",
+                    "value": "Bearer YOUR_SECRET_KEY"
+                  }
+                ],
+                "url": {
+                  "raw": "https://backendapi.sayswitchgroup.com/api/v1/SSW_17482573443162479",
+                  "protocol": "https",
+                  "host": [
+                    "backendapi",
+                    "sayswitchgroup",
+                    "com"
+                  ],
+                  "path": [
+                    "api",
+                    "v1",
+                    "SSW_17482573443162479"
+                  ]
+                }
+              },
+              "response": []
+            }
+          ]
+        },
+        {
+          "name": "USSD Payment",
+          "item": [
+            {
+              "name": "Get USSD Bank list",
+              "request": {
+                "method": "GET",
+                "header": [],
+                "url": {
+                  "raw": "https://backendapi.sayswitchgroup.com/api/s2s/v1/ussd/list/live",
+                  "protocol": "https",
+                  "host": [
+                    "backendapi",
+                    "sayswitchgroup",
+                    "com"
+                  ],
+                  "path": [
+                    "api",
+                    "s2s",
+                    "v1",
+                    "ussd",
+                    "list",
+                    "live"
+                  ]
+                }
+              },
+              "response": []
+            },
+            {
+              "name": "Initialize USSD Payment",
+              "request": {
+                "method": "POST",
+                "header": [
+                  {
+                    "key": "Content-Type",
+                    "value": "application/json"
+                  }
+                ],
+                "body": {
+                  "mode": "raw",
+                  "raw": "{\n   \"email\": \"test@email.com\",\n   \"amount\": \"100\",\n   \"currency\": \"NGN\",\n   \"reference\": \"2345673627589602112\",\n   \"bankCode\": \"GTB\"\n}",
+                  "options": {
+                    "raw": {
+                      "language": "json"
+                    }
+                  }
+                },
+                "url": {
+                  "raw": "https://backendapi.sayswitchgroup.com/api/s2s/v1/ussd/initialize",
+                  "protocol": "https",
+                  "host": [
+                    "backendapi",
+                    "sayswitchgroup",
+                    "com"
+                  ],
+                  "path": [
+                    "api",
+                    "s2s",
+                    "v1",
+                    "ussd",
+                    "initialize"
+                  ]
+                }
+              },
+              "response": []
+            },
+            {
+              "name": "Verify transaction",
+              "request": {
+                "method": "POST",
+                "header": [
+                  {
+                    "key": "Content-Type",
+                    "value": "application/json"
+                  }
+                ],
+                "body": {
+                  "mode": "raw",
+                  "raw": "{\n   \"reference\": \"968573627589609378\"\n}",
+                  "options": {
+                    "raw": {
+                      "language": "json"
+                    }
+                  }
+                },
+                "url": {
+                  "raw": "{{baseurl}}/ussd/verify",
+                  "host": [
+                    "{{baseurl}}"
+                  ],
+                  "path": [
+                    "ussd",
+                    "verify"
+                  ]
+                }
+              },
+              "response": []
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Transactions",
+      "item": [
+        {
+          "name": "Fetch Transaction Details",
+          "request": {
+            "method": "GET",
+            "header": [
+              {
+                "key": "Authorization",
+                "value": "Bearer YOUR_SECRET_KEY"
+              }
+            ],
+            "url": {
+              "raw": "https://backendapi.sayswitchgroup.com/api/v1/transaction/2280",
+              "protocol": "https",
+              "host": [
+                "backendapi",
+                "sayswitchgroup",
+                "com"
+              ],
+              "path": [
+                "api",
+                "v1",
+                "transaction",
+                "2280"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "Get Transaction by Reference",
+          "request": {
+            "method": "GET",
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              },
+              {
+                "key": "Authorization",
+                "value": "Bearer YOUR_SECRET_KEY"
+              }
+            ],
+            "url": {
+              "raw": "https://backendapi.sayswitchgroup.com/api/v1/transaction/verify/TEST_TXN_REF_001",
+              "protocol": "https",
+              "host": [
+                "backendapi",
+                "sayswitchgroup",
+                "com"
+              ],
+              "path": [
+                "api",
+                "v1",
+                "transaction",
+                "verify",
+                "TEST_TXN_REF_001"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "Transaction Timeline",
+          "request": {
+            "method": "GET",
+            "header": [
+              {
+                "key": "Authorization",
+                "value": "Bearer `YOUR_SECRET_KEY`"
+              }
+            ],
+            "url": {
+              "raw": "https://backendapi.sayswitchgroup.com/api/v1/transaction/timeline/SSW_17471703346211972",
+              "protocol": "https",
+              "host": [
+                "backendapi",
+                "sayswitchgroup",
+                "com"
+              ],
+              "path": [
+                "api",
+                "v1",
+                "transaction",
+                "timeline",
+                "SSW_17471703346211972"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "Get Total Transactions",
+          "request": {
+            "method": "GET",
+            "header": [
+              {
+                "key": "Authorization",
+                "value": "Bearer YOUR_SECRET_KEY"
+              }
+            ],
+            "url": {
+              "raw": "https://backendapi.sayswitchgroup.com/api/v1/transactions/totals",
+              "protocol": "https",
+              "host": [
+                "backendapi",
+                "sayswitchgroup",
+                "com"
+              ],
+              "path": [
+                "api",
+                "v1",
+                "transactions",
+                "totals"
+              ]
+            }
+          },
+          "response": []
+        }
+      ]
+    },
+    {
+      "name": "Payouts",
+      "item": [
+        {
+          "name": "Get Bank List",
+          "request": {
+            "method": "GET",
+            "header": [
+              {
+                "key": "Authorization",
+                "value": "Bearer YOUR_SECRET_KEY"
+              }
+            ],
+            "url": {
+              "raw": "https://backendapi.sayswitchgroup.com/api/v1/bank_list",
+              "protocol": "https",
+              "host": [
+                "backendapi",
+                "sayswitchgroup",
+                "com"
+              ],
+              "path": [
+                "api",
+                "v1",
+                "bank_list"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "Account Name Verification",
+          "request": {
+            "method": "POST",
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              },
+              {
+                "key": "Authorization",
+                "value": "Bearer YOUR_ACCESS_TOKEN"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n    \"bank_code\": \"100004\",\n    \"account_number\": \"7036218209\",\n    \"currency\": \"NGN\"\n  }",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "https://backendapi.sayswitchgroup.com/api/v1/account_name_verify",
+              "protocol": "https",
+              "host": [
+                "backendapi",
+                "sayswitchgroup",
+                "com"
+              ],
+              "path": [
+                "api",
+                "v1",
+                "account_name_verify"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "Initiate Bulk Payout",
+          "request": {
+            "method": "POST",
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              },
+              {
+                "key": "Authorization",
+                "value": "Bearer YOUR_SECRET_KEY"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n    \"currency\": \"NGN\",\n    \"transfers\": [\n        {\n            \"amount\": \"200\",\n            \"bank_code\": \"000013\",\n            \"bank_name\": \"GUARANTY TRUST BANK\",\n            \"account_number\": \"1234567890\",\n            \"narration\": \"January Salary\"\n        },\n        {\n            \"amount\": \"100\",\n            \"bank_code\": \"000013\",\n            \"bank_name\": \"GUARANTY TRUST BANK\",\n            \"account_number\": \"1234567890\",\n            \"narration\": \"February Salary\"\n        }\n    ]\n  }",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "https://backendapi.sayswitchgroup.com/api/v1/bulk_bank_transfer",
+              "protocol": "https",
+              "host": [
+                "backendapi",
+                "sayswitchgroup",
+                "com"
+              ],
+              "path": [
+                "api",
+                "v1",
+                "bulk_bank_transfer"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "Initiate payout",
+          "request": {
+            "method": "POST",
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              },
+              {
+                "key": "Authorization",
+                "value": "Bearer YOUR_SECRET_KEY"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n        \"account_name\": \"John Doe\",\n        \"account_number\": \"1234567890\",\n        \"amount\": \"100\",\n        \"bank_code\": \"100004\",\n        \"bank_name\": \"OPAY\",\n        \"currency\": \"NGN\",\n        \"narration\": \"Test transfer\",\n        \"reference\": \"2024031404929202020\"\n    }",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "https://backendapi.sayswitchgroup.com/api/v1/bank_transfer",
+              "protocol": "https",
+              "host": [
+                "backendapi",
+                "sayswitchgroup",
+                "com"
+              ],
+              "path": [
+                "api",
+                "v1",
+                "bank_transfer"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "Get Payouts",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "GET https://backendapi.sayswitchgroup.com/api/v1/payout",
+              "protocol": "GET https",
+              "host": [
+                "backendapi",
+                "sayswitchgroup",
+                "com"
+              ],
+              "path": [
+                "api",
+                "v1",
+                "payout"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "Get PayoutDetails",
+          "request": {
+            "method": "GET",
+            "header": [
+              {
+                "key": "Authorization",
+                "value": "Bearer YOUR_SECRET_KEY"
+              }
+            ],
+            "url": {
+              "raw": "https://backendapi.sayswitchgroup.com/api/v1/payout/SSW_trf_m47f3023693d6d",
+              "protocol": "https",
+              "host": [
+                "backendapi",
+                "sayswitchgroup",
+                "com"
+              ],
+              "path": [
+                "api",
+                "v1",
+                "payout",
+                "SSW_trf_m47f3023693d6d"
+              ]
+            }
+          },
+          "response": []
+        }
+      ]
+    },
+    {
+      "name": "Wallets",
+      "item": [
+        {
+          "name": "Get Wallet Balance",
+          "request": {
+            "method": "GET",
+            "header": [
+              {
+                "key": "Authorization",
+                "value": "Bearer YOUR_SECRET_KEY"
+              }
+            ],
+            "url": {
+              "raw": "https://backendapi.sayswitchgroup.com/api/v1wallet_balance/NGN",
+              "protocol": "https",
+              "host": [
+                "backendapi",
+                "sayswitchgroup",
+                "com"
+              ],
+              "path": [
+                "api",
+                "v1wallet_balance",
+                "NGN"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "View Wallet Transaction",
+          "request": {
+            "method": "GET",
+            "header": [
+              {
+                "key": "Authorization",
+                "value": "Bearer YOUR_SECRET_KEY"
+              }
+            ],
+            "url": {
+              "raw": "https://backendapi.sayswitchgroup.com/api/v1/wallet_transactions/NGN",
+              "protocol": "https",
+              "host": [
+                "backendapi",
+                "sayswitchgroup",
+                "com"
+              ],
+              "path": [
+                "api",
+                "v1",
+                "wallet_transactions",
+                "NGN"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "Get Settlment",
+          "request": {
+            "method": "GET",
+            "header": [
+              {
+                "key": "Authorization",
+                "value": "Bearer YOUR_SECRET_KEY"
+              }
+            ],
+            "url": {
+              "raw": "https://backendapi.sayswitchgroup.com/api/v1/settlement",
+              "protocol": "https",
+              "host": [
+                "backendapi",
+                "sayswitchgroup",
+                "com"
+              ],
+              "path": [
+                "api",
+                "v1",
+                "settlement"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "Get Settlement Details",
+          "request": {
+            "method": "GET",
+            "header": [
+              {
+                "key": "Authorization",
+                "value": "Bearer YOUR_SECRET_KEY"
+              }
+            ],
+            "url": {
+              "raw": "https://backendapi.sayswitchgroup.com/api/v1/settlement/details/1919376216134",
+              "protocol": "https",
+              "host": [
+                "backendapi",
+                "sayswitchgroup",
+                "com"
+              ],
+              "path": [
+                "api",
+                "v1",
+                "settlement",
+                "details",
+                "1919376216134"
+              ]
+            }
+          },
+          "response": []
+        }
+      ]
+    },
+    {
+      "name": "Refunds",
+      "item": [
+        {
+          "name": "Initiate Refunds",
+          "request": {
+            "method": "POST",
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              },
+              {
+                "key": "Authorization",
+                "value": "Bearer YOUR_SECRET_KEY"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n    \"reference\": \"4757846579098876\"\n  }",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "https://backendapi.sayswitchgroup.com/api/v1/refund",
+              "protocol": "https",
+              "host": [
+                "backendapi",
+                "sayswitchgroup",
+                "com"
+              ],
+              "path": [
+                "api",
+                "v1",
+                "refund"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "Get Refunds",
+          "request": {
+            "method": "GET",
+            "header": [
+              {
+                "key": "Authorization",
+                "value": "Bearer YOUR_SECRET_KEY"
+              }
+            ],
+            "url": {
+              "raw": "https://backendapi.sayswitchgroup.com/api/v1/refund",
+              "protocol": "https",
+              "host": [
+                "backendapi",
+                "sayswitchgroup",
+                "com"
+              ],
+              "path": [
+                "api",
+                "v1",
+                "refund"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "Get Refund Details",
+          "request": {
+            "method": "GET",
+            "header": [
+              {
+                "key": "Authorization",
+                "value": "Bearer YOUR_SECRET_KEY"
+              }
+            ],
+            "url": {
+              "raw": "https://backendapi.sayswitchgroup.com/api/v1/refund/status/RF_qquhr0w88zxo7n7",
+              "protocol": "https",
+              "host": [
+                "backendapi",
+                "sayswitchgroup",
+                "com"
+              ],
+              "path": [
+                "api",
+                "v1",
+                "refund",
+                "status",
+                "RF_qquhr0w88zxo7n7"
+              ]
+            }
+          },
+          "response": []
+        }
+      ]
+    },
+    {
+      "name": "Customer",
+      "item": [
+        {
+          "name": "Create Customer",
+          "request": {
+            "method": "POST",
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              },
+              {
+                "key": "Authorization",
+                "value": "Bearer YOUR_SECRET_KEY"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n    \"email\": \"test@email.com\",\n    \"first_name\": \"test\",\n    \"last_name\": \"tester\",\n    \"phone\": \"08159994269\"\n  }",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "https://backendapi.sayswitchgroup.com/api/v1/customer",
+              "protocol": "https",
+              "host": [
+                "backendapi",
+                "sayswitchgroup",
+                "com"
+              ],
+              "path": [
+                "api",
+                "v1",
+                "customer"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "Create Bulk Customer",
+          "request": {
+            "method": "POST",
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              },
+              {
+                "key": "Authorization",
+                "value": "Bearer YOUR_SECRET_KEY"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "https://backendapi.sayswitchgroup.com/api/v1/customer/bulk_create",
+              "protocol": "https",
+              "host": [
+                "backendapi",
+                "sayswitchgroup",
+                "com"
+              ],
+              "path": [
+                "api",
+                "v1",
+                "customer",
+                "bulk_create"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "Retrieve Customers",
+          "request": {
+            "method": "GET",
+            "header": [
+              {
+                "key": "Authorization",
+                "value": "Bearer YOUR_SECRET_KEY"
+              }
+            ],
+            "url": {
+              "raw": "https://backendapi.sayswitchgroup.com/api/v1/customer",
+              "protocol": "https",
+              "host": [
+                "backendapi",
+                "sayswitchgroup",
+                "com"
+              ],
+              "path": [
+                "api",
+                "v1",
+                "customer"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "Get Customer",
+          "request": {
+            "method": "GET",
+            "header": [
+              {
+                "key": "Authorization",
+                "value": "Bearer YOUR_SECRET_KEY"
+              }
+            ],
+            "url": {
+              "raw": "https://backendapi.sayswitchgroup.com/api/v1/customer/johndoe@gmail.com",
+              "protocol": "https",
+              "host": [
+                "backendapi",
+                "sayswitchgroup",
+                "com"
+              ],
+              "path": [
+                "api",
+                "v1",
+                "customer",
+                "johndoe@gmail.com"
+              ]
+            }
+          },
+          "response": []
+        }
+      ]
+    },
+    {
+      "name": "Virtual Account",
+      "item": [
+        {
+          "name": "Create Virtual Account",
+          "request": {
+            "method": "POST",
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              },
+              {
+                "key": "Authorization",
+                "value": "Bearer YOUR_SECRET_KEY"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n    \"customer\": \"CUS_ngfz27uqjin3ny5\"\n  }",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "https://backendapi.sayswitchgroup.com/api/v1/dedicated_virtual_account",
+              "protocol": "https",
+              "host": [
+                "backendapi",
+                "sayswitchgroup",
+                "com"
+              ],
+              "path": [
+                "api",
+                "v1",
+                "dedicated_virtual_account"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "Create Dedicated Bulk Virtual Account",
+          "request": {
+            "method": "POST",
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              },
+              {
+                "key": "Authorization",
+                "value": "Bearer YOUR_SECRET_KEY"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n    \"batchId\": \"6641876634878\"\n  }",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "https://backendapi.sayswitchgroup.com/api/v1/dedicated_bulk_virtual_account",
+              "protocol": "https",
+              "host": [
+                "backendapi",
+                "sayswitchgroup",
+                "com"
+              ],
+              "path": [
+                "api",
+                "v1",
+                "dedicated_bulk_virtual_account"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "Get Virtual Accounts",
+          "request": {
+            "method": "GET",
+            "header": [
+              {
+                "key": "Authorization",
+                "value": "Bearer YOUR_SECRET_KEY"
+              }
+            ],
+            "url": {
+              "raw": "https://backendapi.sayswitchgroup.com/api/v1/list_dedicated_accounts",
+              "protocol": "https",
+              "host": [
+                "backendapi",
+                "sayswitchgroup",
+                "com"
+              ],
+              "path": [
+                "api",
+                "v1",
+                "list_dedicated_accounts"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "Get Virtual Account Details",
+          "request": {
+            "method": "GET",
+            "header": [
+              {
+                "key": "Authorization",
+                "value": "Bearer YOUR_SECRET_KEY"
+              }
+            ],
+            "url": {
+              "raw": "https://backendapi.sayswitchgroup.com/api/v1/dedicated_account/484",
+              "protocol": "https",
+              "host": [
+                "backendapi",
+                "sayswitchgroup",
+                "com"
+              ],
+              "path": [
+                "api",
+                "v1",
+                "dedicated_account",
+                "484"
+              ]
+            }
+          },
+          "response": []
+        }
+      ]
+    },
+    {
+      "name": "Bill Payments",
+      "item": [
+        {
+          "name": "Data",
+          "item": [
+            {
+              "name": "Internet Providers",
+              "request": {
+                "method": "GET",
+                "header": [
+                  {
+                    "key": "Content-Type",
+                    "value": "application/json"
+                  },
+                  {
+                    "key": "Authorization",
+                    "value": "Bearer YOUR_SECRET_KEY"
+                  }
+                ],
+                "url": {
+                  "raw": "https://backendapi.sayswitchgroup.com/api/v1/internet",
+                  "protocol": "https",
+                  "host": [
+                    "backendapi",
+                    "sayswitchgroup",
+                    "com"
+                  ],
+                  "path": [
+                    "api",
+                    "v1",
+                    "internet"
+                  ]
+                }
+              },
+              "response": []
+            },
+            {
+              "name": "Internet Plans",
+              "request": {
+                "method": "GET",
+                "header": [
+                  {
+                    "key": "Authorization",
+                    "value": "Bearer YOUR_SECRET_KEY"
+                  }
+                ],
+                "url": {
+                  "raw": "https://backendapi.sayswitchgroup.com/api/v1/internet/plans/MTN",
+                  "protocol": "https",
+                  "host": [
+                    "backendapi",
+                    "sayswitchgroup",
+                    "com"
+                  ],
+                  "path": [
+                    "api",
+                    "v1",
+                    "internet",
+                    "plans",
+                    "MTN"
+                  ]
+                }
+              },
+              "response": []
+            },
+            {
+              "name": "Internet Order",
+              "request": {
+                "method": "POST",
+                "header": [
+                  {
+                    "key": "Content-Type",
+                    "value": "application/json"
+                  }
+                ],
+                "body": {
+                  "mode": "raw",
+                  "raw": "{\n    \"provider\": \"MTN\",\n    \"plan_id\": 46,\n    \"number\": \"07066369927\",\n    \"reference\": \"2024041521481039\"\n  }",
+                  "options": {
+                    "raw": {
+                      "language": "json"
+                    }
+                  }
+                },
+                "url": {
+                  "raw": "https://backendapi.sayswitchgroup.com/api/v1/internet/data",
+                  "protocol": "https",
+                  "host": [
+                    "backendapi",
+                    "sayswitchgroup",
+                    "com"
+                  ],
+                  "path": [
+                    "api",
+                    "v1",
+                    "internet",
+                    "data"
+                  ]
+                }
+              },
+              "response": []
+            }
+          ]
+        },
+        {
+          "name": "Airtime",
+          "item": [
+            {
+              "name": "Get Airtime Providers",
+              "request": {
+                "method": "GET",
+                "header": [
+                  {
+                    "key": "Authorization",
+                    "value": "Bearer YOUR_SECRET_KEY"
+                  }
+                ],
+                "url": {
+                  "raw": "https://backendapi.sayswitchgroup.com/api/v1/airtime",
+                  "protocol": "https",
+                  "host": [
+                    "backendapi",
+                    "sayswitchgroup",
+                    "com"
+                  ],
+                  "path": [
+                    "api",
+                    "v1",
+                    "airtime"
+                  ]
+                }
+              },
+              "response": []
+            },
+            {
+              "name": "Airtime Topup",
+              "request": {
+                "method": "POST",
+                "header": [
+                  {
+                    "key": "Content-Type",
+                    "value": "application/json"
+                  },
+                  {
+                    "key": "Authorization",
+                    "value": "Bearer YOUR_SECRET_KEY"
+                  }
+                ],
+                "body": {
+                  "mode": "raw",
+                  "raw": "{\n    \"network\": \"mtn\",\n    \"phone\": \"08012345678\",\n    \"amount\": \"100\"\n  }",
+                  "options": {
+                    "raw": {
+                      "language": "json"
+                    }
+                  }
+                },
+                "url": {
+                  "raw": "https://backendapi.sayswitchgroup.com/api/v1/airtime/topup",
+                  "protocol": "https",
+                  "host": [
+                    "backendapi",
+                    "sayswitchgroup",
+                    "com"
+                  ],
+                  "path": [
+                    "api",
+                    "v1",
+                    "airtime",
+                    "topup"
+                  ]
+                }
+              },
+              "response": []
+            }
+          ]
+        },
+        {
+          "name": "Electricity",
+          "item": [
+            {
+              "name": "Get Electricity Providers",
+              "request": {
+                "method": "GET",
+                "header": [
+                  {
+                    "key": "Authorization",
+                    "value": "Bearer YOUR_SECRET_KEY"
+                  }
+                ],
+                "url": {
+                  "raw": "https://backendapi.sayswitchgroup.com/api/v1/electricity",
+                  "protocol": "https",
+                  "host": [
+                    "backendapi",
+                    "sayswitchgroup",
+                    "com"
+                  ],
+                  "path": [
+                    "api",
+                    "v1",
+                    "electricity"
+                  ]
+                }
+              },
+              "response": []
+            },
+            {
+              "name": "Electricity Recharge",
+              "request": {
+                "method": "POST",
+                "header": [
+                  {
+                    "key": "Content-Type",
+                    "value": "application/json"
+                  },
+                  {
+                    "key": "Authorization",
+                    "value": "Bearer YOUR_SECRET_KEY_HERE"
+                  }
+                ],
+                "body": {
+                  "mode": "raw",
+                  "raw": "{",
+                  "options": {
+                    "raw": {
+                      "language": "json"
+                    }
+                  }
+                },
+                "url": {
+                  "raw": "https://backendapi.sayswitchgroup.com/api/v1/electricity/recharge",
+                  "protocol": "https",
+                  "host": [
+                    "backendapi",
+                    "sayswitchgroup",
+                    "com"
+                  ],
+                  "path": [
+                    "api",
+                    "v1",
+                    "electricity",
+                    "recharge"
+                  ]
+                }
+              },
+              "response": []
+            },
+            {
+              "name": "Validate Electricity Customer",
+              "request": {
+                "method": "POST",
+                "header": [
+                  {
+                    "key": "Content-Type",
+                    "value": "application/json"
+                  }
+                ],
+                "body": {
+                  "mode": "raw",
+                  "raw": "{\n    \"provider\": \"IBEDC\",\n    \"type\": \"prepaid\",\n    \"number\": \"0159003278896\"\n  }",
+                  "options": {
+                    "raw": {
+                      "language": "json"
+                    }
+                  }
+                },
+                "url": {
+                  "raw": "https://backendapi.sayswitchgroup.com/api/v1/electricity/validate",
+                  "protocol": "https",
+                  "host": [
+                    "backendapi",
+                    "sayswitchgroup",
+                    "com"
+                  ],
+                  "path": [
+                    "api",
+                    "v1",
+                    "electricity",
+                    "validate"
+                  ]
+                }
+              },
+              "response": []
+            }
+          ]
+        },
+        {
+          "name": "TV",
+          "item": [
+            {
+              "name": "Get TV Providers",
+              "request": {
+                "method": "GET",
+                "header": [
+                  {
+                    "key": "Authorization",
+                    "value": "Bearer YOUR_SECRET_KEY"
+                  }
+                ],
+                "url": {
+                  "raw": "https://backendapi.sayswitchgroup.com/api/v1/tv",
+                  "protocol": "https",
+                  "host": [
+                    "backendapi",
+                    "sayswitchgroup",
+                    "com"
+                  ],
+                  "path": [
+                    "api",
+                    "v1",
+                    "tv"
+                  ]
+                }
+              },
+              "response": []
+            },
+            {
+              "name": "Get TV Packages for a Provider",
+              "request": {
+                "method": "GET",
+                "header": [
+                  {
+                    "key": "Authorization",
+                    "value": "Bearer YOUR_SECRET_KEY"
+                  }
+                ],
+                "url": {
+                  "raw": "https://backendapi.sayswitchgroup.com/api/v1/tv/packages/DSTV",
+                  "protocol": "https",
+                  "host": [
+                    "backendapi",
+                    "sayswitchgroup",
+                    "com"
+                  ],
+                  "path": [
+                    "api",
+                    "v1",
+                    "tv",
+                    "packages",
+                    "DSTV"
+                  ]
+                }
+              },
+              "response": []
+            },
+            {
+              "name": "TV Subscription Payment",
+              "request": {
+                "method": "POST",
+                "header": [
+                  {
+                    "key": "Content-Type",
+                    "value": "application/json"
+                  },
+                  {
+                    "key": "Authorization",
+                    "value": "Bearer YOUR_SECRET_KEY"
+                  }
+                ],
+                "body": {
+                  "mode": "raw",
+                  "raw": "{\n    \"provider\": \"GOTV\",\n    \"number\": \"2019505346\",\n    \"code\": \"gotv-max\",\n    \"reference\": \"20220511035554758\"\n  }",
+                  "options": {
+                    "raw": {
+                      "language": "json"
+                    }
+                  }
+                },
+                "url": {
+                  "raw": "https://backendapi.sayswitchgroup.com/api/v1/tv/pay",
+                  "protocol": "https",
+                  "host": [
+                    "backendapi",
+                    "sayswitchgroup",
+                    "com"
+                  ],
+                  "path": [
+                    "api",
+                    "v1",
+                    "tv",
+                    "pay"
+                  ]
+                }
+              },
+              "response": []
+            },
+            {
+              "name": "TV Validation",
+              "request": {
+                "method": "POST",
+                "header": [
+                  {
+                    "key": "Content-Type",
+                    "value": "application/json"
+                  },
+                  {
+                    "key": "Authorization",
+                    "value": "Bearer YOUR_SECRET_KEY"
+                  }
+                ],
+                "body": {
+                  "mode": "raw",
+                  "raw": "{\n    \"provider\": \"GOTV\",\n    \"number\": \"2019505346\"\n}",
+                  "options": {
+                    "raw": {
+                      "language": "json"
+                    }
+                  }
+                },
+                "url": {
+                  "raw": "https://backendapi.sayswitchgroup.com/api/v1/tv/validate",
+                  "protocol": "https",
+                  "host": [
+                    "backendapi",
+                    "sayswitchgroup",
+                    "com"
+                  ],
+                  "path": [
+                    "api",
+                    "v1",
+                    "tv",
+                    "validate"
+                  ]
+                }
+              },
+              "response": []
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Webhooks",
+      "item": []
+    }
+  ]
+}
