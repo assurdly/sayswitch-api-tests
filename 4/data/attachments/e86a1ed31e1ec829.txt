@@ -1,0 +1,1 @@
+{"success":true,"message":"Authorization URL created","data":{"authorization_url":"https:\/\/checkout.sayswitchgroup.com\/pay\/SSW_17745517359032228","access_code":"nauridogtesc","reference":"SSW_17745517359032228","payer_id":null}}
