@@ -1,1 +1,1 @@
-{"reportName":"Dettyfinance - API Quality Readiness with history","testRuns":[],"statistic":{"failed":91,"broken":6,"skipped":0,"passed":144,"unknown":0,"total":241},"time":{"start":1774278330174,"stop":1774278384868,"duration":54694,"minDuration":9,"maxDuration":1306,"sumDuration":54006}}
+{"reportName":"Allure Report with history","testRuns":[],"statistic":{"failed":285,"broken":2,"skipped":0,"passed":19,"unknown":0,"total":306},"time":{"start":1774552361714,"stop":1774552697962,"duration":336248,"minDuration":105,"maxDuration":135161,"sumDuration":335413}}
