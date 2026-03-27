@@ -1,0 +1,10 @@
+{
+    "provider": "IBEDC",
+    "number": "0159003278896",
+    "type": "prepaid",
+    "amount": 1000,
+    "customer_name": "IDOWU ADEDOYIN  SUNDAY 3",
+    "customer_address": "17, IREPODUN STREET, AFUNLEYIN AREA OFF, GENERAL GAS ROADESTATEIBADAN O",
+    "reference": "2024011608070000",
+    "auth": "182730"
+}
