@@ -1,0 +1,6 @@
+{
+    "email": "johndoe@gmail.com",
+    "amount": "100",
+    "currency": "NGN",
+    "reference": ""
+}
