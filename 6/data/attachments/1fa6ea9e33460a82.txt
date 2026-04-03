@@ -1,0 +1,6 @@
+{
+    "name": "",
+    "amount": "",
+    "description": "",
+    "redirect": ""
+}
