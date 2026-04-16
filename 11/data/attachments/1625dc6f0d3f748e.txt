@@ -1,0 +1,1 @@
+{"success":false,"status":"validation_error","message":"Validation Error","error":{"verifier":["The verifier field is required."],"firstname":["The firstname field is required."],"business_type":["The business type field is required."],"bvn":["The bvn field is required."]}}
