@@ -1,0 +1,7 @@
+{
+    "from_date": "2022-06-29",
+    "to_date": "2022-06-30",
+    "currency": "NGN",
+    "status": "accepted",
+    "limit": 5
+}
