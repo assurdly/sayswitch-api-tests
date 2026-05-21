@@ -1,0 +1,1 @@
+{"success":true,"message":"Authorization URL created","data":{"authorization_url":"https:\/\/checkout.sayswitchgroup.com\/pay\/SSW_17793930191578662","access_code":"kunkomtaxcmc","reference":"SSW_17793930191578662","payer_id":null}}
