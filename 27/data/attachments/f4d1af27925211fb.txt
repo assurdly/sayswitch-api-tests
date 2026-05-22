@@ -1,0 +1,3 @@
+if (!pm.environment.get("token")) {
+    console.log("No token in environment");
+}
