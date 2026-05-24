@@ -1,6 +1,0 @@
-{
-    "from_date": "",
-    "to_date": "",
-    "currency": "",
-    "limit": -1
-}

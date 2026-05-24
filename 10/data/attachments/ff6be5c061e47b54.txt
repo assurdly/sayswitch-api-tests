@@ -1,2 +1,0 @@
-level: log, messages: No token in environment
-level: warn, messages: Form param `image`, file load error: missing file source
