@@ -1,0 +1,23 @@
+{
+    "business_name": "",
+    "trade_name": "",
+    "industry_id": "",
+    "description": "",
+    "biz_email": "",
+    "biz_phone": "",
+    "biz_address": "",
+    "biz_country": "",
+    "biz_state": "",
+    "biz_city": "",
+    "biz_url": "",
+    "biz_ig": "",
+    "cac": "",
+    "memart": "",
+    "schuml": "",
+    "bank_code": "",
+    "bank_name": "",
+    "account_number": "",
+    "account_name": "",
+    "bvn": "",
+    "trustees": []
+}
