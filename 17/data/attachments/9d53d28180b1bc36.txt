@@ -1,1 +1,0 @@
-{"success":true,"message":"Authorization URL created","data":{"authorization_url":"https:\/\/checkout.sayswitchgroup.com\/pay\/SSW_17770567387971078","access_code":"epdcleebbgps","reference":"SSW_17770567387971078","payer_id":null}}

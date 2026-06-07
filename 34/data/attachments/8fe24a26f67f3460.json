@@ -1,0 +1,10 @@
+{
+    "Authorization": "Bearer invalid-token",
+    "User-Agent": "PostmanRuntime/7.39.1",
+    "Accept": "*/*",
+    "Cache-Control": "no-cache",
+    "Postman-Token": "40cb524f-6ecd-4172-a9f7-b3eb14e16c08",
+    "Host": "backendapi.sayswitchgroup.com",
+    "Accept-Encoding": "gzip, deflate, br",
+    "Connection": "keep-alive"
+}
