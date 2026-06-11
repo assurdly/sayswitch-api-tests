@@ -1,5 +1,0 @@
-{
-    "bank_code": "@@invalid@@",
-    "account_number": "7036218209",
-    "currency": "NGN"
-}
