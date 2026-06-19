@@ -1,1 +1,1 @@
-{"reportName":"Sayswitch Developer APIs - Quality Readiness with history","testRuns":[],"statistic":{"failed":103,"broken":6,"skipped":0,"passed":132,"unknown":0,"total":241},"time":{"start":1781456889177,"stop":1781456951306,"duration":62129,"minDuration":9,"maxDuration":1139,"sumDuration":61468}}
+{"reportName":"Allure Report with history","testRuns":[],"statistic":{"failed":285,"broken":2,"skipped":0,"passed":19,"unknown":0,"total":306},"time":{"start":1781898195807,"stop":1781898551394,"duration":355587,"minDuration":265,"maxDuration":135162,"sumDuration":354777}}
