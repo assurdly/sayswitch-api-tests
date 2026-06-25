@@ -1,0 +1,383 @@
+"DESCRIPTION","DURATION IN MS","NAME","PARENT SUITE","START TIME","STATUS","STOP TIME","SUB SUITE","SUITE","TEST CLASS","TEST METHOD"
+"","227","Sub Account Transaction Filter Endpoint - Positive","SaySwitch Merchant Dashboard - Clean run","2026-06-25","failed","2026-06-25","Sub Account Transaction Filter > Positive Scenarios","Sub Account","",""
+"","220","Rolling Reserve Endpoint - Negative","SaySwitch Merchant Dashboard - Clean run","2026-06-25","failed","2026-06-25","Rolling Reserve > Negative Scenarios","Rolling Reserve","",""
+"","223","Transaction Download Export Endpoint - Positive","SaySwitch Merchant Dashboard - Clean run","2026-06-25","failed","2026-06-25","Transaction Download Export > Positive Scenarios","Transactions","",""
+"","233","Payouts Initiate Bulk Transfer Endpoint - Positive","SaySwitch Merchant Dashboard - Clean run","2026-06-25","failed","2026-06-25","Payouts Initiate Bulk Transfer > Positive Scenarios","Payout (Bank Transfer)","",""
+"","229","Payment Link Update Endpoint - Negative","SaySwitch Merchant Dashboard - Clean run","2026-06-25","failed","2026-06-25","Payment Link Update > Negative Scenarios","Payment Link","",""
+"","219","Transaction Filter Endpoint - Negative","SaySwitch Merchant Dashboard - Clean run","2026-06-25","failed","2026-06-25","Transaction Filter > Negative Scenarios","Transactions","",""
+"","221","Sub Account Edit Endpoint - Positive","SaySwitch Merchant Dashboard - Clean run","2026-06-25","failed","2026-06-25","Sub Account Edit > Positive Scenarios","Sub Account","",""
+"","222","Customer Blacklist Endpoint - Positive","SaySwitch Merchant Dashboard - Clean run","2026-06-25","failed","2026-06-25","Customer Blacklist > Positive Scenarios","Customer","",""
+"","225","Compliance Individual Endpoint - Negative","SaySwitch Merchant Dashboard - Clean run","2026-06-25","failed","2026-06-25","Compliance Individual > Negative Scenarios","Compliance","",""
+"","222","Bill Payment Chart Endpoint - Positive","SaySwitch Merchant Dashboard - Clean run","2026-06-25","failed","2026-06-25","Bill Payment Chart > Positive Scenarios","Bills Payment","",""
+"{ ""phone"":""07036218209"", ""business_name"":""Tech Plus Network Limited"", ""trade_name"":"" Tech Plus Host"", ""industry_id"":""5"", ""description"":""Domain name registration, Servers and Web hosting service"", ""biz_email"":"" [info@techplushost.com](https://mailto:info@techplushost.com)"", ""biz_phone"":"" 07036218209"", ""biz_address"":""Off General Gas Road, Akobo, Ibadan"", ""biz_country"":"" Nigeria"", ""biz_state"":"" Oyo"", ""biz_city"":""Ibadan"", ""biz_url"":""techplushost.com"", ""biz_ig"":""techplushost"", ""cac"":""2"", ""memart"":""3"", ""bank_code"":""00013"", ""bank_name"":""Guaranty Trust Bank"", ""account_number"":""0050883605"", ""account_name"":""TOLULOPE OYENIYI"", ""bvn"":"" 11111111111"", ""directors"":\[ { ""firstname"": ""Tolulope"", ""lastname"": ""Oyeniyi"", ""id_type"": ""Driver License"", ""id_file"":""4"", ""bvn"": ""22222222222"" }, { ""firstname"": ""Samuel"", ""lastname"": ""Owolabi"", ""id_type"": ""Driver License"", ""id_file"":""5"", ""bvn"": ""22222222223"" } \]}","226","Compliance Business Endpoint - Positive","SaySwitch Merchant Dashboard - Clean run","2026-06-25","failed","2026-06-25","Compliance Business > Positive Scenarios","Compliance","",""
+"","220","Business Roles Update Endpoint - Positive","SaySwitch Merchant Dashboard - Clean run","2026-06-25","failed","2026-06-25","Business Roles Update > Positive Scenarios","Business","",""
+"","226","Bill Payment Tv Providers Packages (All) Endpoint - Positive","SaySwitch Merchant Dashboard - Clean run","2026-06-25","failed","2026-06-25","Bill Payment Tv Providers Packages (All) > Positive Scenarios","Bills Payment","",""
+"","225","Business Update Auto refund Settings Endpoint - Positive","SaySwitch Merchant Dashboard - Clean run","2026-06-25","failed","2026-06-25","Business Update Auto refund Settings > Positive Scenarios","Business","",""
+"","223","Business Roles Create Endpoint - Negative","SaySwitch Merchant Dashboard - Clean run","2026-06-25","failed","2026-06-25","Business Roles Create > Negative Scenarios","Business","",""
+"","220","Bill Payment Internet Providers Plans (All) Endpoint - Positive","SaySwitch Merchant Dashboard - Clean run","2026-06-25","failed","2026-06-25","Bill Payment Internet Providers Plans (All) > Positive Scenarios","Bills Payment","",""
+"","223","Reserved Accounts Endpoint - Negative","SaySwitch Merchant Dashboard - Clean run","2026-06-25","failed","2026-06-25","Reserved Accounts > Negative Scenarios","Reserved Accounts","",""
+"","222","Payouts Account Name Verify Copy Endpoint - Negative","SaySwitch Merchant Dashboard - Clean run","2026-06-25","failed","2026-06-25","Payouts Account Name Verify Copy > Negative Scenarios","Payout (Bank Transfer)","",""
+"","227","Payouts Initiate Bulk Transfer Endpoint - Negative","SaySwitch Merchant Dashboard - Clean run","2026-06-25","passed","2026-06-25","Payouts Initiate Bulk Transfer > Negative Scenarios","Payout (Bank Transfer)","",""
+"","221","Payouts validate Bulk Transfer Account Endpoint - Positive","SaySwitch Merchant Dashboard - Clean run","2026-06-25","failed","2026-06-25","Payouts validate Bulk Transfer Account > Positive Scenarios","Payout (Bank Transfer)","",""
+"","222","Payouts Bank List Endpoint - Positive","SaySwitch Merchant Dashboard - Clean run","2026-06-25","failed","2026-06-25","Payouts Bank List > Positive Scenarios","Payout (Bank Transfer)","",""
+"","223","Regenerate Wallet Account Endpoint - Positive","SaySwitch Merchant Dashboard - Clean run","2026-06-25","failed","2026-06-25","Regenerate Wallet Account > Positive Scenarios","Balance","",""
+"","225","Business Callback Auto Redirect Setting Endpoint - Negative","SaySwitch Merchant Dashboard - Clean run","2026-06-25","failed","2026-06-25","Business Callback Auto Redirect Setting > Negative Scenarios","Business","",""
+"","222","Business Edit Settlement Bank Account Endpoint - Positive","SaySwitch Merchant Dashboard - Clean run","2026-06-25","failed","2026-06-25","Business Edit Settlement Bank Account > Positive Scenarios","Business","",""
+"","132904","decryption Endpoint - Positive","SaySwitch Merchant Dashboard - Clean run","2026-06-25","broken","2026-06-25","decryption > Positive Scenarios","Auth","",""
+"","220","Add Beneficiary Endpoint - Negative","SaySwitch Merchant Dashboard - Clean run","2026-06-25","failed","2026-06-25","Add Beneficiary > Negative Scenarios","Payout (Bank Transfer)","",""
+"","223","Dashboard Transaction Month Chart Endpoint - Positive","SaySwitch Merchant Dashboard - Clean run","2026-06-25","failed","2026-06-25","Dashboard Transaction Month Chart > Positive Scenarios","Dashboard","",""
+"","221","Dispute Filter Endpoint - Positive","SaySwitch Merchant Dashboard - Clean run","2026-06-25","failed","2026-06-25","Dispute Filter > Positive Scenarios","Dispute (Chargeback)","",""
+"","220","Transaction History Log for Mobile App Endpoint - Positive","SaySwitch Merchant Dashboard - Clean run","2026-06-25","failed","2026-06-25","Transaction History Log for Mobile App > Positive Scenarios","Transactions","",""
+"","223","Transactions of a Settelemt Endpoint - Negative","SaySwitch Merchant Dashboard - Clean run","2026-06-25","failed","2026-06-25","Transactions of a Settelemt > Negative Scenarios","Transactions","",""
+"","223","Settlement Endpoint - Positive","SaySwitch Merchant Dashboard - Clean run","2026-06-25","failed","2026-06-25","Settlement > Positive Scenarios","Balance","",""
+"{ ""currency"":""NGN"", ""amount"":50, ""merchantId"":""30"", ""narration"":""GiftBills"", ""auth"":""123456""}","220","Single Transfer Endpoint - Negative","SaySwitch Merchant Dashboard - Clean run","2026-06-25","failed","2026-06-25","Single Transfer > Negative Scenarios","Payout B (SaySwitch Transfer)","",""
+"","221","Add New Business Endpoint - Negative","SaySwitch Merchant Dashboard - Clean run","2026-06-25","failed","2026-06-25","Add New Business > Negative Scenarios","Dashboard","",""
+"","220","Sub Account Transaction Filter Endpoint - Negative","SaySwitch Merchant Dashboard - Clean run","2026-06-25","failed","2026-06-25","Sub Account Transaction Filter > Negative Scenarios","Sub Account","",""
+"","227","Business Roles Endpoint - Negative","SaySwitch Merchant Dashboard - Clean run","2026-06-25","failed","2026-06-25","Business Roles > Negative Scenarios","Business","",""
+"","220","Bill Payment Electricity Recharge Endpoint - Positive","SaySwitch Merchant Dashboard - Clean run","2026-06-25","failed","2026-06-25","Bill Payment Electricity Recharge > Positive Scenarios","Bills Payment","",""
+"","223","Bill Payment Tv Validate Endpoint - Positive","SaySwitch Merchant Dashboard - Clean run","2026-06-25","failed","2026-06-25","Bill Payment Tv Validate > Positive Scenarios","Bills Payment","",""
+"","222","Business Notification Preference Update Endpoint - Negative","SaySwitch Merchant Dashboard - Clean run","2026-06-25","failed","2026-06-25","Business Notification Preference Update > Negative Scenarios","Business","",""
+"","723","encryption Endpoint - Positive","SaySwitch Merchant Dashboard - Clean run","2026-06-25","failed","2026-06-25","encryption > Positive Scenarios","Auth","",""
+"","220","Account Profile Update Endpoint - Positive","SaySwitch Merchant Dashboard - Clean run","2026-06-25","failed","2026-06-25","Account Profile Update > Positive Scenarios","Business","",""
+"","220","Bill Payment Airtime Providers Endpoint - Positive","SaySwitch Merchant Dashboard - Clean run","2026-06-25","failed","2026-06-25","Bill Payment Airtime Providers > Positive Scenarios","Bills Payment","",""
+"","222","Sub Account Edit Endpoint - Negative","SaySwitch Merchant Dashboard - Clean run","2026-06-25","failed","2026-06-25","Sub Account Edit > Negative Scenarios","Sub Account","",""
+"Request Body to encrypt.
+
+{""reference"": ""0987654321"", ""type"": ""partial"", ""type"": ""amount"", ""100"": ""refund for bills"", ""auth"": ""542954""}","230","Refund Transaction Endpoint - Positive","SaySwitch Merchant Dashboard - Clean run","2026-06-25","failed","2026-06-25","Refund Transaction > Positive Scenarios","Refund","",""
+"","223","Business Delete Settlement Account Endpoint - Negative","SaySwitch Merchant Dashboard - Clean run","2026-06-25","failed","2026-06-25","Business Delete Settlement Account > Negative Scenarios","Business","",""
+"","221","Payouts Get Beneficiaries Endpoint - Negative","SaySwitch Merchant Dashboard - Clean run","2026-06-25","failed","2026-06-25","Payouts Get Beneficiaries > Negative Scenarios","Payout (Bank Transfer)","",""
+"Request Body to encrypt.
+
+{ ""business_id"":30, ""bvn"":"" 11111111111""}","225","Compliance Update BVN Endpoint - Positive","SaySwitch Merchant Dashboard - Clean run","2026-06-25","failed","2026-06-25","Compliance Update BVN > Positive Scenarios","Compliance","",""
+"","225","Business Profile Endpoint - Positive","SaySwitch Merchant Dashboard - Clean run","2026-06-25","failed","2026-06-25","Business Profile > Positive Scenarios","Dashboard","",""
+"","226","Business Webhook Callback FeeBearer Update Endpoint - Negative","SaySwitch Merchant Dashboard - Clean run","2026-06-25","failed","2026-06-25","Business Webhook Callback FeeBearer Update > Negative Scenarios","Business","",""
+"","223","Sub Account Details Endpoint - Positive","SaySwitch Merchant Dashboard - Clean run","2026-06-25","failed","2026-06-25","Sub Account Details > Positive Scenarios","Sub Account","",""
+"","223","Business Delete Team Member Endpoint - Positive","SaySwitch Merchant Dashboard - Clean run","2026-06-25","failed","2026-06-25","Business Delete Team Member > Positive Scenarios","Business","",""
+"","226","Refund Filter Endpoint - Negative","SaySwitch Merchant Dashboard - Clean run","2026-06-25","passed","2026-06-25","Refund Filter > Negative Scenarios","Refund","",""
+"","220","Transaction Details Using Reference Endpoint - Positive","SaySwitch Merchant Dashboard - Clean run","2026-06-25","failed","2026-06-25","Transaction Details Using Reference > Positive Scenarios","Transactions","",""
+"","220","Dispute Filter Endpoint - Negative","SaySwitch Merchant Dashboard - Clean run","2026-06-25","failed","2026-06-25","Dispute Filter > Negative Scenarios","Dispute (Chargeback)","",""
+"","226","Compliance Sole Proprietorship Endpoint - Negative","SaySwitch Merchant Dashboard - Clean run","2026-06-25","failed","2026-06-25","Compliance Sole Proprietorship > Negative Scenarios","Compliance","",""
+"","223","Payment Link Endpoint - Negative","SaySwitch Merchant Dashboard - Clean run","2026-06-25","failed","2026-06-25","Payment Link > Negative Scenarios","Payment Link","",""
+"","223","Business Settlement Bank Filter Endpoint - Negative","SaySwitch Merchant Dashboard - Clean run","2026-06-25","failed","2026-06-25","Business Settlement Bank Filter > Negative Scenarios","Business","",""
+"","221","Bill Payment Electricity Providers Endpoint - Negative","SaySwitch Merchant Dashboard - Clean run","2026-06-25","failed","2026-06-25","Bill Payment Electricity Providers > Negative Scenarios","Bills Payment","",""
+"","222","Business Generate Key Endpoint - Negative","SaySwitch Merchant Dashboard - Clean run","2026-06-25","failed","2026-06-25","Business Generate Key > Negative Scenarios","Business","",""
+"","223","Payouts By Currency Endpoint - Negative","SaySwitch Merchant Dashboard - Clean run","2026-06-25","failed","2026-06-25","Payouts By Currency > Negative Scenarios","Payout (Bank Transfer)","",""
+"","227","Wallet Balance Reload (Test mode only) Endpoint - Negative","SaySwitch Merchant Dashboard - Clean run","2026-06-25","failed","2026-06-25","Wallet Balance Reload (Test mode only) > Negative Scenarios","Balance","",""
+"","220","Business Profile Endpoint - Negative","SaySwitch Merchant Dashboard - Clean run","2026-06-25","failed","2026-06-25","Business Profile > Negative Scenarios","Dashboard","",""
+"","229","Dashboard (Summary) Endpoint - Positive","SaySwitch Merchant Dashboard - Clean run","2026-06-25","failed","2026-06-25","Dashboard (Summary) > Positive Scenarios","Dashboard","",""
+"Request Body to encrypt.
+
+{ ""email"": ""[tolu@bud.africa](https://mailto:tolu@bud.africa)""}","784","Screen 1 - Email Endpoint - Positive","SaySwitch Merchant Dashboard - Clean run","2026-06-25","failed","2026-06-25","Screen 1 - Email > Positive Scenarios","Auth","",""
+"","229","Refund Endpoint - Negative","SaySwitch Merchant Dashboard - Clean run","2026-06-25","passed","2026-06-25","Refund > Negative Scenarios","Refund","",""
+"","223","Payment Filter Endpoint - Negative","SaySwitch Merchant Dashboard - Clean run","2026-06-25","failed","2026-06-25","Payment Filter > Negative Scenarios","Payment Link","",""
+"","221","Wallet Transactions Filter Endpoint - Negative","SaySwitch Merchant Dashboard - Clean run","2026-06-25","failed","2026-06-25","Wallet Transactions Filter > Negative Scenarios","Balance","",""
+"","224","Dashboard (wallet) Endpoint - Positive","SaySwitch Merchant Dashboard - Clean run","2026-06-25","failed","2026-06-25","Dashboard (wallet) > Positive Scenarios","Dashboard","",""
+"","222","Get Beneficiaries Endpoint - Positive","SaySwitch Merchant Dashboard - Clean run","2026-06-25","failed","2026-06-25","Get Beneficiaries > Positive Scenarios","Payout (Bank Transfer)","",""
+"{ ""bank_code"":""000013"", ""account_number"":""0050883605""}","224","Payouts Account Name Verify Endpoint - Positive","SaySwitch Merchant Dashboard - Clean run","2026-06-25","failed","2026-06-25","Payouts Account Name Verify > Positive Scenarios","Payout (Bank Transfer)","",""
+"","221","Bill Payment Tv Validate Endpoint - Negative","SaySwitch Merchant Dashboard - Clean run","2026-06-25","failed","2026-06-25","Bill Payment Tv Validate > Negative Scenarios","Bills Payment","",""
+"","225","Payouts Download Export Endpoint - Negative","SaySwitch Merchant Dashboard - Clean run","2026-06-25","failed","2026-06-25","Payouts Download Export > Negative Scenarios","Payout (Bank Transfer)","",""
+"","221","Rolling Reserve (View RS) Endpoint - Positive","SaySwitch Merchant Dashboard - Clean run","2026-06-25","failed","2026-06-25","Rolling Reserve (View RS) > Positive Scenarios","Rolling Reserve","",""
+"","221","Business Update Auto refund Settings Endpoint - Negative","SaySwitch Merchant Dashboard - Clean run","2026-06-25","failed","2026-06-25","Business Update Auto refund Settings > Negative Scenarios","Business","",""
+"","234","Refund Details Endpoint - Positive","SaySwitch Merchant Dashboard - Clean run","2026-06-25","failed","2026-06-25","Refund Details > Positive Scenarios","Refund","",""
+"","220","Payouts By Currency Endpoint - Positive","SaySwitch Merchant Dashboard - Clean run","2026-06-25","failed","2026-06-25","Payouts By Currency > Positive Scenarios","Payout (Bank Transfer)","",""
+"","225","Bill Payment Electricity Recharge Endpoint - Negative","SaySwitch Merchant Dashboard - Clean run","2026-06-25","failed","2026-06-25","Bill Payment Electricity Recharge > Negative Scenarios","Bills Payment","",""
+"","222","Get Beneficiaries Endpoint - Negative","SaySwitch Merchant Dashboard - Clean run","2026-06-25","failed","2026-06-25","Get Beneficiaries > Negative Scenarios","Payout (Bank Transfer)","",""
+"","223","Customer Details Endpoint - Positive","SaySwitch Merchant Dashboard - Clean run","2026-06-25","failed","2026-06-25","Customer Details > Positive Scenarios","Customer","",""
+"","226","Settlement Details (View Settlement) Endpoint - Negative","SaySwitch Merchant Dashboard - Clean run","2026-06-25","failed","2026-06-25","Settlement Details (View Settlement) > Negative Scenarios","Balance","",""
+"","221","Resend Transaction Webhook Endpoint - Negative","SaySwitch Merchant Dashboard - Clean run","2026-06-25","failed","2026-06-25","Resend Transaction Webhook > Negative Scenarios","Transactions","",""
+"Request Body to encrypt.
+
+{ ""email"": ""[sam@bud.africa](https://mailto:sam@bud.africa)"", ""token"": ""098grr949g9r7654321"", ""password"": ""0987654321"", ""confirm_password"": ""0987654321""}","228","Delete Account Request Endpoint - Negative","SaySwitch Merchant Dashboard - Clean run","2026-06-25","failed","2026-06-25","Delete Account Request > Negative Scenarios","Auth","",""
+"","223","Dispute (Resolved) Endpoint - Positive","SaySwitch Merchant Dashboard - Clean run","2026-06-25","failed","2026-06-25","Dispute (Resolved) > Positive Scenarios","Dispute (Chargeback)","",""
+"","226","Customer Blacklist Endpoint - Negative","SaySwitch Merchant Dashboard - Clean run","2026-06-25","failed","2026-06-25","Customer Blacklist > Negative Scenarios","Customer","",""
+"","223","Bill Payment Tv Subscription Endpoint - Negative","SaySwitch Merchant Dashboard - Clean run","2026-06-25","failed","2026-06-25","Bill Payment Tv Subscription > Negative Scenarios","Bills Payment","",""
+"","234","Country Endpoint - Negative","SaySwitch Merchant Dashboard - Clean run","2026-06-25","passed","2026-06-25","Country > Negative Scenarios","Country Extras","",""
+"","224","Business Team Member Status Update Endpoint - Positive","SaySwitch Merchant Dashboard - Clean run","2026-06-25","failed","2026-06-25","Business Team Member Status Update > Positive Scenarios","Business","",""
+"Request Body to encrypt.
+
+{ ""email"": ""[tolu@bud.africa](https://mailto:tolu@bud.africa)"", ""code"": ""865321""}","232","Screen 2 - Email Verify Endpoint - Negative","SaySwitch Merchant Dashboard - Clean run","2026-06-25","passed","2026-06-25","Screen 2 - Email Verify > Negative Scenarios","Auth","",""
+"","222","Payment Link Delete Endpoint - Positive","SaySwitch Merchant Dashboard - Clean run","2026-06-25","failed","2026-06-25","Payment Link Delete > Positive Scenarios","Payment Link","",""
+"","223","Dispute (Pending) Endpoint - Positive","SaySwitch Merchant Dashboard - Clean run","2026-06-25","failed","2026-06-25","Dispute (Pending) > Positive Scenarios","Dispute (Chargeback)","",""
+"","224","Customer Details Endpoint - Negative","SaySwitch Merchant Dashboard - Clean run","2026-06-25","failed","2026-06-25","Customer Details > Negative Scenarios","Customer","",""
+"","223","Sub Account Filter Endpoint - Negative","SaySwitch Merchant Dashboard - Clean run","2026-06-25","failed","2026-06-25","Sub Account Filter > Negative Scenarios","Sub Account","",""
+"","223","Bill Payment Tv Providers Endpoint - Negative","SaySwitch Merchant Dashboard - Clean run","2026-06-25","failed","2026-06-25","Bill Payment Tv Providers > Negative Scenarios","Bills Payment","",""
+"OTP Source determinant
+
+Payout OTP = payout
+
+Budpay Transfer OTP = transfer
+
+Transaction Settings Update OTP = 2fa (to switch btw pin and otp)","224","Transaction OTP Endpoint - Positive","SaySwitch Merchant Dashboard - Clean run","2026-06-25","failed","2026-06-25","Transaction OTP > Positive Scenarios","OTP Request","",""
+"","221","Dispute (Resolved) Endpoint - Negative","SaySwitch Merchant Dashboard - Clean run","2026-06-25","failed","2026-06-25","Dispute (Resolved) > Negative Scenarios","Dispute (Chargeback)","",""
+"","224","Business Logo Upload Endpoint - Negative","SaySwitch Merchant Dashboard - Clean run","2026-06-25","failed","2026-06-25","Business Logo Upload > Negative Scenarios","Business","",""
+"","222","Business Team Endpoint - Negative","SaySwitch Merchant Dashboard - Clean run","2026-06-25","failed","2026-06-25","Business Team > Negative Scenarios","Business","",""
+"","225","Dispute Details Endpoint - Negative","SaySwitch Merchant Dashboard - Clean run","2026-06-25","failed","2026-06-25","Dispute Details > Negative Scenarios","Dispute (Chargeback)","",""
+"","220","Payment Request Endpoint - Negative","SaySwitch Merchant Dashboard - Clean run","2026-06-25","failed","2026-06-25","Payment Request > Negative Scenarios","Payment Link","",""
+"Request Body to encrypt.
+
+{""verifier"": ""regrkwrkvwkrrk"", ""firstname"": ""Tolu"", ""lastname"": ""Oye"", ""email"": ""[tolu@bud.africa](https://mailto:tolu@bud.africa)"", ""password"": ""101919fbjs"", ""business_name"": ""Toluxsys Inc"", ""trade_name"": ""Toluxsys Inc"", ""registration_number"": """", ""date_of_incorporation"": """", ""country"": ""NG"", ""business_type"": 1, ""referral"": ""TOLO50""}
+
+{""verifier"": ""65f95f5b72b071793947537451787697242984"", ""firstname"": ""Omolara"", ""lastname"": ""ilori"", ""email"": ""[favour@budpay.com](https://mailto:favour@budpay.com)"", ""password"": ""Budpay@$7"", ""business_name"": ""omolara and co"", ""trade_name"": ""iloriInc"", ""country"": ""Nigeria"", ""isoName"": ""Nigeria"", ""business_type"": 2, ""industry_id"": 11, ""cat_id"": 95, ""referral"": ""TOLO50"", ""date_of_incorporation"": """", ""registration_number"": """"}","227","Register Endpoint - Positive","SaySwitch Merchant Dashboard - Clean run","2026-06-25","passed","2026-06-25","Register > Positive Scenarios","Auth","",""
+"","222","Rolling Reserve (View RS) Endpoint - Negative","SaySwitch Merchant Dashboard - Clean run","2026-06-25","failed","2026-06-25","Rolling Reserve (View RS) > Negative Scenarios","Rolling Reserve","",""
+"","221","Bill Payment Tv Providers Packages (by Provider) Endpoint - Positive","SaySwitch Merchant Dashboard - Clean run","2026-06-25","failed","2026-06-25","Bill Payment Tv Providers Packages (by Provider) > Positive Scenarios","Bills Payment","",""
+"","220","Payouts Get Beneficiaries Endpoint - Positive","SaySwitch Merchant Dashboard - Clean run","2026-06-25","failed","2026-06-25","Payouts Get Beneficiaries > Positive Scenarios","Payout (Bank Transfer)","",""
+"","222","Bill Payment Details by Ref Endpoint - Positive","SaySwitch Merchant Dashboard - Clean run","2026-06-25","failed","2026-06-25","Bill Payment Details by Ref > Positive Scenarios","Bills Payment","",""
+"","222","Settlement Download Export Endpoint - Negative","SaySwitch Merchant Dashboard - Clean run","2026-06-25","failed","2026-06-25","Settlement Download Export > Negative Scenarios","Balance","",""
+"","222","Business Phone Verify Endpoint - Negative","SaySwitch Merchant Dashboard - Clean run","2026-06-25","failed","2026-06-25","Business Phone Verify > Negative Scenarios","Compliance","",""
+"","227","Account Change Password Endpoint - Negative","SaySwitch Merchant Dashboard - Clean run","2026-06-25","failed","2026-06-25","Account Change Password > Negative Scenarios","Business","",""
+"","228","Audit Filter Endpoint - Negative","SaySwitch Merchant Dashboard - Clean run","2026-06-25","failed","2026-06-25","Audit Filter > Negative Scenarios","Audit","",""
+"Request Body to encrypt.
+
+{ ""email"": ""[sam@bud.africa](https://mailto:sam@bud.africa)""}","225","Reset Password Request Endpoint - Negative","SaySwitch Merchant Dashboard - Clean run","2026-06-25","passed","2026-06-25","Reset Password Request > Negative Scenarios","Auth","",""
+"","229","Business IP whitelisting Endpoint - Positive","SaySwitch Merchant Dashboard - Clean run","2026-06-25","failed","2026-06-25","Business IP whitelisting > Positive Scenarios","Business","",""
+"","223","Customer Edit Endpoint - Positive","SaySwitch Merchant Dashboard - Clean run","2026-06-25","failed","2026-06-25","Customer Edit > Positive Scenarios","Customer","",""
+"","223","Confirm Business Phone Otp Endpoint - Negative","SaySwitch Merchant Dashboard - Clean run","2026-06-25","failed","2026-06-25","Confirm Business Phone Otp > Negative Scenarios","Compliance","",""
+"","221","Dispute Details Endpoint - Positive","SaySwitch Merchant Dashboard - Clean run","2026-06-25","failed","2026-06-25","Dispute Details > Positive Scenarios","Dispute (Chargeback)","",""
+"","230","Business IP whitelisting Endpoint - Negative","SaySwitch Merchant Dashboard - Clean run","2026-06-25","passed","2026-06-25","Business IP whitelisting > Negative Scenarios","Business","",""
+"","221","Payment Link Tried Count Endpoint - Positive","SaySwitch Merchant Dashboard - Clean run","2026-06-25","failed","2026-06-25","Payment Link Tried Count > Positive Scenarios","Payment Link","",""
+"Request Body to encrypt.
+
+{ ""business_id"":30, ""bvn"":"" 11111111111""}","223","Compliance Update BVN Endpoint - Negative","SaySwitch Merchant Dashboard - Clean run","2026-06-25","failed","2026-06-25","Compliance Update BVN > Negative Scenarios","Compliance","",""
+"","231","Screen 2 - Resend Email Endpoint - Positive","SaySwitch Merchant Dashboard - Clean run","2026-06-25","passed","2026-06-25","Screen 2 - Resend Email > Positive Scenarios","Auth","",""
+"","222","Audit Filter Endpoint - Positive","SaySwitch Merchant Dashboard - Clean run","2026-06-25","failed","2026-06-25","Audit Filter > Positive Scenarios","Audit","",""
+"","222","Recent Endpoint - Negative","SaySwitch Merchant Dashboard - Clean run","2026-06-25","failed","2026-06-25","Recent > Negative Scenarios","Dashboard","",""
+"OTP Source determinant
+
+Payout OTP = payout
+
+Budpay Transfer OTP = transfer
+
+Transaction Settings Update OTP = 2fa (to switch btw pin and otp)","224","Change Auth Mode Endpoint - Negative","SaySwitch Merchant Dashboard - Clean run","2026-06-25","failed","2026-06-25","Change Auth Mode > Negative Scenarios","OTP Request","",""
+"","223","Customers Endpoint - Negative","SaySwitch Merchant Dashboard - Clean run","2026-06-25","failed","2026-06-25","Customers > Negative Scenarios","Customer","",""
+"Request Body to encrypt.
+
+{ ""email"": ""adetunjioluwakayode@gmail.com"", ""password"": ""adetunjioluwakayode@gmail.com"", ""device_name"": ""merchantpro""}","233","Auth Login Endpoint - Positive","SaySwitch Merchant Dashboard - Clean run","2026-06-25","failed","2026-06-25","Auth Login > Positive Scenarios","Auth","",""
+"","229","Refund Endpoint - Positive","SaySwitch Merchant Dashboard - Clean run","2026-06-25","failed","2026-06-25","Refund > Positive Scenarios","Refund","",""
+"","220","Add Beneficiary Endpoint - Positive","SaySwitch Merchant Dashboard - Clean run","2026-06-25","failed","2026-06-25","Add Beneficiary > Positive Scenarios","Payout (Bank Transfer)","",""
+"","222","Payouts Bank List Endpoint - Negative","SaySwitch Merchant Dashboard - Clean run","2026-06-25","failed","2026-06-25","Payouts Bank List > Negative Scenarios","Payout (Bank Transfer)","",""
+"","221","Bill Payment Buy Airime Endpoint - Positive","SaySwitch Merchant Dashboard - Clean run","2026-06-25","failed","2026-06-25","Bill Payment Buy Airime > Positive Scenarios","Bills Payment","",""
+"","229","Bill Payment Filter Endpoint - Negative","SaySwitch Merchant Dashboard - Clean run","2026-06-25","failed","2026-06-25","Bill Payment Filter > Negative Scenarios","Bills Payment","",""
+"","221","Bill Payment Internet Providers Endpoint - Positive","SaySwitch Merchant Dashboard - Clean run","2026-06-25","failed","2026-06-25","Bill Payment Internet Providers > Positive Scenarios","Bills Payment","",""
+"","221","Bill Payment Tv Providers Packages (by Provider) Endpoint - Negative","SaySwitch Merchant Dashboard - Clean run","2026-06-25","failed","2026-06-25","Bill Payment Tv Providers Packages (by Provider) > Negative Scenarios","Bills Payment","",""
+"","227","Refund Filter Endpoint - Positive","SaySwitch Merchant Dashboard - Clean run","2026-06-25","failed","2026-06-25","Refund Filter > Positive Scenarios","Refund","",""
+"","222","Payment Link Details Endpoint - Negative","SaySwitch Merchant Dashboard - Clean run","2026-06-25","failed","2026-06-25","Payment Link Details > Negative Scenarios","Payment Link","",""
+"Request Body to encrypt.
+
+{""verifier"": ""regrkwrkvwkrrk"", ""firstname"": ""Tolu"", ""lastname"": ""Oye"", ""email"": ""[tolu@bud.africa](https://mailto:tolu@bud.africa)"", ""password"": ""101919fbjs"", ""business_name"": ""Toluxsys Inc"", ""trade_name"": ""Toluxsys Inc"", ""registration_number"": """", ""date_of_incorporation"": """", ""country"": ""NG"", ""business_type"": 1, ""referral"": ""TOLO50""}
+
+{""verifier"": ""65f95f5b72b071793947537451787697242984"", ""firstname"": ""Omolara"", ""lastname"": ""ilori"", ""email"": ""[favour@budpay.com](https://mailto:favour@budpay.com)"", ""password"": ""Budpay@$7"", ""business_name"": ""omolara and co"", ""trade_name"": ""iloriInc"", ""country"": ""Nigeria"", ""isoName"": ""Nigeria"", ""business_type"": 2, ""industry_id"": 11, ""cat_id"": 95, ""referral"": ""TOLO50"", ""date_of_incorporation"": """", ""registration_number"": """"}","229","Register Endpoint - Negative","SaySwitch Merchant Dashboard - Clean run","2026-06-25","passed","2026-06-25","Register > Negative Scenarios","Auth","",""
+"","225","Dispute Response Endpoint - Negative","SaySwitch Merchant Dashboard - Clean run","2026-06-25","failed","2026-06-25","Dispute Response > Negative Scenarios","Dispute (Chargeback)","",""
+"","224","File Upload Endpoint - Positive","SaySwitch Merchant Dashboard - Clean run","2026-06-25","failed","2026-06-25","File Upload > Positive Scenarios","File Upload","",""
+"","222","Transaction Details Endpoint - Negative","SaySwitch Merchant Dashboard - Clean run","2026-06-25","failed","2026-06-25","Transaction Details > Negative Scenarios","Transactions","",""
+"","221","Account Profile Update Endpoint - Negative","SaySwitch Merchant Dashboard - Clean run","2026-06-25","failed","2026-06-25","Account Profile Update > Negative Scenarios","Business","",""
+"","222","Business Webhook Callback FeeBearer Update Endpoint - Positive","SaySwitch Merchant Dashboard - Clean run","2026-06-25","failed","2026-06-25","Business Webhook Callback FeeBearer Update > Positive Scenarios","Business","",""
+"{ ""phone"":""07036218209"", ""business_name"":""Tech Plus Network Limited"", ""trade_name"":"" Tech Plus Host"", ""industry_id"":""5"", ""description"":""Domain name registration, Servers and Web hosting service"", ""biz_email"":"" [info@techplushost.com](https://mailto:info@techplushost.com)"", ""biz_phone"":"" 07036218209"", ""biz_address"":""Off General Gas Road, Akobo, Ibadan"", ""biz_country"":"" Nigeria"", ""biz_state"":"" Oyo"", ""biz_city"":""Ibadan"", ""biz_url"":""techplushost.com"", ""biz_ig"":""techplushost"", ""cac"":""2"", ""memart"":""3"", ""bank_code"":""00013"", ""bank_name"":""Guaranty Trust Bank"", ""account_number"":""0050883605"", ""account_name"":""TOLULOPE OYENIYI"", ""bvn"":"" 11111111111"", ""directors"":\[ { ""firstname"": ""Tolulope"", ""lastname"": ""Oyeniyi"", ""id_type"": ""Driver License"", ""id_file"":""4"", ""bvn"": ""22222222222"" }, { ""firstname"": ""Samuel"", ""lastname"": ""Owolabi"", ""id_type"": ""Driver License"", ""id_file"":""5"", ""bvn"": ""22222222223"" } \]}","223","Compliance Business Endpoint - Negative","SaySwitch Merchant Dashboard - Clean run","2026-06-25","failed","2026-06-25","Compliance Business > Negative Scenarios","Compliance","",""
+"{""merchantId"":""30""}","220","Payouts Account Name Verify Endpoint - Positive","SaySwitch Merchant Dashboard - Clean run","2026-06-25","failed","2026-06-25","Payouts Account Name Verify > Positive Scenarios","Payout B (SaySwitch Transfer)","",""
+"","223","Bill Payment Electricity Providers Endpoint - Positive","SaySwitch Merchant Dashboard - Clean run","2026-06-25","failed","2026-06-25","Bill Payment Electricity Providers > Positive Scenarios","Bills Payment","",""
+"","220","Business Details Update Endpoint - Negative","SaySwitch Merchant Dashboard - Clean run","2026-06-25","failed","2026-06-25","Business Details Update > Negative Scenarios","Business","",""
+"","264","Test Webhook","SaySwitch Merchant Dashboard - Clean run","2026-06-25","passed","2026-06-25","","","",""
+"Request Body to encrypt.
+
+{ ""email"": ""[sam@bud.africa](https://mailto:sam@bud.africa)"", ""token"": ""098grr949g9r7654321"", ""password"": ""0987654321"", ""confirm_password"": ""0987654321""}","226","Reset Password Submit Endpoint - Negative","SaySwitch Merchant Dashboard - Clean run","2026-06-25","passed","2026-06-25","Reset Password Submit > Negative Scenarios","Auth","",""
+"","220","Payouts Verify Endpoint - Negative","SaySwitch Merchant Dashboard - Clean run","2026-06-25","failed","2026-06-25","Payouts Verify > Negative Scenarios","Payout (Bank Transfer)","",""
+"","220","Payout Filter Endpoint - Negative","SaySwitch Merchant Dashboard - Clean run","2026-06-25","failed","2026-06-25","Payout Filter > Negative Scenarios","Payout (Bank Transfer)","",""
+"","223","Resend Transaction Receipt Endpoint - Negative","SaySwitch Merchant Dashboard - Clean run","2026-06-25","failed","2026-06-25","Resend Transaction Receipt > Negative Scenarios","Transactions","",""
+"","221","Confirm Business Phone Otp Endpoint - Positive","SaySwitch Merchant Dashboard - Clean run","2026-06-25","failed","2026-06-25","Confirm Business Phone Otp > Positive Scenarios","Compliance","",""
+"","223","Business Settlement Bank Filter Endpoint - Positive","SaySwitch Merchant Dashboard - Clean run","2026-06-25","failed","2026-06-25","Business Settlement Bank Filter > Positive Scenarios","Business","",""
+"","223","Payouts Endpoint - Negative","SaySwitch Merchant Dashboard - Clean run","2026-06-25","failed","2026-06-25","Payouts > Negative Scenarios","Payout (Bank Transfer)","",""
+"","221","Audit Endpoint - Positive","SaySwitch Merchant Dashboard - Clean run","2026-06-25","failed","2026-06-25","Audit > Positive Scenarios","Audit","",""
+"","424","Country Endpoint - Positive","SaySwitch Merchant Dashboard - Clean run","2026-06-25","passed","2026-06-25","Country > Positive Scenarios","Country Extras","",""
+"","222","Sub Account List Endpoint - Positive","SaySwitch Merchant Dashboard - Clean run","2026-06-25","failed","2026-06-25","Sub Account List > Positive Scenarios","Sub Account","",""
+"","222","Payment Link Create Endpoint - Negative","SaySwitch Merchant Dashboard - Clean run","2026-06-25","failed","2026-06-25","Payment Link Create > Negative Scenarios","Payment Link","",""
+"","223","Business Payment Method Update (disable) Endpoint - Positive","SaySwitch Merchant Dashboard - Clean run","2026-06-25","failed","2026-06-25","Business Payment Method Update (disable) > Positive Scenarios","Business","",""
+"","221","Rolling Reserve Endpoint - Positive","SaySwitch Merchant Dashboard - Clean run","2026-06-25","failed","2026-06-25","Rolling Reserve > Positive Scenarios","Rolling Reserve","",""
+"{ ""currency"":""NGN"", ""amount"":50, ""merchantId"":""30"", ""narration"":""GiftBills"", ""auth"":""123456""}","221","Single Transfer Endpoint - Positive","SaySwitch Merchant Dashboard - Clean run","2026-06-25","failed","2026-06-25","Single Transfer > Positive Scenarios","Payout B (SaySwitch Transfer)","",""
+"","220","Bill Payment Endpoint - Positive","SaySwitch Merchant Dashboard - Clean run","2026-06-25","failed","2026-06-25","Bill Payment > Positive Scenarios","Bills Payment","",""
+"{""merchantId"":""30""}","220","Payouts Account Name Verify Endpoint - Negative","SaySwitch Merchant Dashboard - Clean run","2026-06-25","failed","2026-06-25","Payouts Account Name Verify > Negative Scenarios","Payout B (SaySwitch Transfer)","",""
+"","224","Business Roles Create Endpoint - Positive","SaySwitch Merchant Dashboard - Clean run","2026-06-25","failed","2026-06-25","Business Roles Create > Positive Scenarios","Business","",""
+"","221","Bill Payment Internet Providers Endpoint - Negative","SaySwitch Merchant Dashboard - Clean run","2026-06-25","failed","2026-06-25","Bill Payment Internet Providers > Negative Scenarios","Bills Payment","",""
+"","222","Wallet Account Providers Endpoint - Positive","SaySwitch Merchant Dashboard - Clean run","2026-06-25","failed","2026-06-25","Wallet Account Providers > Positive Scenarios","Reserved Accounts","",""
+"","222","Bill Payment Chart Endpoint - Negative","SaySwitch Merchant Dashboard - Clean run","2026-06-25","failed","2026-06-25","Bill Payment Chart > Negative Scenarios","Bills Payment","",""
+"","223","Business Phone Verify Endpoint - Positive","SaySwitch Merchant Dashboard - Clean run","2026-06-25","failed","2026-06-25","Business Phone Verify > Positive Scenarios","Compliance","",""
+"","221","Business Add Settlement Bank Account Endpoint - Negative","SaySwitch Merchant Dashboard - Clean run","2026-06-25","failed","2026-06-25","Business Add Settlement Bank Account > Negative Scenarios","Business","",""
+"","221","Bill Payment Buy Airime Endpoint - Negative","SaySwitch Merchant Dashboard - Clean run","2026-06-25","failed","2026-06-25","Bill Payment Buy Airime > Negative Scenarios","Bills Payment","",""
+"Request Body to encrypt.
+
+{ ""email"": ""[tolu@bud.africa](https://mailto:tolu@bud.africa)"", ""code"": ""865321""}","234","Screen 2 - Email Verify Endpoint - Positive","SaySwitch Merchant Dashboard - Clean run","2026-06-25","failed","2026-06-25","Screen 2 - Email Verify > Positive Scenarios","Auth","",""
+"","225","Compliance Sole Proprietorship Endpoint - Positive","SaySwitch Merchant Dashboard - Clean run","2026-06-25","failed","2026-06-25","Compliance Sole Proprietorship > Positive Scenarios","Compliance","",""
+"","224","Sub Account List Endpoint - Negative","SaySwitch Merchant Dashboard - Clean run","2026-06-25","failed","2026-06-25","Sub Account List > Negative Scenarios","Sub Account","",""
+"","220","Bill Payment Internet Providers Plans (by Provider) Endpoint - Positive","SaySwitch Merchant Dashboard - Clean run","2026-06-25","failed","2026-06-25","Bill Payment Internet Providers Plans (by Provider) > Positive Scenarios","Bills Payment","",""
+"OTP Source determinant
+
+Payout OTP = payout
+
+Budpay Transfer OTP = transfer
+
+Transaction Settings Update OTP = 2fa (to switch btw pin and otp)","226","Request OTP Endpoint - Positive","SaySwitch Merchant Dashboard - Clean run","2026-06-25","failed","2026-06-25","Request OTP > Positive Scenarios","OTP Request","",""
+"","221","Dispute Response Endpoint - Positive","SaySwitch Merchant Dashboard - Clean run","2026-06-25","failed","2026-06-25","Dispute Response > Positive Scenarios","Dispute (Chargeback)","",""
+"","223","Account Change Trans Pin Endpoint - Negative","SaySwitch Merchant Dashboard - Clean run","2026-06-25","failed","2026-06-25","Account Change Trans Pin > Negative Scenarios","Business","",""
+"","223","Payment Link Tried Count Endpoint - Negative","SaySwitch Merchant Dashboard - Clean run","2026-06-25","failed","2026-06-25","Payment Link Tried Count > Negative Scenarios","Payment Link","",""
+"","224","Business Set Primary Settlement Account Endpoint - Positive","SaySwitch Merchant Dashboard - Clean run","2026-06-25","failed","2026-06-25","Business Set Primary Settlement Account > Positive Scenarios","Business","",""
+"","222","Payouts Verify Endpoint - Positive","SaySwitch Merchant Dashboard - Clean run","2026-06-25","failed","2026-06-25","Payouts Verify > Positive Scenarios","Payout (Bank Transfer)","",""
+"","220","Bill Payment Internet Data Endpoint - Negative","SaySwitch Merchant Dashboard - Clean run","2026-06-25","failed","2026-06-25","Bill Payment Internet Data > Negative Scenarios","Bills Payment","",""
+"","222","Business Team Member Status Update Endpoint - Negative","SaySwitch Merchant Dashboard - Clean run","2026-06-25","failed","2026-06-25","Business Team Member Status Update > Negative Scenarios","Business","",""
+"","223","Payouts Endpoint - Positive","SaySwitch Merchant Dashboard - Clean run","2026-06-25","failed","2026-06-25","Payouts > Positive Scenarios","Payout (Bank Transfer)","",""
+"","220","Bill Payment Internet Data Endpoint - Positive","SaySwitch Merchant Dashboard - Clean run","2026-06-25","failed","2026-06-25","Bill Payment Internet Data > Positive Scenarios","Bills Payment","",""
+"","219","Business Details Update Endpoint - Positive","SaySwitch Merchant Dashboard - Clean run","2026-06-25","failed","2026-06-25","Business Details Update > Positive Scenarios","Business","",""
+"","222","Transaction Details for Dedicated Endpoint - Negative","SaySwitch Merchant Dashboard - Clean run","2026-06-25","failed","2026-06-25","Transaction Details for Dedicated > Negative Scenarios","Transactions","",""
+"","220","Bill Payment Tv Subscription Endpoint - Positive","SaySwitch Merchant Dashboard - Clean run","2026-06-25","failed","2026-06-25","Bill Payment Tv Subscription > Positive Scenarios","Bills Payment","",""
+"{ ""phone"": ""07036218209"", ""business_name"": ""Tech Plus Network Limited"", ""trade_name"": "" Tech Plus Host"", ""industry_id"": ""5"", ""description"": ""Domain name registration, Servers and Web hosting service"", ""biz_email"": "" info@techplushost.com"", ""biz_phone"": "" 07036218209"", ""biz_address"": ""Off General Gas Road, Akobo, Ibadan"", ""biz_country"": "" Nigeria"", ""biz_state"": "" Oyo"", ""biz_city"": ""Ibadan"", ""biz_url"": ""techplushost.com"", ""biz_ig"": ""techplushost"", ""glea"": ""2"", ""aga"": ""3"", ""bank_code"": ""00013"", ""bank_name"": ""Guaranty Trust Bank"", ""account_number"": ""0050883605"", ""account_name"": ""TOLULOPE OYENIYI"", ""bvn"": "" 11111111111"", ""pa_firstname"": ""Tolulope"", ""pa_lastname"": ""Oyeniyi"", ""pa_email"": ""toluxsys@yahoo.ca"", ""pa_phone"": ""07036218209"", ""pa_id_type"": ""Driver License"", ""pa_id_file"": ""4"", ""pa_bvn"": ""22222222222""}","222","Compliance Governmental Bodies Endpoint - Positive","SaySwitch Merchant Dashboard - Clean run","2026-06-25","failed","2026-06-25","Compliance Governmental Bodies > Positive Scenarios","Compliance","",""
+"","222","Payouts Get Fee Endpoint - Negative","SaySwitch Merchant Dashboard - Clean run","2026-06-25","failed","2026-06-25","Payouts Get Fee > Negative Scenarios","Payout (Bank Transfer)","",""
+"","221","Bill Payment Details by Ref Endpoint - Negative","SaySwitch Merchant Dashboard - Clean run","2026-06-25","failed","2026-06-25","Bill Payment Details by Ref > Negative Scenarios","Bills Payment","",""
+"","225","Wallet (by Currency) Endpoint - Negative","SaySwitch Merchant Dashboard - Clean run","2026-06-25","failed","2026-06-25","Wallet (by Currency) > Negative Scenarios","Balance","",""
+"","228","Payment Link Tried Endpoint - Negative","SaySwitch Merchant Dashboard - Clean run","2026-06-25","failed","2026-06-25","Payment Link Tried > Negative Scenarios","Payment Link","",""
+"Request Body to encrypt.
+
+{ ""email"": ""[sam@bud.africa](https://mailto:sam@bud.africa)"", ""token"": ""098grr949g9r7654321"", ""password"": ""0987654321"", ""confirm_password"": ""0987654321""}","227","Delete Account Request Endpoint - Positive","SaySwitch Merchant Dashboard - Clean run","2026-06-25","failed","2026-06-25","Delete Account Request > Positive Scenarios","Auth","",""
+"","222","Bill Payment Internet Providers Plans (All) Endpoint - Negative","SaySwitch Merchant Dashboard - Clean run","2026-06-25","failed","2026-06-25","Bill Payment Internet Providers Plans (All) > Negative Scenarios","Bills Payment","",""
+"","223","Business Team Endpoint - Positive","SaySwitch Merchant Dashboard - Clean run","2026-06-25","failed","2026-06-25","Business Team > Positive Scenarios","Business","",""
+"","224","Customers Endpoint - Positive","SaySwitch Merchant Dashboard - Clean run","2026-06-25","failed","2026-06-25","Customers > Positive Scenarios","Customer","",""
+"","226","Business Logo Upload Endpoint - Positive","SaySwitch Merchant Dashboard - Clean run","2026-06-25","failed","2026-06-25","Business Logo Upload > Positive Scenarios","Business","",""
+"","220","Business Permissions Endpoint - Positive","SaySwitch Merchant Dashboard - Clean run","2026-06-25","failed","2026-06-25","Business Permissions > Positive Scenarios","Business","",""
+"","222","Payment Link Status Endpoint - Positive","SaySwitch Merchant Dashboard - Clean run","2026-06-25","failed","2026-06-25","Payment Link Status > Positive Scenarios","Payment Link","",""
+"","229","Payouts Initiate Bulk Transfer Endpoint - Positive","SaySwitch Merchant Dashboard - Clean run","2026-06-25","failed","2026-06-25","Payouts Initiate Bulk Transfer > Positive Scenarios","Payout B (SaySwitch Transfer)","",""
+"","222","Customer Filter Endpoint - Negative","SaySwitch Merchant Dashboard - Clean run","2026-06-25","failed","2026-06-25","Customer Filter > Negative Scenarios","Customer","",""
+"","221","Payouts Download Export Endpoint - Positive","SaySwitch Merchant Dashboard - Clean run","2026-06-25","failed","2026-06-25","Payouts Download Export > Positive Scenarios","Payout (Bank Transfer)","",""
+"","221","Payout Filter Endpoint - Positive","SaySwitch Merchant Dashboard - Clean run","2026-06-25","failed","2026-06-25","Payout Filter > Positive Scenarios","Payout (Bank Transfer)","",""
+"","221","Bill Payment Stats Endpoint - Positive","SaySwitch Merchant Dashboard - Clean run","2026-06-25","failed","2026-06-25","Bill Payment Stats > Positive Scenarios","Bills Payment","",""
+"","223","Business Payment Method Update (disable) Endpoint - Negative","SaySwitch Merchant Dashboard - Clean run","2026-06-25","failed","2026-06-25","Business Payment Method Update (disable) > Negative Scenarios","Business","",""
+"","221","Dashboard Week Volume Chart Endpoint - Negative","SaySwitch Merchant Dashboard - Clean run","2026-06-25","failed","2026-06-25","Dashboard Week Volume Chart > Negative Scenarios","Dashboard","",""
+"","225","Business Set Primary Settlement Account Endpoint - Negative","SaySwitch Merchant Dashboard - Clean run","2026-06-25","failed","2026-06-25","Business Set Primary Settlement Account > Negative Scenarios","Business","",""
+"","219","Business Permissions Endpoint - Negative","SaySwitch Merchant Dashboard - Clean run","2026-06-25","failed","2026-06-25","Business Permissions > Negative Scenarios","Business","",""
+"","222","Dashboard (wallet) Endpoint - Negative","SaySwitch Merchant Dashboard - Clean run","2026-06-25","failed","2026-06-25","Dashboard (wallet) > Negative Scenarios","Dashboard","",""
+"","222","Bill Payment Electricity Validate Endpoint - Negative","SaySwitch Merchant Dashboard - Clean run","2026-06-25","failed","2026-06-25","Bill Payment Electricity Validate > Negative Scenarios","Bills Payment","",""
+"Request Body to encrypt.
+
+{ ""email"": ""[sam@bud.africa](https://mailto:sam@bud.africa)"", ""token"": ""098grr949g9r7654321"", ""password"": ""0987654321"", ""confirm_password"": ""0987654321""}","226","Reset Password Submit Endpoint - Positive","SaySwitch Merchant Dashboard - Clean run","2026-06-25","failed","2026-06-25","Reset Password Submit > Positive Scenarios","Auth","",""
+"","221","Transaction Endpoint - Positive","SaySwitch Merchant Dashboard - Clean run","2026-06-25","failed","2026-06-25","Transaction > Positive Scenarios","Transactions","",""
+"","220","Validate Custom Payment Link Url Endpoint - Positive","SaySwitch Merchant Dashboard - Clean run","2026-06-25","failed","2026-06-25","Validate Custom Payment Link Url > Positive Scenarios","Payment Link","",""
+"","222","Payment Request Endpoint - Positive","SaySwitch Merchant Dashboard - Clean run","2026-06-25","failed","2026-06-25","Payment Request > Positive Scenarios","Payment Link","",""
+"","224","Payment Link Create Endpoint - Positive","SaySwitch Merchant Dashboard - Clean run","2026-06-25","failed","2026-06-25","Payment Link Create > Positive Scenarios","Payment Link","",""
+"Request Body to encrypt.
+
+{ ""email"": ""[tolu@bud.africa](https://mailto:tolu@bud.africa)""}","244","Screen 1 - Email Endpoint - Negative","SaySwitch Merchant Dashboard - Clean run","2026-06-25","passed","2026-06-25","Screen 1 - Email > Negative Scenarios","Auth","",""
+"","222","Account Change Password Endpoint - Positive","SaySwitch Merchant Dashboard - Clean run","2026-06-25","failed","2026-06-25","Account Change Password > Positive Scenarios","Business","",""
+"","223","Customer Create Endpoint - Positive","SaySwitch Merchant Dashboard - Clean run","2026-06-25","failed","2026-06-25","Customer Create > Positive Scenarios","Customer","",""
+"","224","Sub Account Create Endpoint - Negative","SaySwitch Merchant Dashboard - Clean run","2026-06-25","failed","2026-06-25","Sub Account Create > Negative Scenarios","Sub Account","",""
+"","225","Businesses Endpoint - Negative","SaySwitch Merchant Dashboard - Clean run","2026-06-25","failed","2026-06-25","Businesses > Negative Scenarios","Dashboard","",""
+"","222","Dashboard Week Volume Chart Endpoint - Positive","SaySwitch Merchant Dashboard - Clean run","2026-06-25","failed","2026-06-25","Dashboard Week Volume Chart > Positive Scenarios","Dashboard","",""
+"","222","Account Change Trans Pin Endpoint - Positive","SaySwitch Merchant Dashboard - Clean run","2026-06-25","failed","2026-06-25","Account Change Trans Pin > Positive Scenarios","Business","",""
+"","230","Screen 2 - Resend Email Endpoint - Negative","SaySwitch Merchant Dashboard - Clean run","2026-06-25","failed","2026-06-25","Screen 2 - Resend Email > Negative Scenarios","Auth","",""
+"","223","Transaction By Date Endpoint - Positive","SaySwitch Merchant Dashboard - Clean run","2026-06-25","failed","2026-06-25","Transaction By Date > Positive Scenarios","Transactions","",""
+"","222","Add New Business Endpoint - Positive","SaySwitch Merchant Dashboard - Clean run","2026-06-25","failed","2026-06-25","Add New Business > Positive Scenarios","Dashboard","",""
+"","222","Sub Account Create Endpoint - Positive","SaySwitch Merchant Dashboard - Clean run","2026-06-25","failed","2026-06-25","Sub Account Create > Positive Scenarios","Sub Account","",""
+"","220","Business Roles Update Endpoint - Negative","SaySwitch Merchant Dashboard - Clean run","2026-06-25","failed","2026-06-25","Business Roles Update > Negative Scenarios","Business","",""
+"","226","Payouts Initiate Bulk Transfer Endpoint - Negative","SaySwitch Merchant Dashboard - Clean run","2026-06-25","passed","2026-06-25","Payouts Initiate Bulk Transfer > Negative Scenarios","Payout B (SaySwitch Transfer)","",""
+"{ ""bank_code"":""000013"", ""account_number"":""0050883605""}","222","Payouts Account Name Verify Endpoint - Negative","SaySwitch Merchant Dashboard - Clean run","2026-06-25","failed","2026-06-25","Payouts Account Name Verify > Negative Scenarios","Payout (Bank Transfer)","",""
+"","226","Compliance Individual Endpoint - Positive","SaySwitch Merchant Dashboard - Clean run","2026-06-25","failed","2026-06-25","Compliance Individual > Positive Scenarios","Compliance","",""
+"","222","Bill Payment Stats Endpoint - Negative","SaySwitch Merchant Dashboard - Clean run","2026-06-25","failed","2026-06-25","Bill Payment Stats > Negative Scenarios","Bills Payment","",""
+"","223","Reserved Account Details Endpoint - Negative","SaySwitch Merchant Dashboard - Clean run","2026-06-25","failed","2026-06-25","Reserved Account Details > Negative Scenarios","Reserved Accounts","",""
+"","223","Reserved Account Details Endpoint - Positive","SaySwitch Merchant Dashboard - Clean run","2026-06-25","failed","2026-06-25","Reserved Account Details > Positive Scenarios","Reserved Accounts","",""
+"","221","Recent Endpoint - Positive","SaySwitch Merchant Dashboard - Clean run","2026-06-25","failed","2026-06-25","Recent > Positive Scenarios","Dashboard","",""
+"","224","File Upload Endpoint - Negative","SaySwitch Merchant Dashboard - Clean run","2026-06-25","failed","2026-06-25","File Upload > Negative Scenarios","File Upload","",""
+"","221","Transaction History Log for Mobile App Endpoint - Negative","SaySwitch Merchant Dashboard - Clean run","2026-06-25","failed","2026-06-25","Transaction History Log for Mobile App > Negative Scenarios","Transactions","",""
+"","221","Business Add Settlement Bank Account Endpoint - Positive","SaySwitch Merchant Dashboard - Clean run","2026-06-25","failed","2026-06-25","Business Add Settlement Bank Account > Positive Scenarios","Business","",""
+"","224","Settlement Details (View Settlement) Endpoint - Positive","SaySwitch Merchant Dashboard - Clean run","2026-06-25","failed","2026-06-25","Settlement Details (View Settlement) > Positive Scenarios","Balance","",""
+"OTP Source determinant
+
+Payout OTP = payout
+
+Budpay Transfer OTP = transfer
+
+Transaction Settings Update OTP = 2fa (to switch btw pin and otp)","225","Change Auth Mode Endpoint - Positive","SaySwitch Merchant Dashboard - Clean run","2026-06-25","failed","2026-06-25","Change Auth Mode > Positive Scenarios","OTP Request","",""
+"","220","Bill Payment Filter Endpoint - Positive","SaySwitch Merchant Dashboard - Clean run","2026-06-25","failed","2026-06-25","Bill Payment Filter > Positive Scenarios","Bills Payment","",""
+"","222","Settlement Filter Endpoint - Negative","SaySwitch Merchant Dashboard - Clean run","2026-06-25","failed","2026-06-25","Settlement Filter > Negative Scenarios","Balance","",""
+"","221","Sub Account Filter Endpoint - Positive","SaySwitch Merchant Dashboard - Clean run","2026-06-25","failed","2026-06-25","Sub Account Filter > Positive Scenarios","Sub Account","",""
+"","222","Transaction Download Export Endpoint - Negative","SaySwitch Merchant Dashboard - Clean run","2026-06-25","failed","2026-06-25","Transaction Download Export > Negative Scenarios","Transactions","",""
+"","220","Dashboard (Summary) Endpoint - Negative","SaySwitch Merchant Dashboard - Clean run","2026-06-25","failed","2026-06-25","Dashboard (Summary) > Negative Scenarios","Dashboard","",""
+"","223","Transaction Filter Endpoint - Positive","SaySwitch Merchant Dashboard - Clean run","2026-06-25","failed","2026-06-25","Transaction Filter > Positive Scenarios","Transactions","",""
+"","227","encryption Endpoint - Negative","SaySwitch Merchant Dashboard - Clean run","2026-06-25","failed","2026-06-25","encryption > Negative Scenarios","Auth","",""
+"","232","Wallet Balance Reload (Test mode only) Endpoint - Positive","SaySwitch Merchant Dashboard - Clean run","2026-06-25","failed","2026-06-25","Wallet Balance Reload (Test mode only) > Positive Scenarios","Balance","",""
+"","232","Payment Filter Endpoint - Positive","SaySwitch Merchant Dashboard - Clean run","2026-06-25","failed","2026-06-25","Payment Filter > Positive Scenarios","Payment Link","",""
+"","223","Business Roles Endpoint - Positive","SaySwitch Merchant Dashboard - Clean run","2026-06-25","failed","2026-06-25","Business Roles > Positive Scenarios","Business","",""
+"","225","Payouts Account Name Verify Copy Endpoint - Positive","SaySwitch Merchant Dashboard - Clean run","2026-06-25","failed","2026-06-25","Payouts Account Name Verify Copy > Positive Scenarios","Payout (Bank Transfer)","",""
+"","223","Payment Link Delete Endpoint - Negative","SaySwitch Merchant Dashboard - Clean run","2026-06-25","failed","2026-06-25","Payment Link Delete > Negative Scenarios","Payment Link","",""
+"","222","Transaction Details for Dedicated Endpoint - Positive","SaySwitch Merchant Dashboard - Clean run","2026-06-25","failed","2026-06-25","Transaction Details for Dedicated > Positive Scenarios","Transactions","",""
+"","223","Payment Link Endpoint - Positive","SaySwitch Merchant Dashboard - Clean run","2026-06-25","failed","2026-06-25","Payment Link > Positive Scenarios","Payment Link","",""
+"{ ""phone"": ""07036218209"", ""business_name"": ""Tech Plus Network Limited"", ""trade_name"": "" Tech Plus Host"", ""industry_id"": ""5"", ""description"": ""Domain name registration, Servers and Web hosting service"", ""biz_email"": "" info@techplushost.com"", ""biz_phone"": "" 07036218209"", ""biz_address"": ""Off General Gas Road, Akobo, Ibadan"", ""biz_country"": "" Nigeria"", ""biz_state"": "" Oyo"", ""biz_city"": ""Ibadan"", ""biz_url"": ""techplushost.com"", ""biz_ig"": ""techplushost"", ""glea"": ""2"", ""aga"": ""3"", ""bank_code"": ""00013"", ""bank_name"": ""Guaranty Trust Bank"", ""account_number"": ""0050883605"", ""account_name"": ""TOLULOPE OYENIYI"", ""bvn"": "" 11111111111"", ""pa_firstname"": ""Tolulope"", ""pa_lastname"": ""Oyeniyi"", ""pa_email"": ""toluxsys@yahoo.ca"", ""pa_phone"": ""07036218209"", ""pa_id_type"": ""Driver License"", ""pa_id_file"": ""4"", ""pa_bvn"": ""22222222222""}","221","Compliance Governmental Bodies Endpoint - Negative","SaySwitch Merchant Dashboard - Clean run","2026-06-25","failed","2026-06-25","Compliance Governmental Bodies > Negative Scenarios","Compliance","",""
+"","224","Business Generate Key Endpoint - Positive","SaySwitch Merchant Dashboard - Clean run","2026-06-25","failed","2026-06-25","Business Generate Key > Positive Scenarios","Business","",""
+"","222","Transactions of a Settelemt Endpoint - Positive","SaySwitch Merchant Dashboard - Clean run","2026-06-25","failed","2026-06-25","Transactions of a Settelemt > Positive Scenarios","Transactions","",""
+"OTP Source determinant
+
+Payout OTP = payout
+
+Budpay Transfer OTP = transfer
+
+Transaction Settings Update OTP = 2fa (to switch btw pin and otp)","225","Transaction OTP Endpoint - Negative","SaySwitch Merchant Dashboard - Clean run","2026-06-25","failed","2026-06-25","Transaction OTP > Negative Scenarios","OTP Request","",""
+"","220","Resend Transaction Receipt Endpoint - Positive","SaySwitch Merchant Dashboard - Clean run","2026-06-25","failed","2026-06-25","Resend Transaction Receipt > Positive Scenarios","Transactions","",""
+"","220","Business Callback Auto Redirect Setting Endpoint - Positive","SaySwitch Merchant Dashboard - Clean run","2026-06-25","failed","2026-06-25","Business Callback Auto Redirect Setting > Positive Scenarios","Business","",""
+"","223","Bill Payment Electricity Validate Endpoint - Positive","SaySwitch Merchant Dashboard - Clean run","2026-06-25","failed","2026-06-25","Bill Payment Electricity Validate > Positive Scenarios","Bills Payment","",""
+"","225","Business Delete Settlement Account Endpoint - Positive","SaySwitch Merchant Dashboard - Clean run","2026-06-25","failed","2026-06-25","Business Delete Settlement Account > Positive Scenarios","Business","",""
+"","221","Payouts Initiate Transfer Endpoint - Positive","SaySwitch Merchant Dashboard - Clean run","2026-06-25","failed","2026-06-25","Payouts Initiate Transfer > Positive Scenarios","Payout (Bank Transfer)","",""
+"Request Body to encrypt.
+
+{ ""email"": ""adetunjioluwakayode@gmail.com"", ""password"": ""adetunjioluwakayode@gmail.com"", ""device_name"": ""merchantpro""}","232","Auth Login Endpoint - Negative","SaySwitch Merchant Dashboard - Clean run","2026-06-25","passed","2026-06-25","Auth Login > Negative Scenarios","Auth","",""
+"","221","Business Invite Team Member Endpoint - Negative","SaySwitch Merchant Dashboard - Clean run","2026-06-25","failed","2026-06-25","Business Invite Team Member > Negative Scenarios","Business","",""
+"","223","Businesses Endpoint - Positive","SaySwitch Merchant Dashboard - Clean run","2026-06-25","failed","2026-06-25","Businesses > Positive Scenarios","Dashboard","",""
+"","221","Bill Payment Tv Providers Packages (All) Endpoint - Negative","SaySwitch Merchant Dashboard - Clean run","2026-06-25","failed","2026-06-25","Bill Payment Tv Providers Packages (All) > Negative Scenarios","Bills Payment","",""
+"","222","Dispute (Pending) Endpoint - Negative","SaySwitch Merchant Dashboard - Clean run","2026-06-25","failed","2026-06-25","Dispute (Pending) > Negative Scenarios","Dispute (Chargeback)","",""
+"","222","Sub Account Details Endpoint - Negative","SaySwitch Merchant Dashboard - Clean run","2026-06-25","failed","2026-06-25","Sub Account Details > Negative Scenarios","Sub Account","",""
+"","251","Extras Endpoint - Negative","SaySwitch Merchant Dashboard - Clean run","2026-06-25","failed","2026-06-25","Extras > Negative Scenarios","Country Extras","",""
+"Request Body to encrypt.
+
+{""reference"": ""0987654321"", ""type"": ""partial"", ""type"": ""amount"", ""100"": ""refund for bills"", ""auth"": ""542954""}","229","Refund Transaction Endpoint - Negative","SaySwitch Merchant Dashboard - Clean run","2026-06-25","passed","2026-06-25","Refund Transaction > Negative Scenarios","Refund","",""
+"","221","Payouts validate Bulk Transfer Account Endpoint - Negative","SaySwitch Merchant Dashboard - Clean run","2026-06-25","failed","2026-06-25","Payouts validate Bulk Transfer Account > Negative Scenarios","Payout (Bank Transfer)","",""
+"","220","Bill Payment Airtime Providers Endpoint - Negative","SaySwitch Merchant Dashboard - Clean run","2026-06-25","failed","2026-06-25","Bill Payment Airtime Providers > Negative Scenarios","Bills Payment","",""
+"","220","Bill Payment Tv Providers Endpoint - Positive","SaySwitch Merchant Dashboard - Clean run","2026-06-25","failed","2026-06-25","Bill Payment Tv Providers > Positive Scenarios","Bills Payment","",""
+"","223","Payouts Initiate Transfer Endpoint - Negative","SaySwitch Merchant Dashboard - Clean run","2026-06-25","failed","2026-06-25","Payouts Initiate Transfer > Negative Scenarios","Payout (Bank Transfer)","",""
+"","220","Settlement Endpoint - Negative","SaySwitch Merchant Dashboard - Clean run","2026-06-25","failed","2026-06-25","Settlement > Negative Scenarios","Balance","",""
+"","222","Reserved Accounts Endpoint - Positive","SaySwitch Merchant Dashboard - Clean run","2026-06-25","failed","2026-06-25","Reserved Accounts > Positive Scenarios","Reserved Accounts","",""
+"","223","Audit Endpoint - Negative","SaySwitch Merchant Dashboard - Clean run","2026-06-25","failed","2026-06-25","Audit > Negative Scenarios","Audit","",""
+"","223","Wallet Transactions Filter Endpoint - Positive","SaySwitch Merchant Dashboard - Clean run","2026-06-25","failed","2026-06-25","Wallet Transactions Filter > Positive Scenarios","Balance","",""
+"","229","Dashboard Transaction Chart Endpoint - Negative","SaySwitch Merchant Dashboard - Clean run","2026-06-25","failed","2026-06-25","Dashboard Transaction Chart > Negative Scenarios","Dashboard","",""
+"","221","Settlement Download Export Endpoint - Positive","SaySwitch Merchant Dashboard - Clean run","2026-06-25","failed","2026-06-25","Settlement Download Export > Positive Scenarios","Balance","",""
+"","222","Transaction Details Endpoint - Positive","SaySwitch Merchant Dashboard - Clean run","2026-06-25","failed","2026-06-25","Transaction Details > Positive Scenarios","Transactions","",""
+"","225","Payouts Get Fee Endpoint - Positive","SaySwitch Merchant Dashboard - Clean run","2026-06-25","failed","2026-06-25","Payouts Get Fee > Positive Scenarios","Payout (Bank Transfer)","",""
+"","225","Dashboard Transaction Month Chart Endpoint - Negative","SaySwitch Merchant Dashboard - Clean run","2026-06-25","failed","2026-06-25","Dashboard Transaction Month Chart > Negative Scenarios","Dashboard","",""
+"","226","Payment Link Status Endpoint - Negative","SaySwitch Merchant Dashboard - Clean run","2026-06-25","failed","2026-06-25","Payment Link Status > Negative Scenarios","Payment Link","",""
+"","221","Transaction Details Using Reference Endpoint - Negative","SaySwitch Merchant Dashboard - Clean run","2026-06-25","failed","2026-06-25","Transaction Details Using Reference > Negative Scenarios","Transactions","",""
+"","228","Refund Details Endpoint - Negative","SaySwitch Merchant Dashboard - Clean run","2026-06-25","passed","2026-06-25","Refund Details > Negative Scenarios","Refund","",""
+"","432","Extras Endpoint - Positive","SaySwitch Merchant Dashboard - Clean run","2026-06-25","passed","2026-06-25","Extras > Positive Scenarios","Country Extras","",""
+"","228","Business Edit Settlement Bank Account Endpoint - Negative","SaySwitch Merchant Dashboard - Clean run","2026-06-25","failed","2026-06-25","Business Edit Settlement Bank Account > Negative Scenarios","Business","",""
+"","222","Dashboard Transaction Chart Endpoint - Positive","SaySwitch Merchant Dashboard - Clean run","2026-06-25","failed","2026-06-25","Dashboard Transaction Chart > Positive Scenarios","Dashboard","",""
+"","221","Wallet (by Currency) Endpoint - Positive","SaySwitch Merchant Dashboard - Clean run","2026-06-25","failed","2026-06-25","Wallet (by Currency) > Positive Scenarios","Balance","",""
+"","221","Business Notification Preference Update Endpoint - Positive","SaySwitch Merchant Dashboard - Clean run","2026-06-25","failed","2026-06-25","Business Notification Preference Update > Positive Scenarios","Business","",""
+"","221","Customer Filter Endpoint - Positive","SaySwitch Merchant Dashboard - Clean run","2026-06-25","failed","2026-06-25","Customer Filter > Positive Scenarios","Customer","",""
+"","227","Transaction By Date Endpoint - Negative","SaySwitch Merchant Dashboard - Clean run","2026-06-25","failed","2026-06-25","Transaction By Date > Negative Scenarios","Transactions","",""
+"","220","Transaction Endpoint - Negative","SaySwitch Merchant Dashboard - Clean run","2026-06-25","failed","2026-06-25","Transaction > Negative Scenarios","Transactions","",""
+"","223","Validate Custom Payment Link Url Endpoint - Negative","SaySwitch Merchant Dashboard - Clean run","2026-06-25","failed","2026-06-25","Validate Custom Payment Link Url > Negative Scenarios","Payment Link","",""
+"","225","Customer Create Endpoint - Negative","SaySwitch Merchant Dashboard - Clean run","2026-06-25","failed","2026-06-25","Customer Create > Negative Scenarios","Customer","",""
+"","219","Bill Payment Endpoint - Negative","SaySwitch Merchant Dashboard - Clean run","2026-06-25","failed","2026-06-25","Bill Payment > Negative Scenarios","Bills Payment","",""
+"","221","Payment Link Update Endpoint - Positive","SaySwitch Merchant Dashboard - Clean run","2026-06-25","failed","2026-06-25","Payment Link Update > Positive Scenarios","Payment Link","",""
+"","220","Resend Transaction Webhook Endpoint - Positive","SaySwitch Merchant Dashboard - Clean run","2026-06-25","failed","2026-06-25","Resend Transaction Webhook > Positive Scenarios","Transactions","",""
+"","220","Bill Payment Internet Providers Plans (by Provider) Endpoint - Negative","SaySwitch Merchant Dashboard - Clean run","2026-06-25","failed","2026-06-25","Bill Payment Internet Providers Plans (by Provider) > Negative Scenarios","Bills Payment","",""
+"","223","Payment Link Details Endpoint - Positive","SaySwitch Merchant Dashboard - Clean run","2026-06-25","failed","2026-06-25","Payment Link Details > Positive Scenarios","Payment Link","",""
+"","221","Settlement Filter Endpoint - Positive","SaySwitch Merchant Dashboard - Clean run","2026-06-25","failed","2026-06-25","Settlement Filter > Positive Scenarios","Balance","",""
+"","229","Compliance NGO Endpoint - Negative","SaySwitch Merchant Dashboard - Clean run","2026-06-25","failed","2026-06-25","Compliance NGO > Negative Scenarios","Compliance","",""
+"","220","Business Invite Team Member Endpoint - Positive","SaySwitch Merchant Dashboard - Clean run","2026-06-25","failed","2026-06-25","Business Invite Team Member > Positive Scenarios","Business","",""
+"","135161","decryption Endpoint - Negative","SaySwitch Merchant Dashboard - Clean run","2026-06-25","broken","2026-06-25","decryption > Negative Scenarios","Auth","",""
+"","222","Regenerate Wallet Account Endpoint - Negative","SaySwitch Merchant Dashboard - Clean run","2026-06-25","failed","2026-06-25","Regenerate Wallet Account > Negative Scenarios","Balance","",""
+"Request Body to encrypt.
+
+{ ""email"": ""[sam@bud.africa](https://mailto:sam@bud.africa)""}","229","Reset Password Request Endpoint - Positive","SaySwitch Merchant Dashboard - Clean run","2026-06-25","failed","2026-06-25","Reset Password Request > Positive Scenarios","Auth","",""
+"","225","Customer Edit Endpoint - Negative","SaySwitch Merchant Dashboard - Clean run","2026-06-25","failed","2026-06-25","Customer Edit > Negative Scenarios","Customer","",""
+"","223","Business Delete Team Member Endpoint - Negative","SaySwitch Merchant Dashboard - Clean run","2026-06-25","failed","2026-06-25","Business Delete Team Member > Negative Scenarios","Business","",""
+"","227","Compliance NGO Endpoint - Positive","SaySwitch Merchant Dashboard - Clean run","2026-06-25","failed","2026-06-25","Compliance NGO > Positive Scenarios","Compliance","",""
+"OTP Source determinant
+
+Payout OTP = payout
+
+Budpay Transfer OTP = transfer
+
+Transaction Settings Update OTP = 2fa (to switch btw pin and otp)","227","Request OTP Endpoint - Negative","SaySwitch Merchant Dashboard - Clean run","2026-06-25","failed","2026-06-25","Request OTP > Negative Scenarios","OTP Request","",""
+"","220","Payment Link Tried Endpoint - Positive","SaySwitch Merchant Dashboard - Clean run","2026-06-25","failed","2026-06-25","Payment Link Tried > Positive Scenarios","Payment Link","",""
