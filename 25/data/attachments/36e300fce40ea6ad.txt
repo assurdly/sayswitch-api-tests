@@ -1,1 +1,0 @@
-{"success":true,"message":"Authorization URL created","data":{"authorization_url":"https:\/\/checkout.staging-sayswitchgroup.com\/pay\/SSW_17787877821497615","access_code":"gtchgttrlc6p","reference":"SSW_17787877821497615","payer_id":null}}
