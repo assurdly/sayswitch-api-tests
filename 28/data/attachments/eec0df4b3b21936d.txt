@@ -1,4 +1,0 @@
-{
-    "provider": "GOTV",
-    "number": "2019505346"
-}
