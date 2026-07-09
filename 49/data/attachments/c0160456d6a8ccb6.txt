@@ -1,0 +1,10 @@
+{
+    "account_name": "@@invalid@@",
+    "account_number": "1234567890",
+    "amount": "100",
+    "bank_code": "100004",
+    "bank_name": "OPAY",
+    "currency": "NGN",
+    "narration": "Test transfer",
+    "reference": "2024031404929202020"
+}
