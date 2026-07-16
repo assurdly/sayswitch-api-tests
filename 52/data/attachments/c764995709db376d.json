@@ -1,0 +1,10 @@
+{
+    "Server": "nginx/1.24.0 (Ubuntu)",
+    "Date": "Thu, 16 Jul 2026 19:05:26 GMT",
+    "Content-Type": "text/html; charset=UTF-8",
+    "Transfer-Encoding": "chunked",
+    "Connection": "keep-alive",
+    "allow": "GET, HEAD",
+    "Cache-Control": "no-cache, private",
+    "Access-Control-Allow-Origin": "*"
+}
