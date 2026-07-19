@@ -1,0 +1,19 @@
+{
+    "currency": "NGN",
+    "transfers": [
+        {
+            "amount": "",
+            "bank_code": "000013",
+            "bank_name": "GUARANTY TRUST BANK",
+            "account_number": "1234567890",
+            "narration": "January Salary"
+        },
+        {
+            "amount": "100",
+            "bank_code": "000013",
+            "bank_name": "GUARANTY TRUST BANK",
+            "account_number": "1234567890",
+            "narration": "February Salary"
+        }
+    ]
+}
