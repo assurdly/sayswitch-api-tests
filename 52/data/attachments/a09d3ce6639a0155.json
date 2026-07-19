@@ -1,0 +1,9 @@
+{
+    "Date": "Sun, 19 Jul 2026 16:49:10 GMT",
+    "Content-Type": "application/json",
+    "Transfer-Encoding": "chunked",
+    "Connection": "keep-alive",
+    "Server": "nginx",
+    "Cache-Control": "no-cache, private",
+    "Access-Control-Allow-Origin": "*"
+}
