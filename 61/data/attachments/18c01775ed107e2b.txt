@@ -1,0 +1,1 @@
+{"success":true,"message":"Authorization URL created","data":{"authorization_url":"https:\/\/checkout.sayswitchgroup.com\/pay\/SSW_17860605246650498","access_code":"ljpp405gtxwh","reference":"SSW_17860605246650498","payer_id":null}}
