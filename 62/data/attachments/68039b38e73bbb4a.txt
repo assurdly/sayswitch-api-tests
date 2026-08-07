@@ -1,0 +1,10 @@
+{
+    "account_name": "John Doe",
+    "account_number": "1234567890",
+    "amount": "100",
+    "bank_code": "100004",
+    "bank_name": "OPAY",
+    "currency": "",
+    "narration": "Test transfer",
+    "reference": "2024031404929202020"
+}
