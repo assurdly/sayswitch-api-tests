@@ -1,0 +1,12 @@
+{
+    "name": "tolu",
+    "email": "toluxsys@yahoo.ca",
+    "bank_name": "GTBank Plc",
+    "bank_code": "000013",
+    "account_number": "0050883605",
+    "country": "Nigeria",
+    "currency": "NGN",
+    "split_type": "percentage",
+    "split_rate": "20",
+    "zip_code": "234"
+}
