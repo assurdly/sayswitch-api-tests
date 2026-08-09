@@ -1,6 +1,0 @@
-{
-    "bank_code": "",
-    "account_number": "",
-    "account_name": "",
-    "bank_name": ""
-}

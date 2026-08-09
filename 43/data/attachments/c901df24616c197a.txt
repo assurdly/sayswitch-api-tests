@@ -1,9 +1,0 @@
-{
-    "from_date":"",
-    "to_date":"",
-    "currency":"",
-    "account_name":"",
-    "account_type":"",
-    "bank_code":"",
-    "status":""
-}
