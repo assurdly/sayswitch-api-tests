@@ -1,0 +1,1 @@
+{"success":true,"message":"Authorization URL created","data":{"authorization_url":"https:\/\/checkout.sayswitchgroup.com\/pay\/SSW_17866475105144482","access_code":"tvwhuaiavp2c","reference":"SSW_17866475105144482","payer_id":null}}
