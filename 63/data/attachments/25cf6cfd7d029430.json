@@ -1,0 +1,12 @@
+{
+    "Content-Type": "application/json",
+    "Authorization": "Bearer ejUB3mPGZQ67ln8z657yuihjbnhgftui789iokl87uijk45r",
+    "User-Agent": "PostmanRuntime/7.39.1",
+    "Accept": "*/*",
+    "Cache-Control": "no-cache",
+    "Postman-Token": "733749fc-0da2-4bc4-8e50-c9c5f744f669",
+    "Host": "3tv.budpay.com",
+    "Accept-Encoding": "gzip, deflate, br",
+    "Connection": "keep-alive",
+    "Content-Length": "372"
+}

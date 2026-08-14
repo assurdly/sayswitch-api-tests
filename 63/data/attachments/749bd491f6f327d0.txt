@@ -1,0 +1,12 @@
+{
+    "originatoraccountnumber": "7036218209",
+    "amount": "5000",
+    "originatorname": "Tolulope Oyeniyi",
+    "narration": "Enjoy your day",
+    "craccountname": "Rowland Test Enterprise",
+    "paymentreference": "202401251802550000",
+    "bankname": "Opay",
+    "sessionid": "100004202401251802550000100004",
+    "craccount": "8028926498",
+    "bankcode": "100004"
+}
