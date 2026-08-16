@@ -1,5 +1,0 @@
-{
-    "currency": "",
-    "file_id": -1,
-    "auth": ""
-}
