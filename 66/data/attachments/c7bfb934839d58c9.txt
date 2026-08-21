@@ -1,0 +1,6 @@
+{
+    "bank_code":"000013",
+    "account_number":"0050883605",
+    "account_name":"OYENIYI TOLULOPE OYEBIYI",
+    "bank_name":"GTBank Plc"
+}
