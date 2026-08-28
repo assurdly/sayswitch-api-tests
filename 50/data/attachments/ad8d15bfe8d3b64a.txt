@@ -1,5 +1,0 @@
-{
-    "currency": "NGN",
-    "file_id": 331,
-    "auth": "137426"
-}
