@@ -1,0 +1,9 @@
+{
+    "search": "",
+    "service_type": "",
+    "from_date": "",
+    "to_date": "",
+    "provider": "",
+    "status": "",
+    "limit": -1
+}
