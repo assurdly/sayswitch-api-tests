@@ -1,0 +1,1 @@
+{"success":true,"message":"Authorization URL created","data":{"authorization_url":"https:\/\/checkout.sayswitchgroup.com\/pay\/SSW_17879668439869623","access_code":"z3qmjsmxej03","reference":"SSW_17879668439869623","payer_id":null}}
