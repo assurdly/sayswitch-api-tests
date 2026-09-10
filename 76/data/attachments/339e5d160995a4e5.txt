@@ -1,0 +1,6 @@
+{
+    "email": "@@invalid@@",
+    "amount": "10",
+    "callback": "https://google.com",
+    "currency": "NGN"
+}
