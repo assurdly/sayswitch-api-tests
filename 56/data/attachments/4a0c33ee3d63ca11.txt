@@ -1,5 +1,0 @@
-{
-    "provider": "",
-    "type": "prepaid",
-    "number": "0159003278896"
-}

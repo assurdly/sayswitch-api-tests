@@ -1,7 +1,0 @@
-{
-    "amount": "1",
-    "card": "",
-    "currency": "USD",
-    "email": "akinlabisamson15@gmail.com",
-    "reference": "865436543308888877527544pw6"
-}

@@ -1,6 +1,0 @@
-{
-    "email": "test@email.com",
-    "first_name": "test",
-    "last_name": "tester",
-    "phone": "@@invalid@@"
-}
