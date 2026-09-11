@@ -1,0 +1,10 @@
+{
+    "search": "",
+    "biz_id": 30,
+    "domain": "live",
+    "from_date": "2022-06-29",
+    "to_date": "2022-06-30",
+    "status": "success",
+    "currency": "NGN",
+    "limit": 5
+}

@@ -1,0 +1,10 @@
+{
+    "biz_id": -1,
+    "domain": "",
+    "type": "",
+    "from_date": "",
+    "to_date": "",
+    "currency": "",
+    "status": "",
+    "limit": -1
+}
