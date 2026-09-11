@@ -1,4 +1,0 @@
-{
-    "split_type": "",
-    "split_rate": ""
-}

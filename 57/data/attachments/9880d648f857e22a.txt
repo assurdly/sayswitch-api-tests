@@ -1,7 +1,0 @@
-{
-    "from_date": "",
-    "to_date": "",
-    "email": "",
-    "id": "",
-    "limit": -1
-}

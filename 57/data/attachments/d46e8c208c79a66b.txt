@@ -1,9 +1,0 @@
-{
-    "currency": "",
-    "amount": -1,
-    "bank": "",
-    "account_number": "",
-    "account_name": "",
-    "narration": "",
-    "auth": ""
-}

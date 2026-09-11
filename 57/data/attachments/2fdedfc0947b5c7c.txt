@@ -1,5 +1,0 @@
-{
-    "wallet":"",
-    "business":"",
-    "amount":100
-}

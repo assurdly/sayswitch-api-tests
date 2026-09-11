@@ -1,5 +1,0 @@
-{
-    "merchant_id":25,
-    "role_id": 1,
-    "status": "active" 
-}

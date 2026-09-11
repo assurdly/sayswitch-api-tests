@@ -1,5 +1,0 @@
-{
-    "support_email": "",
-    "support_phone": "",
-    "chargeback_email": ""
-}
