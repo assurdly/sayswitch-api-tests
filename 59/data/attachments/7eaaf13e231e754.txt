@@ -1,4 +1,0 @@
-{
-    "email":"toluxsys@gmail.com",
-    "role_id": 47
-}
