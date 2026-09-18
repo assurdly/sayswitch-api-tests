@@ -1,0 +1,5 @@
+{
+    "bank_code": "100004",
+    "account_number": "@@invalid@@",
+    "currency": "NGN"
+}
