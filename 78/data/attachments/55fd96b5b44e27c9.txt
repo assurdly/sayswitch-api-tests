@@ -1,0 +1,6 @@
+{
+    "firstname": "",
+    "lastname": "",
+    "home_address": "",
+    "image": ""
+}

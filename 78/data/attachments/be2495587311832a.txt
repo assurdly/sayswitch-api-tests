@@ -1,0 +1,20 @@
+{
+    "business_name":"Tech Plus Network Limited",
+    "trade_name":" Tech Plus Host",
+    "industry_id":"5",
+    "description":"Domain name registration, Servers and Web hosting service",
+    "biz_email":" info@techplushost.com",
+    "biz_phone":" 07036218209",
+    "biz_address":"Off General Gas Road, Akobo, Ibadan",
+    "biz_country":" Nigeria",
+    "biz_state":" Oyo",
+    "biz_city":"Ibadan",
+    "biz_url":"techplushost.com",
+    "biz_ig":"techplushost",
+    "idcard":"1",
+    "bank_code":"00013",
+    "bank_name":"Guaranty Trust Bank",
+    "account_number":"0050883605",
+    "account_name":"TOLULOPE OYENIYI",
+    "bvn":" 11111111111"
+}

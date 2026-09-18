@@ -1,0 +1,9 @@
+{
+    "currency":"NGN",
+    "amount":50,
+    "bank":"GTBank Plc|000013",
+    "account_number":"0050883605",
+    "account_name":"OYENIYI TOLULOPE OYEBIYI",
+    "narration":"GiftBills",
+    "auth":""
+}
