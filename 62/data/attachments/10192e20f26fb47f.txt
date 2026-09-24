@@ -1,5 +1,0 @@
-{
-    "provider": "IBEDC",
-    "number": "0159003278896",
-    "type": "prepaid"
-}
