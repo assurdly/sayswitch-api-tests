@@ -1,6 +1,0 @@
-{
-    "provider": "GOTV",
-    "number": "@@invalid@@",
-    "code": "gotv-max",
-    "reference": "20220511035554758"
-}
