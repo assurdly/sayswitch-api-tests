@@ -1,0 +1,38 @@
+// ===== STATUS CHECK =====
+pm.test("Status code is valid", function () {
+    pm.expect(pm.response.code).to.be.oneOf([200, 201, 400, 401, 403, 404, 422, 500]);
+});
+
+// ===== NEGATIVE SCENARIO CHECK =====
+if (pm.info.requestName.toLowerCase().includes("negative")) {
+    pm.test("Negative request should not return 200", function () {
+        pm.expect(pm.response.code).to.not.equal(200);
+    });
+}
+
+// ===== POSITIVE SCENARIO CHECK =====
+if (pm.info.requestName.toLowerCase().includes("positive")) {
+    pm.test("Positive request should return 2xx", function () {
+        pm.expect(pm.response.code).to.be.within(200, 299);
+    });
+}
+
+// ===== RESPONSE TIME =====
+pm.test("Response time is below 10000ms", function () {
+    pm.expect(pm.response.responseTime).to.be.below(10000);
+});
+
+// ===== JSON CHECK (ONLY FOR SUCCESS) =====
+if (pm.response.code >= 200 && pm.response.code < 300) {
+    pm.test("Response is valid JSON", function () {
+        pm.expect(() => pm.response.json()).to.not.throw();
+    });
+}
+
+// ===== LOGIN ISSUE CHECK =====
+pm.test("Response should not contain login error for valid requests.", function () {
+    const res = pm.response.text().toLowerCase();
+    if (pm.response.code === 200) {
+        pm.expect(res).to.not.include("login required");
+    }
+});
