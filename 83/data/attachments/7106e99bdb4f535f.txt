@@ -1,0 +1,6 @@
+{
+    "email": "test@gmail.com",
+    "amount": "10",
+    "callback": "@@invalid@@",
+    "currency": "NGN"
+}

@@ -1,0 +1,5 @@
+{
+    "network": "mtn",
+    "phone": "",
+    "amount": "100"
+}
