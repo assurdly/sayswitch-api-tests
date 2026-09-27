@@ -1,0 +1,4 @@
+{
+    "name":"Account Manager",
+    "permissions": "2|3|4"
+}

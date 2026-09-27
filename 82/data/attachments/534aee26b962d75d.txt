@@ -1,0 +1,13 @@
+{
+    "name":"Tolu Test Link",
+    "amount":"100",
+    "currency":"NGN",
+    "description":"my test link",
+    "redirect":"https://google.com",
+    "split_code":"",
+    "type":"onetime", 
+    "interval":"", 
+    "times":1, 
+    "image":"599",
+    "custom_url":"tolu_test_link"
+}
