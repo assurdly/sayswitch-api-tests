@@ -1,6 +1,0 @@
-{
-    "provider": "MTN",
-    "plan_id": 46,
-    "number": "@@invalid@@",
-    "reference": "2024041521481039"
-}

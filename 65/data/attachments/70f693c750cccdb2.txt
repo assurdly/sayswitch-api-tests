@@ -1,1 +1,0 @@
-{"status":false,"message":"Value '523046xxxxxxxx3470' is invalid. Invalid character '*'"}
