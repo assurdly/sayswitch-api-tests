@@ -1,0 +1,10 @@
+{
+    "biz_id": 207,
+    "domain": "live",
+    "type": "credit",
+    "from_date": "2022-12-01",
+    "to_date": "2022-12-19",
+    "currency": "NGN",
+    "status": "success",
+    "limit": 20
+}

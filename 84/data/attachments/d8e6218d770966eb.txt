@@ -1,0 +1,6 @@
+{
+    "recipient": "",
+    "amount": "",
+    "currency": "",
+    "description": ""
+}
