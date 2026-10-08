@@ -1,4 +1,0 @@
-{
-    "type":"kyc",
-    "file_link":""
-}

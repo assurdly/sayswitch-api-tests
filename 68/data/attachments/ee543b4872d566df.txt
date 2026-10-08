@@ -1,4 +1,0 @@
-{
-    "split_type": "percentage",
-    "split_rate": "20"
-}

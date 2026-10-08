@@ -1,6 +1,0 @@
-{
-    "provider": "",
-    "number": "",
-    "plan_id": -1,
-    "auth": ""
-}
