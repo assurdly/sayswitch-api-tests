@@ -1,0 +1,5 @@
+{
+    "network": "mtn",
+    "phone": "08012345678",
+    "amount": "@@invalid@@"
+}
