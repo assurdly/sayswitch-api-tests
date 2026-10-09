@@ -1,0 +1,6 @@
+{
+    "recipient":"toluxsys@yahoo.ca,07036218209,sam@bud.africa,08161112404",
+    "amount":"200",
+    "currency":"NGN",
+    "description":"Testing Payment Request Night"
+}
