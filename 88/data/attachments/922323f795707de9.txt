@@ -1,0 +1,7 @@
+{
+    "provider": "SHOWMAX",
+    "number": "07036218209",
+    "code": "full",
+    "reference": "2024011607580000",
+    "auth": "182730"
+}
