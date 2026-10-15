@@ -1,5 +1,0 @@
-{
-    "provider": "IBEDC",
-    "type": "",
-    "number": "0159003278896"
-}

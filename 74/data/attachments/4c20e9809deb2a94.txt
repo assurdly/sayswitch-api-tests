@@ -1,5 +1,0 @@
-{
-    "bank": "",
-    "currency": "",
-    "account_number": ""
-}

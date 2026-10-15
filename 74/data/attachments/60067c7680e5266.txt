@@ -1,1 +1,0 @@
-{"success":false,"message":"Incomplete request","error":{"currency":["The currency must be a string."]}}

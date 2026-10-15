@@ -1,3 +1,0 @@
-{
-    "paymentMethod":"card|transfer|ussd|momo"
-}
