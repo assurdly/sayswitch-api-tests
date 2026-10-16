@@ -1,0 +1,6 @@
+{
+    "bc_notify": false,
+    "cc_notify": true,
+    "bp_notify": true,
+    "cp_notify": false
+}

@@ -1,0 +1,10 @@
+{
+    "provider": "",
+    "number": "",
+    "type": "",
+    "amount": -1,
+    "customer_name": "",
+    "customer_address": "",
+    "reference": "",
+    "auth": ""
+}
