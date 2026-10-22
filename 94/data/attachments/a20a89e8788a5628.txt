@@ -1,0 +1,7 @@
+{
+    "amount": "1",
+    "card": "61e2eaa450602e592ce3f5733a15e1b907588060fd15cab502bf7669b88e9486fd46787bde8d9e9a05c168fa12748218d7a8d0a04e4533084a5734e5b3e9963d2c3a34b47a8cd894ec05947eaa1feab4",
+    "currency": "USD",
+    "email": "akinlabisamson15@gmail.com",
+    "reference": ""
+}

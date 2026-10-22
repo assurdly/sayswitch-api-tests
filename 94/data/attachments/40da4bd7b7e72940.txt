@@ -1,0 +1,1 @@
+{"success":true,"message":"Authorization URL created","data":{"authorization_url":"https:\/\/checkout.sayswitchgroup.com\/pay\/SSW_1792703419818416","access_code":"odso2zpm4oil","reference":"SSW_1792703419818416","payer_id":null,"payment_options":null}}
