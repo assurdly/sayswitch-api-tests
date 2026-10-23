@@ -1,0 +1,9 @@
+{
+    "account_name": "",
+    "account_number": "",
+    "bank_code": "",
+    "bank_name": "",
+    "currency": "",
+    "account_type": "",
+    "make_primary": ""
+}
