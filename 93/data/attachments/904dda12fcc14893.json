@@ -1,9 +1,0 @@
-{
-    "Date": "Fri, 23 Oct 2026 20:56:29 GMT",
-    "Content-Type": "application/json",
-    "Transfer-Encoding": "chunked",
-    "Connection": "keep-alive",
-    "Server": "nginx",
-    "Cache-Control": "no-cache, private",
-    "Access-Control-Allow-Origin": "*"
-}
