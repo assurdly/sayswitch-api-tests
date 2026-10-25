@@ -1,0 +1,73 @@
+const name = (pm.info.requestName || '').toLowerCase();
+const isNegative = /(invalid|empty|negative|error|fail)/.test(name);
+const isInvalidEmail = /(invalid\s+.*email|email\s+format)/.test(name);
+const isEmpty = /empty/.test(name);
+const isInvalid = /invalid/.test(name);
+
+pm.test('Response time is below 10000ms', function () {
+  pm.expect(pm.response.responseTime).to.be.below(10000);
+});
+
+pm.test('Status code matches scenario', function () {
+  if (isNegative) pm.expect(pm.response.code).to.be.within(400, 599);
+  else pm.expect(pm.response.code).to.be.within(200, 299);
+});
+
+let jsonData = null;
+let isJson = false;
+try {
+  jsonData = pm.response.json();
+  isJson = true;
+  pm.test('Response body is valid JSON', function () {
+    pm.expect(jsonData).to.not.equal(null);
+  });
+} catch (e) {
+  pm.test('Non-JSON response only for non-JSON APIs', function () {
+    const ct = String(pm.response.headers.get('Content-Type') || '').toLowerCase();
+    pm.expect(ct.includes('json')).to.eql(false);
+  });
+}
+
+if (isJson) {
+  pm.test('Response body shape is object/array', function () {
+    pm.expect(['object', 'array']).to.include(Array.isArray(jsonData) ? 'array' : typeof jsonData);
+  });
+}
+
+const schemaVar = pm.variables.get('responseSchema') || pm.collectionVariables.get('responseSchema');
+if (schemaVar && isJson) {
+  let schema = schemaVar;
+  if (typeof schemaVar === 'string') {
+    try { schema = JSON.parse(schemaVar); } catch (e) { schema = null; }
+  }
+  pm.test('Response matches provided schema', function () {
+    pm.expect(schema, 'Set responseSchema to a valid JSON schema').to.be.an('object');
+    pm.response.to.have.jsonSchema(schema);
+  });
+}
+
+const responseText = (pm.response.text ? pm.response.text() : '').toLowerCase();
+if (isNegative) {
+  pm.test('Negative scenario returns error/validation feedback', function () {
+    const signal = responseText.includes('error') || responseText.includes('invalid') || responseText.includes('required') || responseText.includes('failed');
+    pm.expect(signal).to.eql(true);
+  });
+}
+
+if (isInvalidEmail && isNegative) {
+  pm.test('Invalid email format feedback exists', function () {
+    pm.expect(responseText).to.match(/email|invalid/i);
+  });
+}
+
+if (isEmpty && isNegative) {
+  pm.test('Empty field feedback exists', function () {
+    pm.expect(responseText).to.match(/required|empty|missing|invalid/i);
+  });
+}
+
+if (isInvalid && isNegative) {
+  pm.test('Invalid input feedback exists', function () {
+    pm.expect(responseText).to.match(/invalid|required|field|format/i);
+  });
+}
